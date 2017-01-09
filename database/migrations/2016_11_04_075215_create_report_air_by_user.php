@@ -24,8 +24,7 @@ class CreateReportAirByUser extends Migration
             $table->string('air_area_name');
             $table->string('air_province_name');
             $table->string('air_comment');
-            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamp();
         });
     }
 

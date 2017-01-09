@@ -23,8 +23,7 @@ class CreateWeatherStationTable extends Migration
             $table->string('aqi_condition_name');
             $table->double('lat');
             $table->double('long');
-            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamp();
         });
     }
 

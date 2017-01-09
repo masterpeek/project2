@@ -21,8 +21,7 @@ class CreateAutoReportNoiseByUser extends Migration
             $table->double('long');
             $table->string('noise_area_name');
             $table->string('noise_province_name');
-            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamp();
         });
     }
 

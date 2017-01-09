@@ -7,8 +7,8 @@ use Illuminate\Notifications\Notifiable;
 
 class WeatherStation extends Model
 {
-    use Notifiable;
-    public $timestamps = true;
+    //use Notifiable;
+    //public $timestamps = true;
 
     protected $table = 'weather_station';
     //อนุญาติให้ใส่อะไรเข้ามาได้บ้าง

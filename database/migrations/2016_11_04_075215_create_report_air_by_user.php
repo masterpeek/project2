@@ -24,7 +24,7 @@ class CreateReportAirByUser extends Migration
             $table->string('air_area_name');
             $table->string('air_province_name');
             $table->string('air_comment');
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

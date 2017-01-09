@@ -7,8 +7,8 @@ use Illuminate\Notifications\Notifiable;
 
 class AutoReportNoiseByUser extends Model
 {
-    use Notifiable;
-    public $timestamps = true;
+    //use Notifiable;
+    //public $timestamps = true;
 
     protected $table = 'auto_report_noise_by_user';
     //อนุญาติให้ใส่อะไรเข้ามาได้บ้าง

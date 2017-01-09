@@ -21,7 +21,7 @@ class CreateAutoReportNoiseByUser extends Migration
             $table->double('long');
             $table->string('noise_area_name');
             $table->string('noise_province_name');
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

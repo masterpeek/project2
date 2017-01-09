@@ -23,7 +23,7 @@ class CreateWeatherStationTable extends Migration
             $table->string('aqi_condition_name');
             $table->double('lat');
             $table->double('long');
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

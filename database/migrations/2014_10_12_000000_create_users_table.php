@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->integer('user_level');
             $table->rememberToken();
-            $table->timestamp();
+            $table->timestamps();
 
         });
     }

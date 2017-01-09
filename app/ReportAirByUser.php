@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class ReportAirByUser extends Model
 {
+    use Notifiable;
+    public $timestamps = true;
+
     protected $table = 'report_air_by_user';
     //อนุญาติให้ใส่อะไรเข้ามาได้บ้าง
     protected $fillable = [

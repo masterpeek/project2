@@ -81,5 +81,12 @@ class WeatherStationController extends Controller
         return $arrWeather;
     }
 
+    public function allDB()
+    {
+        $all_db = WeatherStation::all();
+
+        return $all_db;
+    }
+
 
 }

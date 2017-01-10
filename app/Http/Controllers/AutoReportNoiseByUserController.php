@@ -11,8 +11,8 @@ class AutoReportNoiseByUserController extends Controller
     {
         $noise = $request->all();
 
-        $latitude = $noise['Latitude'];
-        $longitude = $noise['Longitude'];
+        $latitude = doubleval($noise['Latitude']);
+        $longitude = doubleval($noise['Longitude']);
 
         $data = [];
         $data['noise_value'] = 10;

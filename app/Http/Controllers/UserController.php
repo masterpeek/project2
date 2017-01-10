@@ -53,4 +53,11 @@ class UserController extends Controller
         $user = User::create($data);
         return $user;
     }
+
+    public function allUser()
+    {
+        $users = User::all();
+
+        return $users;
+    }
 }

@@ -22,3 +22,4 @@ Route::post('addUser', 'RegisterController@addUser');
 Route::resource('user','UserController');
 Route::post('register', 'UserController@register');
 Route::get('allData', 'WeatherStationController@allData');
+Route::get('allUser', 'UserController@allUser');

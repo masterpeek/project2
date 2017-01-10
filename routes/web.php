@@ -24,3 +24,6 @@ Route::post('register', 'UserController@register');
 Route::get('allData', 'WeatherStationController@allData');
 Route::get('allUser', 'UserController@allUser');
 Route::get('allDb', 'WeatherStationController@allDB');
+
+Route::post('getNoise', 'AutoReportNoiseByUserController@getNoise');
+Route::get('showNoise', 'AutoReportNoiseByUserController@showNoise');

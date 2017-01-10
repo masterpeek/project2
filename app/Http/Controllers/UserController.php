@@ -26,6 +26,7 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
+
         $json = $request->all();
 
         $data['username'] = $json['Username'];

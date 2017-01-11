@@ -21,5 +21,5 @@ Route::resource('user','UserController');
 Route::post('register', 'UserController@register');
 Route::get('allUser', 'UserController@allUser');
 
-Route::post('send_noise', 'AutoReportNoiseByUserController@getNoise');
+Route::post('get_noise', 'AutoReportNoiseByUserController@getNoise');
 Route::get('show_noise', 'AutoReportNoiseByUserController@showNoise');

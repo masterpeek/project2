@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\AutoReportNoiseByUser;
 use Illuminate\Http\Request;
+use GuzzleHttp;
 
 class AutoReportNoiseByUserController extends Controller
 {
@@ -15,12 +16,19 @@ class AutoReportNoiseByUserController extends Controller
         $longitude = doubleval($noise['Longitude']);
 
         $data = [];
-        $data['noise_value'] = 10;
-        $data['noise_condition_name'] = "good";
+        $data['noise_value'] = $noise['NoiseValue'];
         $data['lat'] = $latitude;
         $data['long'] = $longitude;
-        $data['noise_area_name'] = "pinklao";
-        $data['noise_province_name'] = "bkk";
+
+        $client = new GuzzleHttp\Client();
+
+        $res = $client->request('GET', '
+        https://maps.googleapis.com/maps/api/geocode/json?latlng='.$latitude.','.$longitude.'&key=AIzaSyBuNhJ7nKSLGV63AaNIls6M41Xu3kgK8Ss');
+        $store = $res->getBody()->getContents();
+        $ans = GuzzleHttp\json_decode($store);
+
+        $data['noise_area_name'] = $ans->results->address_components->short_name[3];
+        $data['noise_province_name'] = $ans->results->address_components->short_name[4];
 
         AutoReportNoiseByUser::create($data);
 

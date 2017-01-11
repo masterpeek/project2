@@ -9,23 +9,20 @@ use App\ReportAirByUser;
 
 class ReportAirByUserController extends Controller
 {
-    public function getReportAirByUser()
+    public function getReportAirByUser(Request $request)
     {
-        $json = Input::json()->all();
+        $air = $request->all();
 
-        $resultJson = GuzzleHttp\json_decode($json);
+        $latitude = doubleval($air['Latitude']);
+        $longitude = doubleval($air['Longitude']);
 
-        $data['username'] = $resultJson->username;
-        $data['password'] = $resultJson->password;
-        $data['fname'] = $resultJson->fname;
-        $data['lname'] = $resultJson->lname;
-        $data['tel'] = $resultJson->tel;
-        $data['email'] = $resultJson->email;
-
-        $date_time = new Carbon();
-
-        $data['user_level'] = 1;
-        $data['created_at'] = $date_time->toDateTimeString();
+        $data = [];
+        $data['air_level'] = $air['SmellChoice'];
+        $data['noise_condition_name'] = "good";
+        $data['lat'] = $latitude;
+        $data['long'] = $longitude;
+        $data['noise_area_name'] = "pinklao";
+        $data['noise_province_name'] = "bkk";
 
         ReportAirByUser::create($data);
 

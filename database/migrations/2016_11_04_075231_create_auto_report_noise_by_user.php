@@ -15,8 +15,7 @@ class CreateAutoReportNoiseByUser extends Migration
     {
         Schema::create('auto_report_noise_by_user', function (Blueprint $table) {
             $table->increments('id');
-            $table->double('noise_value');
-            $table->string('noise_condition_name');
+            $table->integer('noise_value');
             $table->double('lat');
             $table->double('long');
             $table->string('noise_area_name');

@@ -20,8 +20,8 @@ class AutoReportNoiseByUserController extends Controller
 
         $data = [];
         $data['noise_value'] = $noise['NoiseValue'];
-        $data['lat'] = $latitude;
-        $data['long'] = $longitude;
+        $data['noise_lat'] = $latitude;
+        $data['noise_long'] = $longitude;
 
         $client = new GuzzleHttp\Client();
 

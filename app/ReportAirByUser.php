@@ -13,7 +13,7 @@ class ReportAirByUser extends Model
     protected $table = 'report_air_by_user';
     //อนุญาติให้ใส่อะไรเข้ามาได้บ้าง
     protected $fillable = [
-        'air_image', 'air_smell', 'air_pollution','air_comment', 'air_level',
+        'air_smell', 'air_pollution', 'air_comment',
         'lat', 'long', 'air_area_name', 'air_province_name',
 
     ];

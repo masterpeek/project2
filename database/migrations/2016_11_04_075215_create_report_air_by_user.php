@@ -15,15 +15,13 @@ class CreateReportAirByUser extends Migration
     {
         Schema::create('report_air_by_user', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username');
-            $table->text('air_image');
-            $table->integer('air_level');
-            $table->string('air_condition_name');
-            $table->double('lat');
-            $table->double('long');
+            $table->string('air_smell');
+            $table->integer('air_pollution');
+            $table->string('air_comment');
+            $table->double('air_lat');
+            $table->double('air_long');
             $table->string('air_area_name');
             $table->string('air_province_name');
-            $table->string('air_comment');
             $table->timestamps();
         });
     }

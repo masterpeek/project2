@@ -23,3 +23,6 @@ Route::get('allUser', 'UserController@allUser');
 
 Route::post('get_noise', 'AutoReportNoiseByUserController@getNoise');
 Route::get('show_noise', 'AutoReportNoiseByUserController@showNoise');
+
+Route::post('get_air', 'ReportAirByUserController@getAir');
+Route::get('show_air', 'ReportAirByUserController@showAir');

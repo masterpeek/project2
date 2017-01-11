@@ -14,7 +14,7 @@ class ReportAirByUser extends Model
     //อนุญาติให้ใส่อะไรเข้ามาได้บ้าง
     protected $fillable = [
         'air_smell', 'air_pollution', 'air_comment',
-        'lat', 'long', 'air_area_name', 'air_province_name',
+        'air_lat', 'air_long', 'air_area_name', 'air_province_name',
 
     ];
 }

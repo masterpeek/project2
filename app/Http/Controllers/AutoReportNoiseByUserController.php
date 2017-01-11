@@ -22,15 +22,18 @@ class AutoReportNoiseByUserController extends Controller
 
         $client = new GuzzleHttp\Client();
 
-        $res = $client->request('GET', '
+        /*$res = $client->request('GET', '
         https://maps.googleapis.com/maps/api/geocode/json?latlng='.$latitude.','.$longitude.'&key=AIzaSyBuNhJ7nKSLGV63AaNIls6M41Xu3kgK8Ss');
         $store = $res->getBody()->getContents();
         $ans = GuzzleHttp\json_decode($store);
+        */
 
-        $data['noise_area_name'] = $ans->results->address_components->short_name[3];
-        $data['noise_province_name'] = $ans->results->address_components->short_name[4];
+        //$ans->results->address_components->short_name[3];
+        $data['noise_area_name'] = "bkk";
+        //$ans->results->address_components->short_name[4];
+        $data['noise_province_name'] = "bkk";
 
-        AutoReportNoiseByUser::create($data);
+            AutoReportNoiseByUser::create($data);
 
     }
 

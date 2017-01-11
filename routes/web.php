@@ -11,19 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WebController@index');
 
 Route::get('call_data_weather_station', 'WeatherStationController@callData');
-Route::get('register1', 'RegisterController@register');
-
-Route::post('addUser', 'RegisterController@addUser');
-Route::resource('user','UserController');
-Route::post('register', 'UserController@register');
-Route::get('allData', 'WeatherStationController@allData');
-Route::get('allUser', 'UserController@allUser');
+Route::get('return_data_weather_station', 'WeatherStationController@allData');
 Route::get('allDb', 'WeatherStationController@allDB');
 
-Route::post('getNoise', 'AutoReportNoiseByUserController@getNoise');
-Route::get('showNoise', 'AutoReportNoiseByUserController@showNoise');
+Route::resource('user','UserController');
+Route::post('register', 'UserController@register');
+Route::get('allUser', 'UserController@allUser');
+
+Route::post('send_noise', 'AutoReportNoiseByUserController@getNoise');
+Route::get('show_noise', 'AutoReportNoiseByUserController@showNoise');

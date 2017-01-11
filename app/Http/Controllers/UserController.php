@@ -15,18 +15,25 @@ class UserController extends Controller
         return view('register');
     }
 
-    public function store($username, $password, $fname, $lname,
-                            $tel, $email)
-    {
-        DB::table('users')->insert(['user' => '$username',
-            'password' => '$password', 'fname' => '$fname',
-            'lname' => '$lname', 'tel' => '$tel', 'email' => '$email']);
-    }
-
-
     public function register(Request $request)
     {
 
+        $user = $request->all();
+
+        $data = [];
+
+        $data['username'] = $request['Username'];
+        $data['password'] = $request['Password'];
+        $data['fname'] = $request['Name'];
+        $data['lname'] = $request['Lastname'];
+        $data['tel'] = $request['Telephone'];
+
+        $user = User::create($data);
+
+        return $user;
+
+
+        /*
         $json = $request->all();
 
         $data['username'] = $json['Username'];
@@ -51,8 +58,6 @@ class UserController extends Controller
 
         $data['created_at'] = $date_time->toDateTimeString();*/
 
-        $user = User::create($data);
-        return $user;
     }
 
     public function allUser()

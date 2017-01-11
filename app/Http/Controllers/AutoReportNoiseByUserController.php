@@ -12,6 +12,9 @@ class AutoReportNoiseByUserController extends Controller
     {
         $noise = $request->all();
 
+        $lat = $noise['Latitude'];
+        $long = $noise['Longitude'];
+
         $latitude = doubleval($noise['Latitude']);
         $longitude = doubleval($noise['Longitude']);
 
@@ -22,13 +25,13 @@ class AutoReportNoiseByUserController extends Controller
 
         $client = new GuzzleHttp\Client();
 
-        $res = $client->request('GET', '
-        https://maps.googleapis.com/maps/api/geocode/json?latlng=' . $latitude . ',' . $longitude . '&key=AIzaSyBuNhJ7nKSLGV63AaNIls6M41Xu3kgK8Ss');
+        $res = $client->request('GET', 'https://maps.googleapis.com/maps/api/geocode/json?latlng='.$lat.','.$long.'&key=AIzaSyBuNhJ7nKSLGV63AaNIls6M41Xu3kgK8Ss');
         $store = $res->getBody()->getContents();
         $ans = GuzzleHttp\json_decode($store);
 
-        $noise_area_name =  $ans->results->address_components->short_name;
-        $noise_province_name = $ans->results->address_components->short_name;
+        $noise_area_name =  $ans->results[0]->address_components[3]->short_name;
+        $noise_province_name = $ans->results[0]->address_components[4]->short_name;
+
         //$ans->results->address_components->short_name[3];
         $data['noise_area_name'] = $noise_area_name;
         //$ans->results->address_components->short_name[4];

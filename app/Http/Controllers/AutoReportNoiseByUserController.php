@@ -27,8 +27,8 @@ class AutoReportNoiseByUserController extends Controller
         $store = $res->getBody()->getContents();
         $ans = GuzzleHttp\json_decode($store);
 
-        $noise_area_name =  $ans->results->address_components[3]->short_name;
-        $noise_province_name = $ans->results->address_components[4]->short_name;
+        $noise_area_name =  $ans->results->address_components->short_name;
+        $noise_province_name = $ans->results->address_components->short_name;
         //$ans->results->address_components->short_name[3];
         $data['noise_area_name'] = $noise_area_name;
         //$ans->results->address_components->short_name[4];

@@ -13,11 +13,11 @@ class ReportAirByUserController extends Controller
     {
         $air = $request->all();
 
-        $lat = $air['Latitude'];
-        $long = $air['Longitude'];
-
         $latitude = doubleval($air['Latitude']);
         $longitude = doubleval($air['Longitude']);
+
+        $lat = $air['Latitude'];
+        $long = $air['Longitude'];
 
         $client = new GuzzleHttp\Client();
 

@@ -82,9 +82,10 @@ class WeatherStationController extends Controller
             ->select(DB::raw('station_id, station_name, area_name, province_name,
             aqi_value, aqi_condition_name, lat, long'))
             ->orderBy('aqi_value', 'asc')
-            ->limit('10');
+            ->limit('10')
+            ->get();
 
-        return $good_rank;
+        return $good_rank->toJson;
     }
 
     public function allData()

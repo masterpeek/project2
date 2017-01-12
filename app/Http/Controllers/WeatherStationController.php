@@ -78,14 +78,12 @@ class WeatherStationController extends Controller
 
     public function goodRank()
     {
-        $good_rank = DB::table('weather_station')
-            ->select(DB::raw('station_id, station_name, area_name, province_name,
-            aqi_value, aqi_condition_name, lat, long'))
+        $good_rank = WeatherStation::all()
             ->orderBy('aqi_value', 'asc')
             ->limit('10')
             ->get();
 
-        return $good_rank->toJson;
+        return $good_rank;
     }
 
     public function allData()

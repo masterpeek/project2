@@ -20,7 +20,9 @@ class WeatherStation extends Model
 
     public static function nearBy($lat, $long)
     {
-        $results =  DB::select(DB::raw('SELECT * FROM weather_station 
-        WHERE $lat = lat AND $long = long') );
+        $results = DB::select(DB::raw('SELECT id, ( 3959 * acos( cos( radians(' . $lat . ') ) 
+        * cos( radians( lat ) ) * cos( radians( long ) - radians(' . $long . ') ) 
+        + sin( radians(' . $lat .') ) * sin( radians(lat) ) ) ) AS distance FROM weather_station 
+        HAVING distance < 25 ORDER BY distance ASC') );
     }
 }

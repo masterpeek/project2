@@ -78,9 +78,7 @@ class WeatherStationController extends Controller
 
     public function goodRank()
     {
-        $good_rank = WeatherStation::all()
-            ->sortBy('aqi_value')
-            ->take('10');
+        $good_rank = WeatherStation::orderBy('aqi_value')->get();
 
         return $good_rank;
     }

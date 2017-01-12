@@ -18,6 +18,7 @@ Route::get('return_data_weather_station', 'WeatherStationController@allData');
 Route::get('allDb', 'WeatherStationController@allDB');
 Route::post('test', 'WeatherStationController@nearByLatLong');
 Route::get('good_rank', 'WeatherStationController@goodRank');
+Route::get('good_rank', 'WeatherStationController@badRank');
 
 
 Route::resource('user','UserController');

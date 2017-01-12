@@ -83,6 +83,13 @@ class WeatherStationController extends Controller
         return $good_rank;
     }
 
+    public function badRank()
+    {
+        $bad_rank = WeatherStation::orderBy('aqi_value','DESC')->limit('10')->get();
+
+        return $bad_rank;
+    }
+
     public function allData()
     {
         $arrWeather["arrWeather"] = [];

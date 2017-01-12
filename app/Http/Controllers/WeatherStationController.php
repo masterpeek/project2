@@ -78,14 +78,26 @@ class WeatherStationController extends Controller
 
     public function goodRank()
     {
-        $good_rank = WeatherStation::orderBy('aqi_value')->limit('10')->get();
+        $good_rank["good_rank"] = [];
+
+        $goods = WeatherStation::orderBy('aqi_value')->limit('10')->get();
+
+        foreach ($goods as $good){
+            array_push($good_rank["good_rank"], $good);
+        }
 
         return $good_rank;
     }
 
     public function badRank()
     {
-        $bad_rank = WeatherStation::orderBy('aqi_value','DESC')->limit('10')->get();
+        $bad_rank["bad_rank"] = [];
+
+        $bads = WeatherStation::orderBy('aqi_value','DESC')->limit('10')->get();
+
+        foreach ($bads as $bad){
+            array_push($bad_rank["bad_rank"], $bad);
+        }
 
         return $bad_rank;
     }

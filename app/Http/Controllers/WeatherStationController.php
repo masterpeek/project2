@@ -74,13 +74,7 @@ class WeatherStationController extends Controller
 
         $lat = $data["Latitude"];
         $lng = $data["Longitude"];
-
-        $query = DB::table('weather_station')->get();
-
-        $ans = WeatherStation::nearBy($query, $lat, $lng);
-
-        return $ans;
-
+        
     }
 
     public function allData()

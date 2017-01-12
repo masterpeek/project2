@@ -18,18 +18,4 @@ class WeatherStation extends Model
         'aqi_value', 'aqi_condition_name', 'lat', 'long'
     ];
 
-    public static function nearBy($query, $lat, $lng, $radius = 100, $unit = "km")
-    {
-        $unit = ($unit === "km") ? 6378.10 : 3963.17;
-        $radius = (double) $radius;
-
-        return $query->having('distance','<=',$radius)
-            ->select(DB::raw("*,
-                            ($unit * ACOS(COS(RADIANS($lat))
-                                * COS(RADIANS(lat))
-                                * COS(RADIANS($lng) - RADIANS(long))
-                                + SIN(RADIANS($lat))
-                                * SIN(RADIANS(lat)))) AS distance")
-            )->orderBy('distance','asc');
-    }
 }

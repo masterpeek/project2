@@ -16,6 +16,7 @@ Route::get('/', 'WebController@index');
 Route::get('call_data_weather_station', 'WeatherStationController@callData');
 Route::get('return_data_weather_station', 'WeatherStationController@allData');
 Route::get('allDb', 'WeatherStationController@allDB');
+Route::post('test', 'WeatherStationController@nearByLatLong');
 
 Route::resource('user','UserController');
 Route::post('register', 'UserController@register');

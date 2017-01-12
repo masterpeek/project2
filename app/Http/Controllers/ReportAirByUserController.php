@@ -47,4 +47,5 @@ class ReportAirByUserController extends Controller
 
         return $all_air;
     }
+
 }

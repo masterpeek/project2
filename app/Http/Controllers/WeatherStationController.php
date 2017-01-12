@@ -67,6 +67,28 @@ class WeatherStationController extends Controller
 
     }
 
+    public function nearByLatLong(Request $request)
+    {
+        $data = $request->all();
+
+        $lat = $data["Latitude"];
+        $long = $data["Longitude"];
+
+        $near_by_lat_long = DB::table('WeatherStation')
+            ->select(DB::raw('id, ( 3959 * acos( cos( radians(37) ) 
+            * cos( radians( '.$lat.' ) ) * cos( radians( '.$long.' ) - radians(-122) ) 
+            + sin( radians(37) ) * sin( radians( '.$lat.' ) ) ) )'))
+            ->as('distance')
+                ->from('WeatherStation')
+                ->having('distance < 25')
+                ->orderBy('distance')
+                ->limit('0, 20')
+                ->get();
+
+        return $near_by_lat_long;
+
+    }
+
     public function allData()
     {
         $arrWeather["arrWeather"] = [];

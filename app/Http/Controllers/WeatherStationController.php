@@ -6,7 +6,6 @@ use App\WeatherStation;
 use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Query\Builder;
 use Log;
 
 class WeatherStationController extends Controller
@@ -74,7 +73,18 @@ class WeatherStationController extends Controller
 
         $lat = $data["Latitude"];
         $lng = $data["Longitude"];
-        
+
+    }
+
+    public function goodRank()
+    {
+        $good_rank = DB::table('weather_station')
+            ->select(DB::raw('station_id, station_name, area_name, province_name,
+            aqi_value, aqi_condition_name, lat, long'))
+            ->orderBy('aqi_value', 'asc')
+            ->limit('10');
+
+        return $good_rank;
     }
 
     public function allData()
@@ -91,12 +101,7 @@ class WeatherStationController extends Controller
         return $arrWeather;
     }
 
-    public function allDB()
-    {
-        $all_db = WeatherStation::all();
 
-        return $all_db;
-    }
 
 
 

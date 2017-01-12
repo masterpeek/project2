@@ -71,8 +71,8 @@ class WeatherStationController extends Controller
     {
         $data = $request->all();
 
-        $lat = $data["Latitude"];
-        $long = $data["Longitude"];
+        $lat = strval($data["Latitude"]);
+        $long = strval($data["Longitude"]);
 
         $near_by_lat_long = WeatherStation::select('*, 
         111.045 * DEGREES(ACOS(COS(RADIANS('.$lat.'))

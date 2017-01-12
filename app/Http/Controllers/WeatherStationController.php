@@ -76,7 +76,7 @@ class WeatherStationController extends Controller
 
         $near_by_lat_long = WeatherStation::nearBy($lat, $long);
 
-        return $near_by_lat_long->toJson;
+        return $near_by_lat_long;
     }
 
     public function allData()

@@ -6,6 +6,7 @@ use App\WeatherStation;
 use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Query\Builder;
 use Log;
 
 class WeatherStationController extends Controller
@@ -72,11 +73,13 @@ class WeatherStationController extends Controller
         $data = $request->all();
 
         $lat = $data["Latitude"];
-        $long = $data["Longitude"];
+        $lng = $data["Longitude"];
 
-        $query = WeatherStation::nearBy($lat, $long);
+        $query = DB::table('weather_station')->get();
 
-        return $query;
+        $ans = WeatherStation::nearBy($query, $lat, $lng);
+
+        return $ans;
 
     }
 

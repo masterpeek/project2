@@ -18,67 +18,18 @@ class WeatherStation extends Model
         'aqi_value', 'aqi_condition_name', 'lat', 'long'
     ];
 
-    public static function nearBy($lat, $long, $max_distance = 25, $units = 'miles', $fields = false )
+    public static function nearBy($query, $lat, $lng, $radius = 100, $unit = "km")
     {
+        $unit = ($unit === "km") ? 6378.10 : 3963.17;
+        $radius = (double) $radius;
 
-        if(empty($lat)){
-            $lat = 0;
-        }
-        if(empty($long)){
-            $long = 0;
-        }
-        /*
-         *  Allow for changing of units of measurement
-         */
-        switch ( $units ) {
-            case 'miles':
-                //radius of the great circle in miles
-                $gr_circle_radius = 3959;
-                break;
-            case 'kilometers':
-                //radius of the great circle in kilometers
-                $gr_circle_radius = 6371;
-                break;
-        }
-        /*
-         *  Support the selection of certain fields
-         */
-        /*
-         *  Generate the select field for disctance
-         */
-        $distance_select = sprintf(
-            "           
-					                ROUND(( %d * acos( cos( radians(%s) ) " .
-            " * cos( radians( lat ) ) " .
-            " * cos( radians( long ) - radians(%s) ) " .
-            " + sin( radians(%s) ) * sin( radians( lat ) ) " .
-            " ) " .
-            ")
-        							, 2 ) " .
-            "AS distance
-					                ",
-            $gr_circle_radius,
-            $lat,
-            $long,
-            $lat
-        );
-
-        $data = DB::select( DB::raw( implode( ',' ,  $fields ) . ',' .  $distance_select  ) )
-            ->having( 'distance', '<=', $max_distance )
-            ->orderBy( 'distance', 'ASC' )
-            ->get();
-
-        //echo '<pre>';
-        //echo $query->toSQL();
-        //echo $distance_select;
-        //echo '</pre>';
-        //die();
-        //
-        //$queries = DB::getQueryLog();
-        //$last_query = end($queries);
-        //var_dump($last_query);
-        //die();
-        return $data;
-
+        return $query->having('distance','<=',$radius)
+            ->select(DB::raw("*,
+                            ($unit * ACOS(COS(RADIANS($lat))
+                                * COS(RADIANS(lat))
+                                * COS(RADIANS($lng) - RADIANS(long))
+                                + SIN(RADIANS($lat))
+                                * SIN(RADIANS(lat)))) AS distance")
+            )->orderBy('distance','asc');
     }
 }

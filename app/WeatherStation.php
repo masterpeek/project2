@@ -16,4 +16,14 @@ class WeatherStation extends Model
         'station_id', 'station_name', 'area_name', 'province_name',
         'aqi_value', 'aqi_condition_name', 'lat', 'long'
     ];
+
+    public static function nearBy($lat, $long)
+    {
+        $results =  DB::select(DB::raw('SELECT id, 
+        ( 3959 * acos( cos( radians(' . $lat . ') ) 
+        * cos( radians( lat ) ) * cos( radians( lng ) 
+        - radians(' . $long . ') ) + sin( radians(' . $lat .') ) 
+        * sin( radians(lat) ) ) ) AS distance FROM articles 
+        HAVING distance < 25 ORDER BY distance') );
+    }
 }

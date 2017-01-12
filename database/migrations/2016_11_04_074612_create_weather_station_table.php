@@ -19,7 +19,7 @@ class CreateWeatherStationTable extends Migration
             $table->string('station_name');
             $table->string('area_name');
             $table->string('province_name');
-            $table->string('aqi_value');
+            $table->integer('aqi_value');
             $table->string('aqi_condition_name');
             $table->double('lat');
             $table->double('long');

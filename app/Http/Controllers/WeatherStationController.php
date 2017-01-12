@@ -80,7 +80,7 @@ class WeatherStationController extends Controller
 
         foreach($query as $q)
         {
-            array_push($ans, $q->id);
+            array_push($ans, $q);
         }
 
         return $ans;

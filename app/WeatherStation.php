@@ -22,7 +22,7 @@ class WeatherStation extends Model
     {
         $results =  DB::select(DB::raw('SELECT id, 
         ( 3959 * acos( cos( radians(' . $lat . ') ) 
-        * cos( radians( lat ) ) * cos( radians( lng ) 
+        * cos( radians( '.$lat.' ) ) * cos( radians( '.$long.' ) 
         - radians(' . $long . ') ) + sin( radians(' . $lat .') ) 
         * sin( radians(lat) ) ) ) AS distance FROM weather_station 
         HAVING distance < 25 ORDER BY distance') );

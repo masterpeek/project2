@@ -80,7 +80,7 @@ class WeatherStationController extends Controller
             AS distance FROM WeatherStation 
             HAVING distance < 25 
             ORDER BY distance 
-            LIMIT 0 , 20');
+            LIMIT 0 , 20')->get();
 
         return $near_by_lat_long;
 

@@ -24,7 +24,7 @@ class WeatherStation extends Model
         ( 3959 * acos( cos( radians(' . $lat . ') ) 
         * cos( radians( lat ) ) * cos( radians( lng ) 
         - radians(' . $long . ') ) + sin( radians(' . $lat .') ) 
-        * sin( radians(lat) ) ) ) AS distance FROM WeatherStation 
+        * sin( radians(lat) ) ) ) AS distance FROM weather_station 
         HAVING distance < 25 ORDER BY distance') );
     }
 }

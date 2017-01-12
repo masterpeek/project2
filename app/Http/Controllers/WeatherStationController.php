@@ -76,14 +76,8 @@ class WeatherStationController extends Controller
 
         $query = WeatherStation::nearBy($lat, $long);
 
-        $ans = [];
+        return $query;
 
-        foreach($query as $q)
-        {
-            array_push($ans, $q);
-        }
-
-        return $ans;
     }
 
     public function allData()
@@ -106,6 +100,8 @@ class WeatherStationController extends Controller
 
         return $all_db;
     }
+
+
 
 
 }

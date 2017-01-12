@@ -75,14 +75,12 @@ class WeatherStationController extends Controller
         $long = $data["Longitude"];
 
         $near_by_lat_long = DB::table('WeatherStation')
-        ->select(DB::raw('*, 
-        111.045 * DEGREES(ACOS(COS(RADIANS('.$lat.'))
-                * COS(RADIANS(lat))
-                * COS(RADIANS(lng) - RADIANS('.$long.'))
-                + SIN(RADIANS('.$lat.'))
-                * SIN(RADIANS(lat)))
-                AS distance'))
+        ->select(DB::raw('id, 
+        ( 3959 * acos( cos( radians(37) ) * cos( radians( '.$lat.' ) ) 
+        * cos( radians( '.$long.' ) - radians(-122) ) + sin( radians(37) ) 
+        * sin( radians( '.@$lat.' ) ) ) ) AS distance'))
             ->from('WeatherStation')
+            ->having('distance', '<',  '25')
             ->orderBy('distance', 'asc')
             ->get();
 

@@ -74,8 +74,7 @@ class WeatherStationController extends Controller
         $lat = $data["Latitude"];
         $lng = $data["Longitude"];
 
-        $query = WeatherStation::select('SELECT station_id, station_name, area_name, 
-        province_name, aqi_value, aqi_condition_name, lat, long, 
+        $query = WeatherStation::select('SELECT station_id, 
         111.045 * DEGREES(ACOS(COS(RADIANS('.$lat.'))
         * COS(RADIANS(lat))
         * COS(RADIANS(long) - RADIANS('.$lng.'))

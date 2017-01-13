@@ -74,7 +74,7 @@ class WeatherStationController extends Controller
         $lat = $data["Latitude"];
         $lng = $data["Longitude"];
 
-        $query = WeatherStation::select('select *')
+        $query = WeatherStation::select('station_id')
             ->from('weather_station')
             ->where('aqi_value', '=', 4)
             ->limit('1')

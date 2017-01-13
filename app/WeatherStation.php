@@ -20,7 +20,7 @@ class WeatherStation extends Model
 
     public static function getNearby($lat, $long)
     {
-        $result = WeatherStation::select('station_id', '3959 * acos(cos(radians(' . $lat . ')) * cos(radians(lat))
+        $result = WeatherStation::select('station_id, 3959 * acos(cos(radians(' . $lat . ')) * cos(radians(lat))
             * cos(radians(long ) - radians(' . $long . '))
             + sin(radians(' . $lat .')) * sin(radians(lat)))) as distance')
             ->orderBy('distance')

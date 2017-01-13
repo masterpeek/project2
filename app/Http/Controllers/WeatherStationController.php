@@ -75,7 +75,7 @@ class WeatherStationController extends Controller
         $lng = $data["Longitude"];
 
         $ans = DB::table('weather_station')
-            -select(
+            ->select(
                 array('weather_station.*',
                     '(3959 * acos(cos(radians(' . $lat . ')) * cos(radians(weather_station.lat)) 
         * cos(radians(weather_station.long ) - radians(' . $lng . ')) 

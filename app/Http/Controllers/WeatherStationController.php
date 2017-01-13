@@ -74,10 +74,9 @@ class WeatherStationController extends Controller
         $lat = $data["Latitude"];
         $lng = $data["Longitude"];
 
-        $ans = DB::table('weather_station')
-        ->select(DB::raw('lat, long, (3959 * acos(cos(radians(' . $lat . ')) * cos(radians(lat)) 
+        $ans = WeatherStation::selectRaw('* , (3959 * acos(cos(radians(' . $lat . ')) * cos(radians(lat)) 
         * cos(radians(long ) - radians(' . $lng . ')) 
-        + sin(radians(' . $lat .')) * sin(radians(lat)))) as distance'))
+        + sin(radians(' . $lat .')) * sin(radians(lat)))) as distance')
             ->orderBy('distance')
             ->limit('1')
             ->get();

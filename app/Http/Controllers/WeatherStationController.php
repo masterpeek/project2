@@ -74,7 +74,7 @@ class WeatherStationController extends Controller
         $lat = $data["Latitude"];
         $lng = $data["Longitude"];
 
-        $query = WeatherStation::select('SELECT ( 3959 * acos( cos( radians(' . $lat . ') ) 
+        $query = WeatherStation::select('station_id, ( 3959 * acos( cos( radians(' . $lat . ') ) 
         * cos( radians( lat ) ) * cos( radians( lng ) - radians(' . $lng . ') ) 
         + sin( radians(' . $lat .') ) * sin( radians(lat) ) ) ) AS distance')
             ->from('weather_station')

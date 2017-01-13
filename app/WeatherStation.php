@@ -18,16 +18,5 @@ class WeatherStation extends Model
         'aqi_value', 'aqi_condition_name', 'lat', 'long'
     ];
 
-    public static function getNearby($lat, $long)
-    {
-        $result = DB::select(DB::raw('SELECT station_id, (3959 * acos(cos(radians(' . $lat . ')) * cos(radians(lat))
-            * cos(radians(long ) - radians(' . $long . '))
-            + sin(radians(' . $lat .')) * sin(radians(lat)))) as distance'))
-            ->orderBy('distance')
-            ->limit('1')
-            ->get();
-
-        return $result;
-    }
 
 }

@@ -69,7 +69,7 @@ class WeatherStationController extends Controller
 
     public function nearByLatLong(Request $request)
     {
-        $aqi_near_by["good_rank"] = [];
+        $aqi_near_by["aqi_near_by"] = [];
 
         $data = $request->all();
 

@@ -76,7 +76,10 @@ class WeatherStationController extends Controller
         $lat = $data["Latitude"];
         $lng = $data["Longitude"];
 
-        $results = DB::select('select weather_station.lat, weather_station.long, 
+        $results = DB::select('select weather_station.aqi_value, 
+        weather_station.aqi_condition_name, 
+        weather_station.area_name, weather_station.province_name,  
+        weather_station.lat, weather_station.long, 
         (3959 * acos(cos(radians(' . $lat . ')) * cos(radians(weather_station.lat)) 
         * cos(radians(weather_station.long ) - radians(' . $lng . ')) 
         + sin(radians(' . $lat .')) * sin(radians(weather_station.lat)))) as distance

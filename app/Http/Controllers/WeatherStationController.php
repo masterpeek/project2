@@ -84,10 +84,6 @@ class WeatherStationController extends Controller
         * cos(radians(weather_station.long ) - radians(' . $lng . ')) 
         + sin(radians(' . $lat .')) * sin(radians(weather_station.lat)))) as distance
         from weather_station order by distance limit 1');
-            //->from('weather_station')
-            //->orderBy('distance')
-            //->limit('1')
-            //->get();
 
         foreach ($results as $result){
             array_push($aqi_near_by["aqi_near_by"], $result);

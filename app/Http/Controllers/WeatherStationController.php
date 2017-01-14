@@ -77,8 +77,8 @@ class WeatherStationController extends Controller
         $ans = DB::select('select weather_station.lat, weather_station.long, 
         (3959 * acos(cos(radians(' . $lat . ')) * cos(radians(weather_station.lat)) 
         * cos(radians(weather_station.long ) - radians(' . $lng . ')) 
-        + sin(radians(' . $lat .')) * sin(radians(weather_station.lat)))) as distance 
-        order by distance limit 1');
+        + sin(radians(' . $lat .')) * sin(radians(weather_station.lat)))) as distance
+        from weather_station order by distance limit 1');
             //->from('weather_station')
             //->orderBy('distance')
             //->limit('1')

@@ -43,8 +43,14 @@ class AutoReportNoiseByUserController extends Controller
 
     public function showNoise()
     {
-        $all_noise = AutoReportNoiseByUser::all();
+        $arrNoise["arrNoise"] = [];
 
-        return $all_noise;
+        $all_noises = AutoReportNoiseByUser::all();
+
+        foreach ($all_noises as $all_noise){
+            array_push($arrNoise["arrNoise"], $all_noise);
+        }
+
+        return $arrNoise;
     }
 }

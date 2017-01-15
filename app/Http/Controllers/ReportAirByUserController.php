@@ -55,9 +55,15 @@ class ReportAirByUserController extends Controller
 
     public function showAir()
     {
-        $all_air = ReportAirByUser::all();
+        $arrAir["arrAir"] = [];
 
-        return $all_air;
+        $all_airs = ReportAirByUser::all();
+
+        foreach ($all_airs as $all_air){
+            array_push($arrAir["arrAir"], $all_air);
+        }
+
+        return $arrAir;
     }
 
 }

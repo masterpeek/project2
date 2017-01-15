@@ -15,7 +15,18 @@ class ReportAirByUserController extends Controller
 
         $latitude = doubleval($air['Latitude']);
         $longitude = doubleval($air['Longitude']);
-        $pollution_choice = intval($air['PollutionChoice']);
+
+        $pollution_choice = 0;
+
+        if($air['PollutionChoice'] = "Normal"){
+            $pollution_choice = 3;
+        }
+        else if($air['PollutionChoice'] = "High"){
+            $pollution_choice = 4;
+        }
+        else if($air['PollutionChoice'] = "Very High"){
+            $pollution_choice = 5;
+        }
 
         $lat = $air['Latitude'];
         $long = $air['Longitude'];

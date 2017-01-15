@@ -120,9 +120,9 @@ class WeatherStationController extends Controller
 
     public function maps()
     {
-        $markers = WeatherStation::all();  
+        $markers = WeatherStation::all();
 
-        return view('weather_station_maps')->with('markers', $markers); 
+        return view('maps')->with('markers', $markers);
     }
 
     public function allData()
@@ -138,10 +138,5 @@ class WeatherStationController extends Controller
 
         return $arrWeather;
     }
-
-
-
-
-
 
 }

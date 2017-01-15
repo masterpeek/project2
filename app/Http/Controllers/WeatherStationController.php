@@ -118,6 +118,13 @@ class WeatherStationController extends Controller
         return $bad_rank;
     }
 
+    public function maps()
+    {
+        $markers = WeatherStation::all();  
+
+        return view('weather_station_maps')->with('markers', $markers); 
+    }
+
     public function allData()
     {
         $arrWeather["arrWeather"] = [];

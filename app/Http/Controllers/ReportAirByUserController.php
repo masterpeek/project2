@@ -15,7 +15,7 @@ class ReportAirByUserController extends Controller
 
         $latitude = doubleval($air['Latitude']);
         $longitude = doubleval($air['Longitude']);
-        $pollution_choice = integerValue($air['PollutionChoice']);
+        $pollution_choice = intval($air['PollutionChoice']);
 
         $lat = $air['Latitude'];
         $long = $air['Longitude'];

@@ -40,9 +40,9 @@
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
                 <a class="mdl-navigation__link" href="">หน้าแรก</a>
-                <a class="mdl-navigation__link" href="{{ route('weather_station_maps') }}">แผนที่คุณภาพเสียงและอากาศ</a>
-                <a class="mdl-navigation__link" href="{{ route('about') }}">เกี่ยวกับ</a>
-                <a class="mdl-navigation__link" href="{{ route('contact') }}">ติดต่อ</a>
+                <a class="mdl-navigation__link" href="">แผนที่คุณภาพเสียงและอากาศ</a>
+                <a class="mdl-navigation__link" href="">เกี่ยวกับ</a>
+                <a class="mdl-navigation__link" href="">ติดต่อ</a>
             </nav>
         </div>
     </header>

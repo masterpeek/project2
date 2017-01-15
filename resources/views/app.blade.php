@@ -39,10 +39,10 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
-                <a class="mdl-navigation__link" href="https://fast-fortress-33466.herokuapp.com/index">หน้าแรก</a>
-                <a class="mdl-navigation__link" href="https://fast-fortress-33466.herokuapp.com/weather_station_maps">แผนที่คุณภาพเสียงและอากาศ</a>
-                <a class="mdl-navigation__link" href="https://fast-fortress-33466.herokuapp.com/about">เกี่ยวกับ</a>
-                <a class="mdl-navigation__link" href="https://fast-fortress-33466.herokuapp.com/contact">ติดต่อ</a>
+                <a class="mdl-navigation__link" href="/index">หน้าแรก</a>
+                <a class="mdl-navigation__link" href="/weather_station_maps">แผนที่คุณภาพเสียงและอากาศ</a>
+                <a class="mdl-navigation__link" href="/about">เกี่ยวกับ</a>
+                <a class="mdl-navigation__link" href="/contact">ติดต่อ</a>
             </nav>
         </div>
     </header>

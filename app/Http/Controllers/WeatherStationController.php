@@ -69,6 +69,8 @@ class WeatherStationController extends Controller
 
     public function nearByLatLong(Request $request)
     {
+        $aqi_near_by["aqi_near_by"] = [];
+
         $data = $request->all();
 
         $lat = $data["Latitude"];
@@ -82,13 +84,6 @@ class WeatherStationController extends Controller
         * cos(radians(weather_station.long ) - radians(' . $lng . ')) 
         + sin(radians(' . $lat .')) * sin(radians(weather_station.lat)))) as distance
         from weather_station order by distance limit 1');
-
-        $this->showNearBy($results);
-    }
-
-    public function showNearBy($results)
-    {
-        $aqi_near_by["aqi_near_by"] = [];
 
         foreach ($results as $result){
             array_push($aqi_near_by["aqi_near_by"], $result);

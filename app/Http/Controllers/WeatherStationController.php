@@ -69,6 +69,8 @@ class WeatherStationController extends Controller
 
     public function nearByLatLong(Request $request)
     {
+        $ans = "";
+
         $aqi_near_by["aqi_near_by"] = [];
 
         $data = $request->all();
@@ -76,7 +78,7 @@ class WeatherStationController extends Controller
         $lat = $data["Latitude"];
         $lng = $data["Longitude"];
 
-        $results = DB::select('select weather_station.aqi_value, 
+        $result = DB::select('select weather_station.aqi_value, 
         weather_station.aqi_condition_name, 
         weather_station.area_name, weather_station.province_name,  
         weather_station.lat, weather_station.long, 
@@ -85,11 +87,9 @@ class WeatherStationController extends Controller
         + sin(radians(' . $lat .')) * sin(radians(weather_station.lat)))) as distance
         from weather_station order by distance limit 1');
 
-        foreach ($results as $result){
-            array_push($aqi_near_by["aqi_near_by"], $result);
-        }
-
-        return $aqi_near_by;
+        $ans = $ans.$result->aqi_value.$result->aqi_condition_name.$result->area_name;
+        
+        return $ans;
     }
 
     public function goodRank()

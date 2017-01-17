@@ -89,11 +89,8 @@ class WeatherStationController extends Controller
 
         $ans = $ans.$result[0]->aqi_value.";".$result[0]->aqi_condition_name.";".$result[0]->area_name;
 
+        return view('show_near')->with('lat', $lat);
 
-        return $ans;
-
-        echo $lat;
-        echo $long;
     }
 
     public function goodRank()

@@ -23,6 +23,7 @@ Route::get('maps', 'WeatherStationController@maps');
 Route::get('/', 'WeatherStationController@index');
 Route::get('/all', 'WeatherStationController@viewAll');
 Route::get('/next/{number}', 'WeatherStationController@next');
+Route::get('/show_near/{lat}', 'WeatherStationController@showNear');
 
 
 

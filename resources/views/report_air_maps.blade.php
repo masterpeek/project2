@@ -1,4 +1,4 @@
-@extends('app')
+@extends('app_air_maps')
 @section('content')
         <!DOCTYPE html>
 <html>
@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-<h3>Weather Station Maps</h3>
+<br><br><br>
 <div id="map" style="width:800px; margin:0 auto;"></div>
 <script>
     function initMap() {

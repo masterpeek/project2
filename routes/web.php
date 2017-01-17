@@ -19,7 +19,11 @@ Route::get('allDb', 'WeatherStationController@allDB');
 Route::post('aqi_near_by', 'WeatherStationController@nearByLatLong');
 Route::get('good_rank', 'WeatherStationController@goodRank');
 Route::get('bad_rank', 'WeatherStationController@badRank');
-Route::get('weather_station_maps', 'WeatherStationController@maps');
+Route::get('maps', 'WeatherStationController@weatherStationMaps');
+Route::get('/', 'WeatherStationController@index');
+Route::get('/all', 'WeatherStationController@viewAll');
+Route::get('/next/{number}', 'WeatherStationController@next');
+
 
 
 Route::resource('user','UserController');

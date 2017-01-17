@@ -6,19 +6,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <style>
         .demo-card-square.mdl-card {
-            width: 80%;
-            height: 50%;
-            margin-left: 10%;
-            margin-right: 10%;
-            margin-bottom: 3%;
-            margin-top: 3%;
-
+            width: 320px;
+            height: 320px;
         }
         .demo-card-square > .mdl-card__title {
-            background: url('../demo.jpg');
-            background-size: cover;
-            background-position: center;
-
+            color: #fff;
+            background:
+                    url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
         }
 
         #view-source {
@@ -40,7 +34,7 @@
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
             <!-- Title -->
-            <span class="mdl-layout-title">เว็บไซต์</span>
+            <span class="mdl-layout-title">NMsurvival</span>
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
@@ -56,17 +50,17 @@
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
-            <a href="{{ url('/') }}" class="mdl-layout__tab is-active">สถานีวัดคุณภาพอากาศ</a>
+            <a href="{{ url('/maps') }}" class="mdl-layout__tab">แผนที่สถานีวัดคุณภาพอากาศ</a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
-            <a href="" class="mdl-layout__tab"></a>
-            <a href="#" class="mdl-layout__tab">รายงานมลพิษทางเสียง</a>
-            <a href="" class="mdl-layout__tab"></a>
+            <a href="{{ url('/report_noise_maps') }}" class="mdl-layout__tab">แผนที่รายงานคุณภาพเสียง</a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
-            <a href="#" class="mdl-layout__tab">รายงานมลพิษทางอากาศ</a>
+            <a href="" class="mdl-layout__tab"></a>
+            <a href="{{ url('/report_air_maps') }}" class="mdl-layout__tab is-active">แผนที่รายงายคุณภาพอากาศ</a>
         </div>
+
 
     </header>
 

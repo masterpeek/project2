@@ -87,9 +87,9 @@ class WeatherStationController extends Controller
         + sin(radians(' . $lat .')) * sin(radians(weather_station.lat)))) as distance
         from weather_station order by distance limit 1');
 
-        //$ans = $ans.$result['aqi_value'].$result['aqi_condition_name'].$result['area_name'];
+        $ans = $ans.$result[0]['aqi_value'].$result[0]['aqi_condition_name'].$result[0]['area_name'];
 
-        return $result;
+        return $ans;
     }
 
     public function goodRank()

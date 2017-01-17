@@ -32,6 +32,8 @@ Route::get('allUser', 'UserController@allUser');
 
 Route::post('get_noise', 'AutoReportNoiseByUserController@getNoise');
 Route::get('show_noise', 'AutoReportNoiseByUserController@showNoise');
+Route::get('report_noise_maps', 'AutoReportNoiseByUserController@maps');
 
 Route::post('get_air', 'ReportAirByUserController@getAir');
 Route::get('show_air', 'ReportAirByUserController@showAir');
+Route::get('report_air_maps', 'ReportAirByUserController@maps');

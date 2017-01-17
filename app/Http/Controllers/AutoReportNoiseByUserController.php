@@ -53,4 +53,11 @@ class AutoReportNoiseByUserController extends Controller
 
         return $arrNoise;
     }
+
+    public function maps()
+    {
+        $markers = AutoReportNoiseByUser::all();
+
+        return view('report_noise_maps')->with('markers', $markers);
+    }
 }

@@ -50,7 +50,7 @@
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
-            <a href="{{ url('/maps') }}" class="mdl-layout__tab">แผนที่สถานีวัดคุณภาพอากาศ</a>
+            <a href="{{ url('/maps') }}" class="mdl-layout__tab is-active">แผนที่สถานีวัดคุณภาพอากาศ</a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
@@ -58,7 +58,7 @@
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
-            <a href="{{ url('/report_air_maps') }}" class="mdl-layout__tab is-active">แผนที่รายงายคุณภาพอากาศ</a>
+            <a href="{{ url('/report_air_maps') }}" class="mdl-layout__tab">แผนที่รายงายคุณภาพอากาศ</a>
         </div>
 
     </header>

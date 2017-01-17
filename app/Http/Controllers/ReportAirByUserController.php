@@ -66,4 +66,11 @@ class ReportAirByUserController extends Controller
         return $arrAir;
     }
 
+    public function maps()
+    {
+        $markers = ReportAirByUser::all();
+
+        return view('report_air_maps')->with('markers', $markers);
+    }
+
 }

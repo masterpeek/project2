@@ -23,6 +23,7 @@ Route::get('maps', 'WeatherStationController@maps');
 Route::get('/', 'WeatherStationController@index');
 Route::get('/all', 'WeatherStationController@viewAll');
 Route::get('/next/{number}', 'WeatherStationController@next');
+Route::get('/show_near', 'WeatherStationController@showNear');
 
 Route::resource('user','UserController');
 Route::post('register', 'UserController@register');

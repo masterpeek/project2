@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Near;
 use App\WeatherStation;
 use Illuminate\Http\Request;
 use GuzzleHttp;
@@ -73,10 +74,15 @@ class WeatherStationController extends Controller
 
         $aqi_near_by["aqi_near_by"] = [];
 
+        $arr =[];
+
         $data = $request->all();
 
         $lat = $data["Latitude"];
         $lng = $data["Longitude"];
+
+        $arr['lat'] = doubleval($lat);
+        $arr['long'] = doubleval($lng);
 
         $result = DB::select('select weather_station.aqi_value, 
         weather_station.aqi_condition_name, 
@@ -89,8 +95,9 @@ class WeatherStationController extends Controller
 
         $ans = $ans.$result[0]->aqi_value.";".$result[0]->aqi_condition_name.";".$result[0]->area_name;
 
-        return $ans;
+        $arr['area'] = $ans;
 
+        Near::create($arr);
     }
 
 
@@ -153,5 +160,12 @@ class WeatherStationController extends Controller
         }
 
         return $arrWeather;
+    }
+
+    public function showNear()
+    {
+        $all = Near::all();
+
+        return $all;
     }
 }

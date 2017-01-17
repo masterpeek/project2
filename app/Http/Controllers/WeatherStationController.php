@@ -98,6 +98,9 @@ class WeatherStationController extends Controller
         $arr['area'] = $ans;
 
         Near::create($arr);
+
+        return $ans;
+        
     }
 
 

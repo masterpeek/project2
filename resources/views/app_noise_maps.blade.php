@@ -58,7 +58,7 @@
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
-            <a href="{{ url('/report_air_maps') }}" class="mdl-layout__tab">แผนที่รายงายคุณภาพอากาศ</a>
+            <a href="{{ url('/report_air_maps') }}" class="mdl-layout__tab">แผนที่รายงานคุณภาพอากาศ</a>
         </div>
 
 

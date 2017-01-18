@@ -9,6 +9,10 @@
             width: 800px;
             height: 100px;
         }
+        .demo-card-square > .mdl-card__title {
+            background-color: #3F51B5;
+
+        }
     </style>
     <meta charset="UTF-8">
     <title>App Name</title>

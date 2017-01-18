@@ -146,7 +146,7 @@ class WeatherStationController extends Controller
 
     public function show($id)
     {
-        $data = WeatherStation::find($id);
+        $data = WeatherStation::where('station_id', $id)->get();
 
         return view('show_weather_station')->with('data', $data);
     }

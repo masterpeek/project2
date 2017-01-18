@@ -2,19 +2,18 @@
 <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="$$hosted_libs_prefix$$/$$version$$/material.deep_purple-pink.min.css">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
 
     <style>
         #map {
-            height: 200px;
+            height: 400px;
             width: 40%;
         }
     </style>
 </head>
 @section('content')
     <br><br><br>
-    <div id="map" style="width:800px; margin:0 auto;"></div>
+    <div id="map" style="width:400px; margin:0 auto;"></div>
     <script>
         function initMap() {
             var bkk = {lat: 13.7251097, lng: 100.3529027};
@@ -42,6 +41,8 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSolnKvQzksYqxOviOJrNTkRn7-voF9MA&callback=initMap">
     </script>
     <br><br><br>
+    <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
         <div class="mdl-card mdl-cell mdl-cell--12-col">
             <div class="mdl-card__supporting-text">
@@ -54,4 +55,6 @@
             </div>
         </div>
     </section>
+        </div>
+    </main>
     @stop

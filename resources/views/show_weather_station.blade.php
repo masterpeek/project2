@@ -26,7 +26,7 @@
             // Multiple Markers
             var markers = [
                     @foreach($data as $result)
-                ['', {{ $result->lat }}, {{ $result->long }} ],
+                ['', {{ $result[0]->lat }}, {{ $result[0]->long }} ],
                 @endforeach
             ];
 
@@ -37,11 +37,6 @@
                     map: map,
                     title: markers[i][0]
                 });
-
-                //var marker = new google.maps.Marker({
-                //  position: ,
-                //map: map
-                //});
             }
         }
     </script>

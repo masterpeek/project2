@@ -100,7 +100,7 @@ class WeatherStationController extends Controller
         Near::create($arr);
 
         return $ans;
-        
+
     }
 
 
@@ -142,6 +142,13 @@ class WeatherStationController extends Controller
         $datas = WeatherStation::all()->take(6);
 
         return view('index')->with('datas', $datas);
+    }
+
+    public function show($id)
+    {
+        $data = WeatherStation::find($id);
+
+        return view('show_weather_station')->with('data', $data);
     }
 
     public function viewAll()

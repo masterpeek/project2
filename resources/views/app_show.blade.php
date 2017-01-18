@@ -13,11 +13,11 @@
             background-color: #3F51B5;
 
         }
-            h1 {
+            h4 {
                 color: #FAFAFA;
             }
 
-            h2 {
+            h5 {
             color: #000000;
             }
 

@@ -1,9 +1,5 @@
-@extends('app')
+@extends('app_show')
 <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
-
     <style>
         #map {
             height: 400px;
@@ -41,21 +37,19 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSolnKvQzksYqxOviOJrNTkRn7-voF9MA&callback=initMap">
     </script>
     <br><br><br>
-    <div class="demo-ribbon"></div>
-    <main class="demo-main mdl-layout__content">
-        <div class="demo-container mdl-grid">
-            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-            <div class="mdl-card__supporting-text">
-                <h4>{{ $data->aqi_value }}</h4>
-               {{ $data->aqi_condition_name }}
-            </div>
-            <div class="mdl-card__actions">
-                <div class="mdl-button">{{ $data->area_name }}
+    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+        <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--4-col">
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <h2 class="mdl-card__title-text">{{ $data->aqi_value }}</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            {{ $data->area_name }}
+                        </div>
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
-            </section>
-        </div>
-    </main>
+    </section>
     @stop

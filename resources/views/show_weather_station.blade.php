@@ -42,6 +42,7 @@
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
                         <div class="mdl-card__title mdl-card--expand">
                             <h1 class="mdl-card__title">Hello World!</h1>
+                            <br>
                             <h2 class="mdl-card__title-text">AQI: {{ $data->aqi_value }}
                                 คุณภาพอากาศ: {{ $data->aqi_condition_name }}</h2>
                         </div>

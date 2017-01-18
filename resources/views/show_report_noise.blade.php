@@ -19,7 +19,7 @@
 
             // Multiple Markers
             var markers = [
-                ['', {{ $data->lat }}, {{ $data->long }} ],
+                ['', {{ $data->noise_lat }}, {{ $data->noise_long }} ],
             ];
 
             for (i = 0; i < markers.length; i++) {

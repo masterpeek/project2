@@ -24,7 +24,7 @@
     </section>
     @unless(Request::url() == url('/all'))
         <div class="mdl-layout__obfuscator"></div>
-        <a href="{{ url('/all') }}" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--white">รายการทั้งหมด</a>
+        <a href="{{ url('/all_report_noise') }}" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--white">รายการทั้งหมด</a>
         <script src="$$hosted_libs_prefix$$/$$version$$/material.min.js"></script>
     @endunless
 @stop

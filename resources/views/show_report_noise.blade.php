@@ -1,4 +1,4 @@
-@extends('app_show')
+@extends('app_show_noise')
 <head>
     <style>
         #map {

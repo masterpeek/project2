@@ -1,4 +1,4 @@
-@extends('app_show')
+@extends('app_show_air')
 <head>
     <style>
         #map {
@@ -41,9 +41,8 @@
             <div class="mdl-cell mdl-cell--4-col">
                 <div class="demo-card-square mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title mdl-card--expand">
-                        <h4> ระดับมลพิษทางอากาศ: {{ $data->air_smell }} </h4>
-                        <br>
-                        <h4> ความคิดเห็น: {{ $data->air_comment }} </h4>
+                        <h4> ระดับมลพิษทางอากาศ: {{ $data->air_smell }} <br>
+                            ความคิดเห็น: {{ $data->air_comment }}</h4>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h5> พื้นที่: {{ $data->air_area_name }} </h5>

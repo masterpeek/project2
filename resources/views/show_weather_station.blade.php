@@ -36,9 +36,6 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSolnKvQzksYqxOviOJrNTkRn7-voF9MA&callback=initMap">
     </script>
     <br>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <main class='mdl-layout__content'>
-            <div class='mdl-layout__tab-panel is-active' id='overview'>
                 <section class='section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp'>
                     <div class='mdl-card mdl-cell mdl-cell--12-col'>
                         <div class='mdl-card__supporting-text'>
@@ -49,8 +46,6 @@
                         </div>
                     </div>
                 </section>
-            </div>
-        </main>
-    </div>
+
     <br><br><br>
     @stop

@@ -25,9 +25,7 @@
 
             // Multiple Markers
             var markers = [
-                    @foreach($data as $result)
-                ['', {{ $result[0]->lat }}, {{ $result[0]->long }} ],
-                @endforeach
+                ['', {{ $data->lat }}, {{ $data->long }} ],
             ];
 
             for (i = 0; i < markers.length; i++) {

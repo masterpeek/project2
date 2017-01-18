@@ -1,4 +1,4 @@
-@extends('app')
+@extends('app_noise')
 
 @section('content')
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">

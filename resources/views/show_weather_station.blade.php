@@ -3,7 +3,6 @@
     <style>
         #map {
             height: 400px;
-            width: 40%;
         }
     </style>
 </head>
@@ -14,7 +13,7 @@
         function initMap() {
             var bkk = {lat: 13.7251097, lng: 100.3529027};
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 6,
+                zoom: 5,
                 center: bkk
             });
 
@@ -43,7 +42,7 @@
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
                         <div class="mdl-card__title mdl-card--expand">
                             <h2 class="mdl-card__title-text">AQI: {{ $data->aqi_value }}
-                                คุณภาพอากาศ: {{ $data->aqi_condition_value }}</h2>
+                                คุณภาพอากาศ: {{ $data->aqi_condition_name }}</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
                             พื้นที่: {{ $data->area_name }}

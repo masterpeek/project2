@@ -15,9 +15,7 @@
 
         }
         .demo-card-square > .mdl-card__title {
-            background: url('../demo.jpg');
-            background-size: cover;
-            background-position: center;
+            background:cornflowerblue;
 
         }
 

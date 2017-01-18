@@ -65,7 +65,14 @@ class AutoReportNoiseByUserController extends Controller
     {
         $datas = AutoReportNoiseByUser::all()->take(6);
 
-        return view('index')->with('datas', $datas);
+        return view('index_report_noise')->with('datas', $datas);
+    }
+
+    public function viewAll()
+    {
+        $datas = AutoReportNoiseByUser::all();
+
+        return view('index_report_noise')->with('datas', $datas);
     }
 
     public function show($id)
@@ -75,12 +82,6 @@ class AutoReportNoiseByUserController extends Controller
         return view('show_report_noise')->with('data', $data);
     }
 
-    public function viewAll()
-    {
-        $datas = AutoReportNoiseByUser::all();
-
-        return view('index')->with('datas', $datas);
-    }
 
 
 }

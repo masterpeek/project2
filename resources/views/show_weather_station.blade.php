@@ -13,7 +13,7 @@
 </head>
 @section('content')
     <br><br><br>
-    <div id="map" style="width:400px; margin:0 auto;"></div>
+    <div id="map" style="width:600px; margin:0 auto;"></div>
     <script>
         function initMap() {
             var bkk = {lat: 13.7251097, lng: 100.3529027};
@@ -41,10 +41,11 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSolnKvQzksYqxOviOJrNTkRn7-voF9MA&callback=initMap">
     </script>
     <br><br><br>
-    <main class="mdl-layout__content">
-        <div class="mdl-layout__tab-panel is-active" id="overview">
-    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-        <div class="mdl-card mdl-cell mdl-cell--12-col">
+    <div class="demo-ribbon"></div>
+    <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+            <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
             <div class="mdl-card__supporting-text">
                 <h4>{{ $data->aqi_value }}</h4>
                {{ $data->aqi_condition_name }}
@@ -54,7 +55,6 @@
                 </div>
             </div>
         </div>
-    </section>
         </div>
     </main>
     @stop

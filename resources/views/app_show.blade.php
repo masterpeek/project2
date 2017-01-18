@@ -14,8 +14,12 @@
 
         }
         .demo-card-square > .mdl-card__title-text {
-            font-c: #FAFAFA;
+            font-color: rgb(255, 255, 255);
         }
+        .demo-card-square > .mdl-card__supporting-text {
+            font-color: rgb(0, 0, 0);
+        }
+
 
 
     </style>

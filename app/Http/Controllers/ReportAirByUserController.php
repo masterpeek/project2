@@ -73,4 +73,27 @@ class ReportAirByUserController extends Controller
         return view('report_air_maps')->with('markers', $markers);
     }
 
+    public function index()
+    {
+        $datas = ReportAirByUser::all()->take(6);
+
+        return view('index')->with('datas', $datas);
+    }
+
+    public function show($id)
+    {
+        $data = ReportAirByUser::where('id', $id)->get()->first();
+
+        return view('show_report_air')->with('data', $data);
+    }
+
+    public function viewAll()
+    {
+        $datas = ReportAirByUser::all();
+
+        return view('index')->with('datas', $datas);
+    }
+
+
+
 }

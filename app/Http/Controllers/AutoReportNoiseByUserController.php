@@ -60,4 +60,27 @@ class AutoReportNoiseByUserController extends Controller
 
         return view('report_noise_maps')->with('markers', $markers);
     }
+
+    public function index()
+    {
+        $datas = AutoReportNoiseByUser::all()->take(6);
+
+        return view('index')->with('datas', $datas);
+    }
+
+    public function show($id)
+    {
+        $data = AutoReportNoiseByUser::where('id', $id)->get()->first();
+
+        return view('show_report_noise')->with('data', $data);
+    }
+
+    public function viewAll()
+    {
+        $datas = AutoReportNoiseByUser::all();
+
+        return view('index')->with('datas', $datas);
+    }
+
+
 }

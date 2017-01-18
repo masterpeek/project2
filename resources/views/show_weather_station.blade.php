@@ -41,11 +41,11 @@
                 <div class="mdl-cell mdl-cell--4-col">
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
                         <div class="mdl-card__title mdl-card--expand">
-                            <h1> AQI: {{ $data->aqi_value }}
-                                คุณภาพอากาศ: {{ $data->aqi_condition_name }}</h1>
+                            <h4> AQI: {{ $data->aqi_value }}
+                                คุณภาพอากาศ: {{ $data->aqi_condition_name }}</h4>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            <h2> พื้นที่: {{ $data->area_name }} </h2>
+                            <h5> พื้นที่: {{ $data->area_name }} </h5>
                         </div>
                     </div>
                 </div>

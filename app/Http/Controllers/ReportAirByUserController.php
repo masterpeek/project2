@@ -38,7 +38,7 @@ class ReportAirByUserController extends Controller
         $store = $res->getBody()->getContents();
         $ans = GuzzleHttp\json_decode($store);
 
-        $air_area_name =  $ans->formatted_address;
+        $air_area_name =  $ans->results[0]->formatted_address;
         $air_province_name = $ans->results[0]->address_components[4]->short_name;
 
         $data = [];

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
 use App\ReportAirByUser;
+use SebastianBergmann\CodeCoverage\Report\Xml\Report;
 
 class ReportAirByUserController extends Controller
 {
@@ -66,6 +67,14 @@ class ReportAirByUserController extends Controller
         return $arrAir;
     }
 
+    public function deleteAir()
+    {
+        $query = "TRUNCATE TABLE report_air_by_user";
+
+        ReportAirByUser::getQuery($query)->delete();
+
+    }
+
     public function maps()
     {
         $markers = ReportAirByUser::all();
@@ -75,14 +84,14 @@ class ReportAirByUserController extends Controller
 
     public function index()
     {
-        $datas = ReportAirByUser::all()->take(6);
+        $datas = ReportAirByUser::orderBy('created_at', 'DESC')->take(6)->get();
 
         return view('index_report_air')->with('datas', $datas);
     }
 
     public function viewAll()
     {
-        $datas = ReportAirByUser::all();
+        $datas = ReportAirByUser::orderBy('created_at', 'DESC')->get();
 
         return view('index_report_air')->with('datas', $datas);
     }

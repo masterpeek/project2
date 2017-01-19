@@ -40,6 +40,7 @@ Route::get('/show_report_noise/{id}', 'AutoReportNoiseByUserController@show');
 
 Route::post('get_air', 'ReportAirByUserController@getAir');
 Route::get('show_air', 'ReportAirByUserController@showAir');
+Route::get('delete_air', 'ReportAirByUserController@deleteAir');
 Route::get('report_air_maps', 'ReportAirByUserController@maps');
 Route::get('/index_report_air', 'ReportAirByUserController@index');
 Route::get('/all_report_air', 'ReportAirByUserController@viewAll');

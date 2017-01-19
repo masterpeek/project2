@@ -59,7 +59,7 @@ class AutoReportNoiseByUserController extends Controller
         $query = "TRUNCATE TABLE auto_report_noise_by_user";
 
         AutoReportNoiseByUser::getQuery($query)->delete();
-        
+
     }
 
     public function maps()

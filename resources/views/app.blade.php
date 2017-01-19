@@ -16,7 +16,7 @@
         }
         .demo-card-square > .mdl-card__title {
             background: url('../station.jpg');
-            background-size: 400px;
+            background-size: 250px;
             background-position: center;
 
         }

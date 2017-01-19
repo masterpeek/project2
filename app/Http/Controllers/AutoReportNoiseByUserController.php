@@ -54,6 +54,14 @@ class AutoReportNoiseByUserController extends Controller
         return $arrNoise;
     }
 
+    public function deleteNoise()
+    {
+        $query = "TRUNCATE TABLE auto_report_noise_by_user";
+
+        AutoReportNoiseByUser::getQuery($query)->delete();
+        
+    }
+
     public function maps()
     {
         $markers = AutoReportNoiseByUser::all();

@@ -32,6 +32,7 @@ Route::get('allUser', 'UserController@allUser');
 
 Route::post('get_noise', 'AutoReportNoiseByUserController@getNoise');
 Route::get('show_noise', 'AutoReportNoiseByUserController@showNoise');
+Route::get('delete_noise', 'AutoReportNoiseByUserController@deleteNoise');
 Route::get('report_noise_maps', 'AutoReportNoiseByUserController@maps');
 Route::get('/index_report_noise', 'AutoReportNoiseByUserController@index');
 Route::get('/all_report_noise', 'AutoReportNoiseByUserController@viewAll');

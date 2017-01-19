@@ -46,6 +46,9 @@ class WeatherStationController extends Controller
             $data['aqi_value'] = $ans->AQILast->AQI->aqi;
             $data['lat'] = $ans->lat;
             $data['long'] = $ans->long;
+            $data['date'] = $ans->LastUpdate->date;
+            $data['time'] = $ans->LastUpdate->time;
+            $data['station_type'] = $ans->stationType;
 
             if ($ans->AQILast->AQI->aqi >= 0 && $ans->AQILast->AQI->aqi <= 50) {
                 $data['aqi_condition_name'] = 'คุณภาพดี';

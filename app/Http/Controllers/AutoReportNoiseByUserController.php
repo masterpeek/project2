@@ -32,7 +32,7 @@ class AutoReportNoiseByUserController extends Controller
         $noise_area_name =  $ans->results[0]->address_components[3]->short_name;
         $noise_province_name = $ans->results[0]->address_components[4]->short_name;
 
-        if($noise_province_name = "จ.นคาปฐม")
+        if($noise_province_name === "จ.นคาปฐม")
         {
             $noise_province_name = "จ.นครปฐม";
         }

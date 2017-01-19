@@ -46,6 +46,8 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h5> พื้นที่: {{ $data->noise_area_name }} </h5>
+                        <br>
+                        <h5> เวลา: {{ $data->created_at }} </h5>
                     </div>
                 </div>
             </div>

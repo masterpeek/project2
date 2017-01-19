@@ -24,7 +24,6 @@ class WeatherStationController extends Controller
 
         $size_id_station = sizeof($id_station);
 
-        Log::info($size_id_station);
 
         $client = new GuzzleHttp\Client();
 
@@ -32,14 +31,12 @@ class WeatherStationController extends Controller
             $res = $client->request('GET', 'http://air4thai.pcd.go.th/forapp2/getAQI_JSON.php?stationID=' . $id_station[$i]);
             $store = $res->getBody()->getContents();
             $ans = GuzzleHttp\json_decode($store);
-            Log::info($ans->areaTH);
 
             $province_name_split = explode(", ", $ans->areaTH);
             $province_name_split = $province_name_split[sizeof($province_name_split) - 1];
 
             $data = [];
             $data['station_id'] = $ans->stationID;
-            Log::info($ans->stationID);
             $data['station_name'] = $ans->nameTH;
             $data['area_name'] = $ans->areaTH;
             $data['province_name'] = $province_name_split;
@@ -65,10 +62,7 @@ class WeatherStationController extends Controller
             WeatherStation::create($data);
 
         }
-
-        Log::info($province_name_split);
-        Log::info($ans->AQILast->AQI->aqi);
-
+        
     }
 
     public function nearByLatLong(Request $request)

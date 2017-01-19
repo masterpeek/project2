@@ -11,7 +11,7 @@
                         </div>
                         <div class="mdl-card__supporting-text">
                             วันที่: {{ $data->created_at }} <br>
-                            พื้นที่: {{ $data->noise_area_name }}
+                            พื้นที่: {{ $data->air_area_name }}
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
                             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ url('show_report_air/'.$data->id) }}">

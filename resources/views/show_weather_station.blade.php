@@ -41,7 +41,7 @@
                 <div class="mdl-cell mdl-cell--4-col">
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
                         <div class="mdl-card__title mdl-card--expand">
-                            <h4> AQI: {{ $data->aqi_value }}
+                            <h4> AQI: {{ $data->aqi_value }} &nbsp;
                                 คุณภาพอากาศ: {{ $data->aqi_condition_name }}
                                 &nbsp;วันที่: {{ $data->date }}&nbsp;เวลา: {{ $data->time }}</h4>
                         </div>

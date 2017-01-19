@@ -10,7 +10,7 @@
                             <h2 class="mdl-card__title-text"></h2>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            {{ $data->noise_area_name }} <br>
+                            {{ $data->noise_area_name }}, {{$data->noise_province_name}} <br>
                             {{ $data->created_at }}
                         </div>
                         <div class="mdl-card__actions mdl-card--border">

@@ -42,12 +42,11 @@
                 <div class="demo-card-square mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title mdl-card--expand">
                         <h4> ความดังของเสียง: {{ $data->noise_value }} เดซิเบล
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </h4>
                     </div>
                     <div class="mdl-card__supporting-text">
                         <h5> พื้นที่: {{ $data->noise_area_name }} </h5>
-                        <br>
-                        <h5> เวลา: {{ $data->created_at }} </h5>
                     </div>
                 </div>
             </div>

@@ -63,14 +63,14 @@ class AutoReportNoiseByUserController extends Controller
 
     public function index()
     {
-        $datas = AutoReportNoiseByUser::orderBy('created_at', 'DESC')->take(6);
+        $datas = AutoReportNoiseByUser::orderBy('created_at', 'DESC')->take(6)-get();
 
         return view('index_report_noise')->with('datas', $datas);
     }
 
     public function viewAll()
     {
-        $datas = AutoReportNoiseByUser::orderBy('created_at', 'DESC');
+        $datas = AutoReportNoiseByUser::orderBy('created_at', 'DESC')-get();
 
         return view('index_report_noise')->with('datas', $datas);
     }

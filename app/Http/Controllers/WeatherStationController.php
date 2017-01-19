@@ -15,12 +15,12 @@ class WeatherStationController extends Controller
     {
         DB::table('weather_station')->delete();
 
-        $id_station = array('02', '03', '05', '10', '12', '52', '54',
-            '59', '61', '46', '60', '32', '33', '34', '76', '47', '41',
-            '13', '62', '67', '75', '77', '21', '70', '43', '63', '28',
-            '30', '31', '74', '26', '37', '38', '39', '40', '68', '44',
-            '08', '16', '17', '19', '14', '27', '24', '25', '71', '42',
-            '57', '73', '35', '36', '72', '69', '58');
+        $id_station = array('02t', '03t', '05t', '10t', '12t', '52t', '54t',
+            '59t', '61t', '46t', '60t', '32t', '33t', '34t', '76t', '47t', '41t',
+            '13t', '62t', '67t', '75t', '77t', '21t', '70t', '43t', '63t', '28t',
+            '30t', '31t', '74t', '26t', '37t', '38t', '39t', '40t', '68t', '44t',
+            '08t', '16t', '17t', '19t', '14t', '27t', '24t', '25t', '71t', '42t',
+            '57t', '73t', '35t', '36t', '72t', '69t', '58t', 'm109', 'm110');
 
         $size_id_station = sizeof($id_station);
 
@@ -29,7 +29,7 @@ class WeatherStationController extends Controller
         $client = new GuzzleHttp\Client();
 
         for ($i = 0; $i < $size_id_station; $i++) {
-            $res = $client->request('GET', 'http://air4thai.pcd.go.th/forapp2/getAQI_JSON.php?stationID=' . $id_station[$i] . 't');
+            $res = $client->request('GET', 'http://air4thai.pcd.go.th/forapp2/getAQI_JSON.php?stationID=' . $id_station[$i]);
             $store = $res->getBody()->getContents();
             $ans = GuzzleHttp\json_decode($store);
             Log::info($ans->areaTH);

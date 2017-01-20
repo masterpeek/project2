@@ -24,7 +24,7 @@
         //All Data
         var all_data = [
             @foreach($markers as $marker)
-            [{{ $marker->aqi_value }}, {{ $marker->area_name }},
+            ['', {{ $marker->aqi_value }}, {{ $marker->area_name }},
                 {{ $marker->date }}, {{ $marker->time }}],
             @endforeach
         ];
@@ -44,7 +44,7 @@
                 title: markers[i][0]
             });
 
-            var content = all_data[i][0];
+            var content = all_data[i][1];
 
             google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
                 return function() {

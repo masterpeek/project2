@@ -24,7 +24,8 @@
         // Multiple Markers
         var markers = [
                 @foreach($markers as $marker)
-            ['', {{ $marker->lat }}, {{ $marker->long }} ],
+            ['', {{ $marker->lat }}, {{ $marker->long }},{{ $marker->aqi_value }},
+                {{$marker->area_name}}, {{ $marker->date }}, {{ $marker->time }} ]
             @endforeach
         ];
 

@@ -20,19 +20,11 @@
             zoom: 6,
             center: bkk
         });
-
-        //All Data
-        var all_data = [
-            @foreach($markers as $marker)
-            ['', {{ $marker->aqi_value }}, {{ $marker->area_name }},
-                {{ $marker->date }}, {{ $marker->time }}],
-            @endforeach
-        ];
-
+        
         // Multiple Markers
         var markers = [
                 @foreach($markers as $marker)
-            ['', {{ $marker->lat }}, {{ $marker->long }}, {{ $marker->area_name }}],
+            ['', {{ $marker->lat }}, {{ $marker->long }}],
             @endforeach
         ];
 

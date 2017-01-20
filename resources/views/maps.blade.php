@@ -33,7 +33,7 @@
         }
 
         //All Data
-        var datas = [
+        var all_data = [
             @foreach($markers as $marker)
             [{{ $marker->aqi_value }}, {{ $marker->area_name }},
                 {{ $marker->date }}, {{ $marker->time }}],
@@ -55,7 +55,7 @@
                 title: markers[i][0]
             });
 
-            addInfoWindow(marker, datas[i][1]);
+            addInfoWindow(marker, all_data[i][1]);
 
             //var marker = new google.maps.Marker({
             //  position: ,

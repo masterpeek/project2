@@ -21,6 +21,24 @@
             center: bkk
         });
 
+        function addInfoWindow(marker, message) {
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: message
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infoWindow.open(map, marker);
+            });
+        }
+
+        //All Data
+        var datas = [
+            @foreach($markers as $marker)
+            [{{ $marker->aqi_value }}, {{ $marker->area_name }},
+                {{ $marker->date }}, {{ $marker->time }}],
+        ];
+
         // Multiple Markers
         var markers = [
                 @foreach($markers as $marker)
@@ -36,10 +54,13 @@
                 title: markers[i][0]
             });
 
+            addInfoWindow(marker, datas[i][1]);
+
             //var marker = new google.maps.Marker({
             //  position: ,
             //map: map
             //});
+
         }
     }
 </script>

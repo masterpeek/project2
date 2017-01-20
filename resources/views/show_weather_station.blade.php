@@ -13,21 +13,17 @@
         function initMap() {
             var bkk = {lat: 13.7251097, lng: 100.3529027};
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 6,
+                zoom: 5,
                 center: bkk
             });
 
             // Multiple Markers
             var markers = [
-                    @foreach($markers as $marker)
-                ['', {{ $marker->lat }}, {{ $marker->long }}, {{ $marker->aqi_value }}],
-                @endforeach
+                ['', {{ $data->lat }}, {{ $data->long }}, {{ $data->aqi_value }}],
             ];
-
 
             for (i = 0; i < markers.length; i++) {
                 var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-
                 var aqi = markers[i][3];
 
                 var content = "AQI: "+ aqi;

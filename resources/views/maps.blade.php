@@ -14,7 +14,7 @@
 <br><br><br>
 <div id="map" style="width:800px; margin:0 auto;"></div>
 <script>
-    
+
     function initMap() {
         var bkk = {lat: 13.7251097, lng: 100.3529027};
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -30,10 +30,6 @@
         ];
 
         for (i = 0; i < markers.length; i++) {
-
-            var aqi = result[i][1];
-            var area = result[i][2];
-
             var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
             marker = new google.maps.Marker({
                 position: position,

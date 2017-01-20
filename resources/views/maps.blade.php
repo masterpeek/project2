@@ -32,7 +32,7 @@
         // Multiple Markers
         var markers = [
                 @foreach($markers as $marker)
-            ['', {{ $marker->lat }}, {{ $marker->long }}],
+            ['', {{ $marker->lat }}, {{ $marker->long }}, {{ $marker->area_name }}],
             @endforeach
         ];
 
@@ -43,15 +43,6 @@
                 map: map,
                 title: markers[i][0]
             });
-
-            var content = all_data[i][1];
-
-            google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
-                return function() {
-                    infowindow.setContent(content);
-                    infowindow.open(map,marker);
-                };
-            })(marker,content,infowindow));
         }
     }
 </script>

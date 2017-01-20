@@ -21,17 +21,6 @@
             center: bkk
         });
 
-        function addInfoWindow(marker, message) {
-
-            var infoWindow = new google.maps.InfoWindow({
-                content: message
-            });
-
-            google.maps.event.addListener(marker, 'click', function () {
-                infoWindow.open(map, marker);
-            });
-        }
-
         //All Data
         var all_data = [
             @foreach($markers as $marker)
@@ -55,7 +44,13 @@
                 title: markers[i][0]
             });
 
-            addInfoWindow(marker, all_data[i][1]);
+            marker.info = new google.maps.InfoWindow({
+                content: all_data[i][0]
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                marker.info.open(map, marker);
+            });
 
             //var marker = new google.maps.Marker({
             //  position: ,

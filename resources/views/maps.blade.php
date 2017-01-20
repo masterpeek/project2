@@ -21,18 +21,12 @@
             center: bkk
         });
 
-        //All Data
-        var all_data = [
-            @foreach($markers as $marker)
-            [{{ $marker->aqi_value }}, {{ $marker->area_name }},
-                {{ $marker->date }}, {{ $marker->time }}],
-            @endforeach
-        ];
+
 
         // Multiple Markers
         var markers = [
                 @foreach($markers as $marker)
-            ['', {{ $marker->lat }}, {{ $marker->long }}],
+            [{{ $marker->area_name }}, {{ $marker->lat }}, {{ $marker->long }}],
             @endforeach
         ];
 
@@ -43,20 +37,7 @@
                 map: map,
                 title: markers[i][0]
             });
-
-            marker.info = new google.maps.InfoWindow({
-                content: all_data[i][0]
-            });
-
-            google.maps.event.addListener(marker, 'click', function() {
-                marker.info.open(map, marker);
-            });
-
-            //var marker = new google.maps.Marker({
-            //  position: ,
-            //map: map
-            //});
-
+            
         }
     }
 </script>

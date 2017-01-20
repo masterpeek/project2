@@ -41,7 +41,7 @@
             <div class="mdl-cell mdl-cell--4-col">
                 <div class="demo-card-square mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title mdl-card--expand">
-                        <h4> ระดับมลพิษทางอากาศ: {{ $data->air_smell }} &nbsp;วันที่: {{ $data->created_at }}
+                        <h4> ระดับมลพิษทางอากาศ: {{ $data->air_smell }} &nbsp;วันที่: {{ $data->created_at }}  น.
                             <br>
                             ความคิดเห็น: {{ $data->air_comment }}</h4>
 

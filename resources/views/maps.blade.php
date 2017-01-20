@@ -80,8 +80,8 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSolnKvQzksYqxOviOJrNTkRn7-voF9MA&callback=initMap">
 </script>
 <br><br><br>
+</body>
 <p style="text-align:center;">
     <img src="show_color.png" style="width:700px;height:100px;>
-</body>
 </html>
 @stop

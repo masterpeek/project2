@@ -37,6 +37,7 @@
             @foreach($markers as $marker)
             [{{ $marker->aqi_value }}, {{ $marker->area_name }},
                 {{ $marker->date }}, {{ $marker->time }}],
+            @endforeach
         ];
 
         // Multiple Markers

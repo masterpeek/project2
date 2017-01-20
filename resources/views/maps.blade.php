@@ -14,13 +14,7 @@
 <br><br><br>
 <div id="map" style="width:800px; margin:0 auto;"></div>
 <script>
-
-    var result = [
-            @foreach($markers as $marker)
-        ['', {{ $marker->aqi_value }}, {{ $marker->area_name }}],
-        @endforeach
-    ];
-
+    
     function initMap() {
         var bkk = {lat: 13.7251097, lng: 100.3529027};
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -47,17 +41,6 @@
                 title: markers[i][0]
             });
 
-            var content = "AQI: "+aqi+"Area: "+area;
-
-            var infowindow = new google.maps.InfoWindow();
-
-            google.maps.event.addListener(marker,'click', (function(marker,content,infowindow)
-            {
-                return function() {
-                    infowindow.setContent(content);
-                    infowindow.open(map,marker);
-                };
-            })(marker,content,infowindow));
         }
     }
 </script>

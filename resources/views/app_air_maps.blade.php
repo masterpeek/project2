@@ -47,10 +47,7 @@
 
         @yield('content')
 
-
-        <footer class="mdl-mini-footer">
-
-        </footer>
+        
     </main>
 </div>
 </body>

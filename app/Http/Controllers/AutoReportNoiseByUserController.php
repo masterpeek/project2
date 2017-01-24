@@ -37,6 +37,7 @@ class AutoReportNoiseByUserController extends Controller
         $data['noise_area_name'] = $noise_area_name;
         //$ans->results->address_components->short_name[4];
         $data['noise_province_name'] = $noise_province_name;
+        $data['user_id'] = intval($noise['UserId']);
 
             AutoReportNoiseByUser::create($data);
 

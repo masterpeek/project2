@@ -49,6 +49,7 @@ class ReportAirByUserController extends Controller
         $data['air_long'] = $longitude;
         $data['air_area_name'] = $air_area_name;
         $data['air_province_name'] = $air_province_name;
+        $data['user_id'] = intval($air['UserId']);
 
         ReportAirByUser::create($data);
 

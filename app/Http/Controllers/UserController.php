@@ -22,15 +22,40 @@ class UserController extends Controller
         $data = [];
 
         $data['username'] = $user['Username'];
-        $data['password'] = $user['Password'];
+        $data['password'] = password_hash($user['Password'], PASSWORD_DEFAULT);
         $data['fname'] = $user['Name'];
         $data['lname'] = $user['Lastname'];
         $data['tel'] = $user['Telephone'];
+        $data['email'] = $user['Email'];
+        $data['user_level'] = 1;
 
         $user = User::create($data);
 
         return $user;
 
+    }
+
+    public function login(Request $request)
+    {
+        $result = "";
+
+        $user = $request->all();
+
+        $username = $user["Username"];
+        $password = $user["Password"];
+
+        $data = User::where('username', '=', $username)->get()->first();
+
+
+        if($data != null)
+        {
+           if(password_verify($password,$data[0]->password))
+           {
+               $result = $result.$data[0]->username.";".$data[0]->fname.";".$data[0]->lname;
+
+               return $result;
+           }
+        }
     }
 
     public function allUser()

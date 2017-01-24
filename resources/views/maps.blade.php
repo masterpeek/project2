@@ -35,13 +35,14 @@
             var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
 
             var aqi = markers[i][3];
-            var station = markers[i][4];
-            var area = markers[i][5];
-            var date = markers[i][6];
-            var time = markers[i][7];
+            var aqi_condition = markers[i][4];
+            var station = markers[i][5];
+            var area = markers[i][6];
+            var date = markers[i][7];
+            var time = markers[i][8];
 
 
-            var content = "ค่าคุณภาพอากาศ: "+ aqi + " " + "ระดับคุณภาพอากาศ: " + "<br>" +
+            var content = "ค่าคุณภาพอากาศ: "+ aqi + " " + "ระดับคุณภาพอากาศ: " +  "<br>" +
                 "ชื่อ: "+ station + "<br>" + "พื้นที่: "+ area +
                 "<br>" + "วันที่: "+ date + " " + "เวลา: " + time +" น.";
 

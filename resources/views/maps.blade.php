@@ -24,7 +24,9 @@
         // Multiple Markers
         var markers = [
                 @foreach($markers as $marker)
-            ['', {{ $marker->lat }}, {{ $marker->long }}, {{ $marker->aqi_value }}],
+            ['', {{ $marker->lat }}, {{ $marker->long }}, {{ $marker->aqi_value }},
+                "{{ $marker->station_name }}", "{{ $marker->area_name }}",
+                "{{ $marker->date }}", "{{ $marker->time }}"],
             @endforeach
         ];
 
@@ -33,8 +35,15 @@
             var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
 
             var aqi = markers[i][3];
+            var station = markers[i][4];
+            var area = markers[i][5];
+            var date = markers[i][6];
+            var time = markers[i][7];
 
-            var content = "AQI: "+ aqi;
+
+            var content = "ค่าคุณภาพอากาศ: "+ aqi + "<br>" +
+                "ชื่อสถานี: "+ station + "<br>" + "พื้นที่: "+ area +
+                "<br>" + "วันที่: "+ " " + "เวลา: " + time +" น.";
 
             var infowindow = new google.maps.InfoWindow({
                 content: content

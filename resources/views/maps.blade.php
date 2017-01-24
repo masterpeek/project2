@@ -42,8 +42,8 @@
             var time = markers[i][8];
 
 
-            var content = "ค่าคุณภาพอากาศ: "+ aqi + " " + "ระดับคุณภาพอากาศ: " +  "<br>" +
-                "ชื่อ: "+ station + "<br>" + "พื้นที่: "+ area +
+            var content = "ค่า​AQI: "+ aqi + " " + "ระดับคุณภาพอากาศ: " + aqi_condition +
+                "<br>" + "ชื่อ: "+ station + "<br>" + "พื้นที่: "+ area +
                 "<br>" + "วันที่: "+ date + " " + "เวลา: " + time +" น.";
 
             var infowindow = new google.maps.InfoWindow({

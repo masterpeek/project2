@@ -49,12 +49,11 @@ class UserController extends Controller
 
         if($data != null)
         {
-           if(password_verify($password,$data[0]->password))
-           {
+
                $result = $result.$data[0]->username.";".$data[0]->fname.";".$data[0]->lname;
 
                return $result;
-           }
+
         }
     }
 

@@ -28,6 +28,7 @@ Route::get('/show_near', 'WeatherStationController@showNear');
 
 Route::resource('user','UserController');
 Route::post('register', 'UserController@register');
+Route::post('login', 'UserController@login');
 Route::get('allUser', 'UserController@allUser');
 
 Route::post('get_noise', 'AutoReportNoiseByUserController@getNoise');

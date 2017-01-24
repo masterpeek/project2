@@ -25,8 +25,8 @@
         var markers = [
                 @foreach($markers as $marker)
             ['', {{ $marker->lat }}, {{ $marker->long }}, {{ $marker->aqi_value }},
-                "{{ $marker->station_name }}", "{{ $marker->area_name }}",
-                "{{ $marker->date }}", "{{ $marker->time }}"],
+                "{{ $marker->aqi_condition_name }}", "{{ $marker->station_name }}",
+                "{{ $marker->area_name }}", "{{ $marker->date }}", "{{ $marker->time }}"],
             @endforeach
         ];
 
@@ -41,9 +41,9 @@
             var time = markers[i][7];
 
 
-            var content = "ค่าคุณภาพอากาศ: "+ aqi + "<br>" +
-                "ชื่อสถานี: "+ station + "<br>" + "พื้นที่: "+ area +
-                "<br>" + "วันที่: "+ " " + "เวลา: " + time +" น.";
+            var content = "ค่าคุณภาพอากาศ: "+ aqi + " " + "ระดับคุณภาพอากาศ: " + "<br>" +
+                "ชื่อ: "+ station + "<br>" + "พื้นที่: "+ area +
+                "<br>" + "วันที่: "+ date + " " + "เวลา: " + time +" น.";
 
             var infowindow = new google.maps.InfoWindow({
                 content: content

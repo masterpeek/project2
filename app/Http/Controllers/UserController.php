@@ -29,9 +29,9 @@ class UserController extends Controller
         $data['email'] = $user['Email'];
         $data['user_level'] = 1;
 
-        $user = User::create($data);
+        User::create($data);
 
-        return $user;
+        return "success";
 
     }
 
@@ -51,7 +51,7 @@ class UserController extends Controller
         {
             if(password_verify($password, $data->password))
             {
-                $result = $result.$data->username.";".$data->fname.";".$data->lname.";".$data->email;
+                $result = $result.$data->id.";".$data->username.";".$data->fname.";".$data->lname.";".$data->email;
 
                 return $result;
             }

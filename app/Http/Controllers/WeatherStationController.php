@@ -166,5 +166,5 @@ class WeatherStationController extends Controller
 
         return $arrWeather;
     }
-    
+
 }

@@ -50,7 +50,7 @@ class UserController extends Controller
         if($data != null)
         {
 
-               $result = $result.$data[0]->username.";".$data[0]->fname.";".$data[0]->lname;
+               $result = $result.$data->username.";".$data->fname.";".$data->lname;
 
                return $result;
 

@@ -2,10 +2,11 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Model
 {
     //use Notifiable;
     //public $timestamps = true;
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username', 'password', 'fname', 'lname', 'tel',
+        'username', 'password', 'fname', 'lname', 'tel', 'email','user_level',
     ];
 
     /**
@@ -25,6 +26,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'remember_token',
     ];
+
+    public function reportAirs()
+    {
+        return $this->hasMany('App\ReportAirByUser');
+    }
+
+    public function reportNoises()
+    {
+        return $this->hasMany('App\AutoReportNoiseByUser');
+    }
 }

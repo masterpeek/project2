@@ -15,4 +15,9 @@ class AutoReportNoiseByUser extends Model
     protected $fillable = [
         'noise_value', 'noise_lat', 'noise_long', 'noise_area_name', 'noise_province_name',
     ];
+
+    public function users()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

@@ -22,6 +22,11 @@ class CreateReportAirByUser extends Migration
             $table->double('air_long');
             $table->string('air_area_name');
             $table->string('air_province_name');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

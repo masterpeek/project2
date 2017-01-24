@@ -17,4 +17,9 @@ class ReportAirByUser extends Model
         'air_lat', 'air_long', 'air_area_name', 'air_province_name',
 
     ];
+
+    public function users()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

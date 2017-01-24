@@ -94,8 +94,6 @@ class WeatherStationController extends Controller
 
         $arr['area'] = $ans;
 
-        Near::create($arr);
-
         return $ans;
 
     }
@@ -168,11 +166,5 @@ class WeatherStationController extends Controller
 
         return $arrWeather;
     }
-
-    public function showNear()
-    {
-        $all = Near::all();
-
-        return $all;
-    }
+    
 }

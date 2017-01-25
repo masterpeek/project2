@@ -26,6 +26,7 @@
                 @endforeach
             ];
 
+
             for (i = 0; i < markers.length; i++) {
                 var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
 
@@ -35,7 +36,6 @@
                 var area = markers[i][6];
                 var date = markers[i][7];
                 var time = markers[i][8];
-
 
                 var content = "ค่า​AQI: "+ aqi + " " + "ระดับคุณภาพอากาศ: " + aqi_condition +
                     "<br>" + "ชื่อ: "+ station + "<br>" + "พื้นที่: "+ area +

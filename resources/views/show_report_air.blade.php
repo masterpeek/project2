@@ -43,8 +43,14 @@
                     map: map,
                     title: content
                 });
+
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent(this.title);
+                    infowindow.open(map, this);
+                });
             }
         }
+        google.maps.event.addDomListener(window, 'load', initMap);
     </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSolnKvQzksYqxOviOJrNTkRn7-voF9MA&callback=initMap">

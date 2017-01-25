@@ -7,7 +7,6 @@ use App\WeatherStation;
 use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
-use Log;
 
 class WeatherStationController extends Controller
 {

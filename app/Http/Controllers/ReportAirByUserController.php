@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
 use App\ReportAirByUser;
-use SebastianBergmann\CodeCoverage\Report\Xml\Report;
 
 class ReportAirByUserController extends Controller
 {

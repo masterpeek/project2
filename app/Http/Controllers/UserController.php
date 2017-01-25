@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
 use App\User;
-use Log;
 
 class UserController extends Controller
 {

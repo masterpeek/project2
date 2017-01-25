@@ -43,7 +43,7 @@ class UserController extends Controller
 
         $validator = Validator::make($data, $rule);
 
-        if($validator->fail())
+        if($validator->fails())
         {
             return "fail";
         }

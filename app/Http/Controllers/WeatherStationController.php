@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Near;
 use App\WeatherStation;
 use Illuminate\Http\Request;
 use GuzzleHttp;

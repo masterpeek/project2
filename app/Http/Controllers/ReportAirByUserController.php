@@ -17,15 +17,16 @@ class ReportAirByUserController extends Controller
         $longitude = doubleval($air['Longitude']);
 
         $pollution_choice = 0;
+        $smell_choice = "";
 
         if($air['PollutionChoice'] = "Normal"){
-            $pollution_choice = 3;
+            $pollution_choice = "ปกติ";
         }
         else if($air['PollutionChoice'] = "High"){
-            $pollution_choice = 4;
+            $pollution_choice = "สูง";
         }
         else if($air['PollutionChoice'] = "Very High"){
-            $pollution_choice = 5;
+            $pollution_choice = "สูงมาก";
         }
 
         $lat = $air['Latitude'];
@@ -40,8 +41,18 @@ class ReportAirByUserController extends Controller
         $air_area_name =  $ans->results[0]->formatted_address;
         $air_province_name = $ans->results[0]->address_components[4]->short_name;
 
+        if($air['SmellChoice'] = "Normal"){
+            $pollution_choice = 3;
+        }
+        else if($air['SmellChoice'] = "High"){
+            $pollution_choice = 4;
+        }
+        else if($air['SmellChoice'] = "Very High"){
+            $pollution_choice = 5;
+        }
+
         $data = [];
-        $data['air_smell'] = $air['SmellChoice'];
+        $data['air_smell'] = $smell_choice;
         $data['air_pollution'] = $pollution_choice;
         $data['air_comment'] = $air['Detail'];
         $data['air_lat'] = $latitude;

@@ -19,15 +19,29 @@
 
             // Multiple Markers
             var markers = [
-                ['', {{ $data->air_lat }}, {{ $data->air_long }} ],
+                ['', {{ $data->air_lat }}, {{ $data->air_long }}, "{{ $data->air_smell }}",
+                    "{{ $data->air_area_name }}", "{{ $data->created_at }}"],
             ];
 
             for (i = 0; i < markers.length; i++) {
                 var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+
+                var value = markers[i][3];
+                var area = markers[i][4];
+                var date = markers[i][5];
+
+                var content = "ระดับมลพิษทางอากาศ: "+ value +
+                    "<br>" + "พื้นที่: "+ area + "<br>" +
+                    "วันที่: "+ date + " น.";
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: content
+                });
+
                 marker = new google.maps.Marker({
                     position: position,
                     map: map,
-                    title: markers[i][0]
+                    title: content
                 });
             }
         }

@@ -11,6 +11,8 @@ class User extends Model
     //use Notifiable;
     //public $timestamps = true;
 
+    protected $table = 'users';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -38,4 +40,5 @@ class User extends Model
     {
         return $this->hasMany('App\AutoReportNoiseByUser');
     }
+
 }

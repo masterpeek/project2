@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
@@ -29,9 +30,29 @@ class UserController extends Controller
         $data['email'] = $user['Email'];
         $data['user_level'] = 1;
 
-        User::create($data);
 
-        return "success";
+        $rule = array
+        (
+            'username' => 'required|unique:users',
+            'password' => 'required|min:5|Max:80',
+            'fname' => 'required|min:5|Max:80',
+            'lname' => 'required|min:5|Max:80',
+            'tel' => 'required',
+            'email' => 'required|email|unique:users'
+        );
+
+        $validator = Validator::make($data, $rule);
+
+        if($validator->fail())
+        {
+            return "fail";
+        }
+        else
+        {
+            User::create($data);
+
+            return "success";
+        }
 
     }
 

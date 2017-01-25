@@ -30,7 +30,7 @@
                 var area = markers[i][4];
                 var date = markers[i][5];
 
-                var content = "ความดังของเสียง: "+ value + "เดซิเบล" +
+                var content = "ความดังของเสียง: "+ value + " เดซิเบล" +
                     "<br>" + "พื้นที่: "+ area + "<br>" +
                     "วันที่: "+ date + " น.";
 

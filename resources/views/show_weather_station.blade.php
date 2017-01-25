@@ -20,12 +20,13 @@
             // Multiple Markers
             var markers = [
                 ['', {{ $data->lat }}, {{ $data->long }}, {{ $data->aqi_value }},
-                    "{{ $marker->aqi_condition_name }}", "{{ $marker->station_name }}",
-                    "{{ $marker->area_name }}", "{{ $marker->date }}", "{{ $marker->time }}"],
+                    "{{ $data->aqi_condition_name }}", "{{ $data->station_name }}",
+                    "{{ $data->area_name }}", "{{ $data->date }}", "{{ $data->time }}"],
             ];
 
             for (i = 0; i < markers.length; i++) {
                 var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+
                 var aqi = markers[i][3];
                 var aqi_condition = markers[i][4];
                 var station = markers[i][5];
@@ -34,7 +35,9 @@
                 var time = markers[i][8];
 
 
-                var content = "AQI: "+ aqi+"test: "+aqi_condition;
+                var content = "ค่า​AQI: "+ aqi + " " + "ระดับคุณภาพอากาศ: " + aqi_condition +
+                    "<br>" + "ชื่อ: "+ station + "<br>" + "พื้นที่: "+ area +
+                    "<br>" + "วันที่: "+ date + " " + "เวลา: " + time +" น.";
 
                 var infowindow = new google.maps.InfoWindow({
                     content: content

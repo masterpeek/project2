@@ -15,7 +15,7 @@
 
         }
         .demo-card-square > .mdl-card__title {
-            background: url('../noise.jpg');
+            background: url('../new_noise.jpg');
             background-size: cover;
             background-position: center;
 

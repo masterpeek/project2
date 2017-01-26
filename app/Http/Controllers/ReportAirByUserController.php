@@ -41,13 +41,13 @@ class ReportAirByUserController extends Controller
         $air_area_name =  $ans->results[0]->formatted_address;
         $air_province_name = $ans->results[0]->address_components[4]->short_name;
 
-        if($air['SmellChoice'] = "Normal"){
+        if($air['SmellChoice'] === "Normal"){
             $smell_choice = "ปกติ";
         }
-        else if($air['SmellChoice'] = "High"){
+        else if($air['SmellChoice'] === "High"){
             $smell_choice = "สูง";
         }
-        else if($air['SmellChoice'] = "Very High"){
+        else if($air['SmellChoice'] === "Very High"){
             $smell_choice = "สูงมาก";
         }
 

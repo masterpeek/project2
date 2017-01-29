@@ -38,6 +38,7 @@ Route::get('report_noise_maps', 'AutoReportNoiseByUserController@maps');
 Route::get('/index_report_noise', 'AutoReportNoiseByUserController@index');
 Route::get('/all_report_noise', 'AutoReportNoiseByUserController@viewAll');
 Route::get('/show_report_noise/{id}', 'AutoReportNoiseByUserController@show');
+Route::post('/notify_nearby','AutoReportNoiseByUserController@reportNoiseNearBy');
 
 Route::post('get_air', 'ReportAirByUserController@getAir');
 Route::get('show_air', 'ReportAirByUserController@showAir');

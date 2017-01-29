@@ -43,6 +43,39 @@ class AutoReportNoiseByUserController extends Controller
 
     }
 
+    public function reportNoiseNearBy(Request $request)
+    {
+
+        $ans = "";
+
+        $data = $request->all();
+
+        $lat = $data["Latitude"];
+        $lng = $data["Longitude"];
+        $distance = $data["Distance"];
+
+        $result = DB::select('auto_report_noise_by_user.noise_value, 
+        auto_report_noise_by_user.area_name, auto_report_noise_by_user.province_name,  
+        auto_report_noise_by_user.noise_lat, auto_report_noise_by_user.noise_long, 
+        (6371 * acos(cos(radians(' . $lat . ')) * cos(radians(auto_report_noise_by_user.noise_lat)) 
+        * cos(radians(auto_report_noise_by_user.noise_long ) - radians(' . $lng . ')) 
+        + sin(radians(' . $lat .')) * sin(radians(auto_report_noise_by_user.noise_lat)))) as distance
+        from auto_report_noise_by_user having distance < '. $distance .' order by distance limit 1');
+
+        if($result != null)
+        {
+            $ans = $ans.$result[0]->noise_value.";".$result[0]->area_name.";".$result[0]->province_name;
+
+            return $ans;
+        }
+        else
+        {
+            return "no result";
+        }
+
+
+    }
+
     public function showNoise()
     {
         $arrNoise["arrNoise"] = [];

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\AutoReportNoiseByUser;
 use Illuminate\Http\Request;
 use GuzzleHttp;
+use Illuminate\Support\Facades\DB;
 
 class AutoReportNoiseByUserController extends Controller
 {

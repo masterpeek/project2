@@ -65,7 +65,7 @@ class AutoReportNoiseByUserController extends Controller
 
         if($result != null)
         {
-            $ans = $ans.$result[0]->noise_value.";".$result[0]->area_name.";".$result[0]->province_name;
+            $ans = $ans.$result[0]->noise_value.";".$result[0]->noise_area_name.";".$result[0]->noise_province_name;
 
             return $ans;
         }

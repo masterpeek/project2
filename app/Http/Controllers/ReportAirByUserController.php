@@ -65,6 +65,37 @@ class ReportAirByUserController extends Controller
 
     }
 
+    public function reportAirNearby(Request $request)
+    {
+        $ans = "";
+
+        $data = $request->all();
+
+        $lat = $data["Latitude"];
+        $lng = $data["Longitude"];
+        $distance = $data["Distance"];
+
+        $result = DB::select('select report_air_by_user.air_smell, 
+        report_air_by_user.air_area_name, report_air_by_user.air_province_name,  
+        report_air_by_user.air_lat, report_air_by_user.air_long, 
+        (6371 * acos(cos(radians(' . $lat . ')) * cos(radians(report_air_by_user.air_lat)) 
+        * cos(radians(report_air_by_user.air_long ) - radians(' . $lng . ')) 
+        + sin(radians(' . $lat .')) * sin(radians(report_air_by_user.air_lat)))) as distance
+        from report_air_by_user having distance < '. $distance .' order by distance limit 1');
+
+        if($result != null)
+        {
+            $ans = $ans.$result[0]->air_smell.";".$result[0]->air_area_name.";".$result[0]->air_province_name;
+
+            return $ans;
+        }
+        else
+        {
+            return "no result";
+        }
+
+    }
+
     public function showAir()
     {
         $arrAir["arrAir"] = [];

@@ -89,7 +89,7 @@
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
                         <div class="mdl-card__title mdl-card--expand">
                             <h4> AQI: {{ $data->aqi_value }} &nbsp;
-                                คุณภาพอากาศ: {{ $data->aqi_condition_name }}
+                                สถานะ: {{ $data->aqi_condition_name }}
                                 &nbsp;วันที่: {{ $data->thai_date }}&nbsp;เวลา: {{ $data->time }}  น.</h4>
                         </div>
                         <div class="mdl-card__supporting-text">

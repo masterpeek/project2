@@ -10,7 +10,7 @@
                             <h2 class="mdl-card__title-text"></h2>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            วันที่: {{ $data->air_thai_date }}  น.<br>
+                            วันที่: {{ $data->air_thai_date }}  <br>
                             พื้นที่: {{ $data->air_area_name }}
                         </div>
                         <div class="mdl-card__actions mdl-card--border">

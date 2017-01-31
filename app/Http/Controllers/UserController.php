@@ -22,8 +22,8 @@ class UserController extends Controller
         $data = [];
 
         $data['username'] = $user['Username'];
-        $data['password'] = password_hash($user['Password'], PASSWORD_DEFAULT);
-        $data['confirm_password'] = password_hash($user['ConfirmPassword'], PASSWORD_DEFAULT);
+        $data['password'] = $user['Password'];
+        $data['confirm_password'] = $user['ConfirmPassword'];
         $data['fname'] = $user['Name'];
         $data['lname'] = $user['Lastname'];
         $data['tel'] = $user['Telephone'];
@@ -33,7 +33,7 @@ class UserController extends Controller
         $rule = array
         (
             'username' => 'required|unique:users|min:6|max:16',
-            'password' => 'required|min:6|max:80|confirmed',
+            'password' => 'required|min:6|max:80',
             'confirm_password' => 'min:6|max:80|same:password',
             'fname' => 'required',
             'lname' => 'required',

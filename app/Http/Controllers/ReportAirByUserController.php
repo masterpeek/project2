@@ -168,6 +168,16 @@ class ReportAirByUserController extends Controller
 
     }
 
+    public function deleteAirMarker(Request $request)
+    {
+        $data = $request->all();
+
+        $id = $data["Id"];
+
+        ReportAirByUser::where('id', $id)->delete();
+    }
+
+
     public function maps()
     {
         $markers = ReportAirByUser::all();

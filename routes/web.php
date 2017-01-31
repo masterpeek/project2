@@ -49,3 +49,4 @@ Route::get('/index_report_air', 'ReportAirByUserController@index');
 Route::get('/all_report_air', 'ReportAirByUserController@viewAll');
 Route::get('/show_report_air/{id}', 'ReportAirByUserController@show');
 Route::post('/notify_nearby_air','ReportAirByUserController@reportAirNearBy');
+Route::post('/delete_air_marker', 'ReportAirByUserController@deleteAirMarker');

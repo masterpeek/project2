@@ -155,7 +155,7 @@ class AutoReportNoiseByUserController extends Controller
         $data = $request->all();
 
         $id = $data["Id"];
-        
+
         AutoReportNoiseByUser::where('id', $id)->delete();
     }
 

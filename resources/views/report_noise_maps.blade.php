@@ -38,7 +38,7 @@
 
             var content = "ความดังของเสียง: "+ value + " เดซิเบล" +
                 "<br>" + "พื้นที่: "+ area + "<br>" +
-                "วันที่: "+ date + " น.";
+                "วันที่: "+ date;
 
             var infowindow = new google.maps.InfoWindow({
                 content: content

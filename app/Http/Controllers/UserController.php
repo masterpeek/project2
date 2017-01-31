@@ -48,6 +48,10 @@ class UserController extends Controller
         }
         else
         {
+
+            $data['password'] = password_hash($user['Password'], PASSWORD_DEFAULT);
+            $data['confirm_password'] = password_hash($user['ConfirmPassword'], PASSWORD_DEFAULT);
+
             User::create($data);
 
             return "success";

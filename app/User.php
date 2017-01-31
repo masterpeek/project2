@@ -19,7 +19,7 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'username', 'password', 'fname', 'lname', 'tel', 'email','user_level',
+        'username', 'password', 'fname', 'lname', 'tel', 'user_level',
     ];
 
     /**
@@ -34,11 +34,6 @@ class User extends Model
     public function reportAirs()
     {
         return $this->hasMany('App\ReportAirByUser');
-    }
-
-    public function reportNoises()
-    {
-        return $this->hasMany('App\AutoReportNoiseByUser');
     }
 
 }

@@ -26,18 +26,17 @@ class UserController extends Controller
         $data['fname'] = $user['Name'];
         $data['lname'] = $user['Lastname'];
         $data['tel'] = $user['Telephone'];
-        $data['email'] = $user['Email'];
         $data['user_level'] = 1;
 
 
         $rule = array
         (
-            'username' => 'required|unique:users',
-            'password' => 'required|min:5|Max:80',
-            'fname' => 'required|min:5|Max:80',
-            'lname' => 'required|min:5|Max:80',
-            'tel' => 'required',
-            'email' => 'required|email|unique:users'
+            'username' => 'required|unique:users|min:6|max:16',
+            'password' => 'required|min:6|max:80',
+            'confirm_password' => 'required|min:6|max:80|same:password',
+            'fname' => 'required',
+            'lname' => 'required',
+            'tel' => 'required|min:10|max:10'
         );
 
         $validator = Validator::make($data, $rule);
@@ -72,7 +71,7 @@ class UserController extends Controller
         {
             if(password_verify($password, $data->password))
             {
-                $result = $result.$data->id.";".$data->username.";".$data->fname.";".$data->lname.";".$data->email;
+                $result = $result.$data->id.";".$data->username.";".$data->fname.";".$data->lname.";".$data->tel;
 
                 return $result;
             }

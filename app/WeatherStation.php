@@ -15,7 +15,7 @@ class WeatherStation extends Model
     //อนุญาติให้ใส่อะไรเข้ามาได้บ้าง
     protected $fillable = [
         'station_id', 'station_name', 'area_name', 'province_name',
-        'aqi_value', 'aqi_condition_name', 'lat', 'long', 'date', 'time', 'station_type',
+        'aqi_value', 'aqi_condition_name', 'lat', 'long', 'date', 'thai_date', 'time', 'station_type',
     ];
 
 

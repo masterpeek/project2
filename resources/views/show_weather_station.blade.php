@@ -90,7 +90,7 @@
                         <div class="mdl-card__title mdl-card--expand">
                             <h4> AQI: {{ $data->aqi_value }} &nbsp;
                                 คุณภาพอากาศ: {{ $data->aqi_condition_name }}
-                                &nbsp;วันที่: {{ $data->date }}&nbsp;เวลา: {{ $data->time }}  น.</h4>
+                                &nbsp;วันที่: {{ $data->thai_date }}&nbsp;เวลา: {{ $data->time }}  น.</h4>
                         </div>
                         <div class="mdl-card__supporting-text">
                             <h5> พื้นที่: {{ $data->area_name }} </h5>

@@ -21,7 +21,7 @@
             var markers = [
                 ['', {{ $data->lat }}, {{ $data->long }}, {{ $data->aqi_value }},
                     "{{ $data->aqi_condition_name }}", "{{ $data->station_name }}",
-                    "{{ $data->area_name }}", "{{ $data->date }}", "{{ $data->time }}"],
+                    "{{ $data->area_name }}", "{{ $data->thai_date }}", "{{ $data->time }}"],
             ];
 
             for (i = 0; i < markers.length; i++) {

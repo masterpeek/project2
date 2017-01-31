@@ -10,7 +10,7 @@
                             <h2 class="mdl-card__title-text"></h2>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            วันที่:  {{ $data->date }} &nbsp; เวลา: {{ $data->time }}  น.
+                            วันที่:  {{ $data->thai_date }} &nbsp; เวลา: {{ $data->time }}  น.
                              <br>
                             พื้นที่: {{ $data->area_name }}
                         </div>

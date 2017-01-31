@@ -62,7 +62,7 @@
                 <div class="demo-card-square mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title mdl-card--expand">
                         <h4> ความดังของเสียง: {{ $data->noise_value }} เดซิเบล
-                            &nbsp;วันที่: {{ $data->created_at }}  น.
+                            &nbsp;วันที่: {{ $data->noise_thai_date }}  น.
                         </h4>
                     </div>
                     <div class="mdl-card__supporting-text">

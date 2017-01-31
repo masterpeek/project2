@@ -25,7 +25,7 @@
         var markers = [
                 @foreach($markers as $marker)
             ['', {{ $marker->air_lat }}, {{ $marker->air_long }}, "{{ $marker->air_smell }}",
-                "{{ $marker->air_area_name }}", "{{ $marker->created_at }}"],
+                "{{ $marker->air_area_name }}", "{{ $marker->air_thai_date }}"],
             @endforeach
         ];
 

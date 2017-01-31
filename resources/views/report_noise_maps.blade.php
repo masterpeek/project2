@@ -25,7 +25,7 @@
         var markers = [
                 @foreach($markers as $marker)
             ['', {{ $marker->noise_lat }}, {{ $marker->noise_long }}, {{ $marker->noise_value }},
-                "{{ $marker->noise_area_name }}", "{{ $marker->created_at }}" ],
+                "{{ $marker->noise_area_name }}", "{{ $marker->noise_thai_date }}" ],
             @endforeach
         ];
 

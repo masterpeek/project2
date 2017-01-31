@@ -150,6 +150,15 @@ class AutoReportNoiseByUserController extends Controller
 
     }
 
+    public function deleteNoiseMarker(Request $request)
+    {
+        $data = $request->all();
+
+        $id = $data["Id"];
+        
+        AutoReportNoiseByUser::where('id', $id)->delete();
+    }
+
     public function maps()
     {
         $markers = AutoReportNoiseByUser::all();

@@ -35,7 +35,7 @@
                 var time = markers[i][8];
 
 
-                var content = "ค่า​AQI: "+ aqi + " " + "ระดับคุณภาพอากาศ: " + aqi_condition +
+                var content = "ค่า​ AQI: "+ aqi + " " + "สถานะ: " + aqi_condition +
                     "<br>" + "ชื่อ: "+ station + "<br>" + "พื้นที่: "+ area +
                     "<br>" + "วันที่: "+ date + " " + "เวลา: " + time +" น.";
 

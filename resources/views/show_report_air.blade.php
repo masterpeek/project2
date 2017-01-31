@@ -20,7 +20,7 @@
             // Multiple Markers
             var markers = [
                 ['', {{ $data->air_lat }}, {{ $data->air_long }}, "{{ $data->air_smell }}",
-                    "{{ $data->air_area_name }}", "{{ $data->created_at }}"],
+                    "{{ $data->air_area_name }}", "{{ $data->air_thai_date }}"],
             ];
 
             for (i = 0; i < markers.length; i++) {

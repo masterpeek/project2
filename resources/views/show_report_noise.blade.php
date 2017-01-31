@@ -20,7 +20,7 @@
             // Multiple Markers
             var markers = [
                 ['', {{ $data->noise_lat }}, {{ $data->noise_long }}, {{ $data->noise_value }},
-                    "{{ $data->noise_area_name }}", "{{ $data->created_at }}"],
+                    "{{ $data->noise_area_name }}", "{{ $data->noise_thai_date }}"],
             ];
 
             for (i = 0; i < markers.length; i++) {

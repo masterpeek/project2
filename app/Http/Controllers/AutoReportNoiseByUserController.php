@@ -35,7 +35,11 @@ class AutoReportNoiseByUserController extends Controller
 
 
         //$ans->results->address_components->short_name[3];
-        $data['noise_area_name'] = $noise_area_name;
+        //$data['noise_area_name'] = $noise_area_name;
+
+
+        $date = time();
+        $data['noise_area_name'] = $this->thai_date_and_time($date);
         //$ans->results->address_components->short_name[4];
         $data['noise_province_name'] = $noise_province_name;
         $data['user_id'] = intval($noise['UserId']);
@@ -43,6 +47,51 @@ class AutoReportNoiseByUserController extends Controller
             AutoReportNoiseByUser::create($data);
 
     }
+
+    public function thai_date_and_time($time)
+    {   // 19 ธันวาคม 2556 เวลา 10:10:43
+        $thai_date_return = "";
+
+        $thai_day_arr=array("อาทิตย์","จันทร์","อังคาร","พุธ","พฤหัสบดี","ศุกร์","เสาร์");
+        $thai_month_arr=array(
+            "0"=>"",
+            "1"=>"มกราคม",
+            "2"=>"กุมภาพันธ์",
+            "3"=>"มีนาคม",
+            "4"=>"เมษายน",
+            "5"=>"พฤษภาคม",
+            "6"=>"มิถุนายน",
+            "7"=>"กรกฎาคม",
+            "8"=>"สิงหาคม",
+            "9"=>"กันยายน",
+            "10"=>"ตุลาคม",
+            "11"=>"พฤศจิกายน",
+            "12"=>"ธันวาคม"
+        );
+        $thai_month_arr_short=array(
+            "0"=>"",
+            "1"=>"ม.ค.",
+            "2"=>"ก.พ.",
+            "3"=>"มี.ค.",
+            "4"=>"เม.ย.",
+            "5"=>"พ.ค.",
+            "6"=>"มิ.ย.",
+            "7"=>"ก.ค.",
+            "8"=>"ส.ค.",
+            "9"=>"ก.ย.",
+            "10"=>"ต.ค.",
+            "11"=>"พ.ย.",
+            "12"=>"ธ.ค."
+        );
+
+        $thai_date_return.= date("j",$time);
+        $thai_date_return.= " ".$thai_month_arr[date("n",$time)];
+        $thai_date_return.= " ".(date("Y",$time)+543);
+        $thai_date_return.= " เวลา ".date("H:i:s",$time);
+
+        return $thai_date_return;
+    }
+
 
     public function reportNoiseNearBy(Request $request)
     {

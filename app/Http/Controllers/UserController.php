@@ -34,7 +34,7 @@ class UserController extends Controller
         (
             'username' => 'required|unique:users|min:6|max:16',
             'password' => 'required|min:6|max:80',
-            'confirm_password' => 'required|min:6|max:80|same:password',
+            'confirm_password' => 'required|same:password',
             'fname' => 'required',
             'lname' => 'required',
             'tel' => 'required|min:10|max:10'

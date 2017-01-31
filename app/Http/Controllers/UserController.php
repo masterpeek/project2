@@ -23,6 +23,7 @@ class UserController extends Controller
 
         $data['username'] = $user['Username'];
         $data['password'] = password_hash($user['Password'], PASSWORD_DEFAULT);
+        $data['confirm_password'] = password_hash($user['ConfirmPassword'], PASSWORD_DEFAULT);
         $data['fname'] = $user['Name'];
         $data['lname'] = $user['Lastname'];
         $data['tel'] = $user['Telephone'];

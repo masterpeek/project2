@@ -70,7 +70,7 @@ class UserController extends Controller
 
         if($data != null)
         {
-            if(password_verify($password, $data->password))
+            if($data->password == $password)
             {
                 $result = $result.$data->id.";".$data->username.";".$data->fname.";".$data->lname.";".$data->tel;
 

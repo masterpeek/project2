@@ -83,7 +83,7 @@ class UserController extends Controller
         }
         else
         {
-            return "login fail";
+            return "incorrect username";
         }
     }
 

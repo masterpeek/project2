@@ -63,7 +63,7 @@ class UserController extends Controller
         $user = $request->all();
 
         $username = $user["Username"];
-        $password = $user["Password"];
+        $password = md5($user["Password"]);
 
         $data = User::where('username', '=', $username)->get()->first();
 
@@ -78,12 +78,12 @@ class UserController extends Controller
             }
             else
             {
-                return "0";
+                return "incorrect password";
             }
         }
         else
         {
-            return "1";
+            return "login fail";
         }
     }
 

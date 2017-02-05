@@ -6,7 +6,7 @@
 
             <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
                 <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text mdl-typography--headline">ติดต่อ</h2>
+                    <h1 class="mdl-card__title-text mdl-typography--headline">ติดต่อ</h1>
                 </div>
 
                 <div class="mdl-grid portfolio-copy">

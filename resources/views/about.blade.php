@@ -4,6 +4,11 @@
 
     <main class="mdl-layout__content">
         <div class="mdl-grid portfolio-max-width">
+            <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text mdl-typography--headline">เกี่ยวกับ</h2>
+                </div>
+
                 <div class="mdl-grid portfolio-copy">
                     <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">ที่มาและความสำคัญของปัญหา
                     </h3>

@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'WebController@index');
+Route::get('/', 'WebController@about');
+Route::get('/', 'WebController@contact');
 
 Route::get('call_data_weather_station', 'WeatherStationController@callData');
 Route::get('return_data_weather_station', 'WeatherStationController@allData');

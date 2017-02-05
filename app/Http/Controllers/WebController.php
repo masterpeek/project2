@@ -10,4 +10,9 @@ class WebController extends Controller
     {
         return view('index');
     }
+
+    public function about()
+    {
+        return view('about');
+    }
 }

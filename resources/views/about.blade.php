@@ -4,12 +4,6 @@
 
     <main class="mdl-layout__content">
         <div class="mdl-grid portfolio-max-width">
-
-            <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">เกี่ยวกับ</h2>
-                </div>
-
                 <div class="mdl-grid portfolio-copy">
                     <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">ที่มาและความสำคัญของปัญหา
                     </h3>
@@ -22,16 +16,20 @@
                         </p>
                     </div>
 
-
-
-
                     <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">วัตถุประสงค์
                     </h3>
 
                     <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                         <p>
                             เพื่อพัฒนาแอพพลิเคชันบนโทรศัพท์เคลื่อนที่ที่สามารถแจ้งเตือนมลพิษทางเสียงและอากาศได้
+
+                        </p>
+
+                        <p>
                             เพื่อสนับสนุนการสร้างเครือข่ายสังคมให้มีส่วนร่วมในการรายงานปัญหามลพิษทางเสียงและอากาศ
+                        </p>
+
+                        <p>
                             เพื่อแนะนำวิธีการวางแผน และการปฏิบัติตนที่ถูกต้องเมื่ออยู่ในพื้นที่ที่มีมลพิษ
                         </p>
                     </div>

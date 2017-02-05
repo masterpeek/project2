@@ -15,6 +15,8 @@
                     <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                         <p>
                            Facebook : Moozagent Aphinan
+                        </p>
+                        <p>
                             E-mail : aphinan.pee@gmail.com
                         </p>
                     </div>
@@ -28,6 +30,9 @@
                     <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                         <p>
                             Facebook : Nateethorn Chotwiwatthanachai
+                        </p>
+
+                        <p>
                             E-mail : Nateethorn2535@gmail.com
                         </p>
                     </div>

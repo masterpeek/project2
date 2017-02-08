@@ -20,4 +20,5 @@ class WebController extends Controller
     {
         return view('contact');
     }
+
 }

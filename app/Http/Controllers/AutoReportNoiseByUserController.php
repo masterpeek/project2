@@ -38,7 +38,7 @@ class AutoReportNoiseByUserController extends Controller
         $noise_province_name1 = explode(",", $ans->results[3]->formatted_address);
         $noise_province_name2 = explode("Chang Wat", $noise_province_name1[0]);
 
-        for($i = 0;$i < strlen($noise_province_name2[0]);$i++)
+        for($i = 0;$i < strlen($noise_province_name2);$i++)
         {
             if($noise_province_name2[$i] === "0")
             {

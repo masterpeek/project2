@@ -34,7 +34,7 @@ class AutoReportNoiseByUserController extends Controller
         $ans = GuzzleHttp\json_decode($store);
 
         $noise_area_name =  explode(",", $ans->results[0]->formatted_address);
-        //$noise_province_name = $ans->results[5]->address_components[0]->long_name;
+
         $noise_province_name = explode(",",$ans->results[0]->formatted_address);
 
         $check = array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Chang Wat");

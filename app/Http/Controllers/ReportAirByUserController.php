@@ -6,11 +6,14 @@ use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
 use App\ReportAirByUser;
+use Stichoza\GoogleTranslate\TranslateClient;
 
 class ReportAirByUserController extends Controller
 {
     public function getAir(Request $request)
     {
+        $tr = new TranslateClient();
+
         $air = $request->all();
 
         $latitude = doubleval($air['Latitude']);
@@ -38,8 +41,18 @@ class ReportAirByUserController extends Controller
         $store = $res->getBody()->getContents();
         $ans = GuzzleHttp\json_decode($store);
 
-        $air_area_name =  $ans->results[0]->formatted_address;
-        $air_province_name = $ans->results[0]->address_components[4]->short_name;
+        $air_area_name =  explode(",", $ans->results[0]->formatted_address);
+
+        $air_province_name = explode(",",$ans->results[0]->formatted_address);
+
+        $check = array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Chang Wat");
+
+        $air_province_name1 = str_replace($check,"",$air_province_name[3]);
+
+        $area1 = $tr->setSource('en')->setTarget('th')->translate($air_area_name[1]);
+        $area2 = $tr->setSource('en')->setTarget('th')->translate($air_area_name[2]);
+
+        $province1 = $tr->setSource('en')->setTarget('th')->translate($air_province_name1);
 
         if($air['SmellChoice'] === "Normal"){
             $smell_choice = "ปกติ";
@@ -57,8 +70,8 @@ class ReportAirByUserController extends Controller
         $data['air_comment'] = $air['Detail'];
         $data['air_lat'] = $latitude;
         $data['air_long'] = $longitude;
-        $data['air_area_name'] = $air_area_name;
-        $data['air_province_name'] = $air_province_name;
+        $data['air_area_name'] = $area1." ".$area2;
+        $data['air_province_name'] = $province1;
 
         $date = time();
         $data['air_thai_date'] = $this->thai_date_and_time($date);

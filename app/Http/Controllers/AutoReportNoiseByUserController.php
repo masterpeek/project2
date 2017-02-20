@@ -34,14 +34,19 @@ class AutoReportNoiseByUserController extends Controller
         $ans = GuzzleHttp\json_decode($store);
 
         $noise_area_name =  explode(",", $ans->results[0]->formatted_address);
-        $noise_province_name = $ans->results[5]->address_components[0]->long_name;
+        //$noise_province_name = $ans->results[5]->address_components[0]->long_name;
+        $noise_province_name = explode(",", $ans->results[4]->formatted_address);
 
         $area1 = $tr->setSource('en')->setTarget('th')->translate($noise_area_name[1]);
         $area2 = $tr->setSource('en')->setTarget('th')->translate($noise_area_name[2]);
 
+        $province1 = $tr->setSource('en')->setTarget('th')->translate($noise_province_name[0]);
+
         $data['noise_area_name'] = $area1." ".$area2;
 
-        $data['noise_province_name'] = $tr->setSource('en')->setTarget('th')->translate($noise_province_name);
+        //$data['noise_province_name'] = $tr->setSource('en')->setTarget('th')->translate($noise_province_name);
+
+        $data['noise_province_name'] = $province1;
 
         $date = time();
         $data['noise_thai_date'] = $this->thai_date_and_time($date);

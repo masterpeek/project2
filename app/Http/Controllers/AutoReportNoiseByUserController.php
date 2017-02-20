@@ -42,7 +42,7 @@ class AutoReportNoiseByUserController extends Controller
         $area1 = $tr->setSource('en')->setTarget('th')->translate($noise_area_name[1]);
         $area2 = $tr->setSource('en')->setTarget('th')->translate($noise_area_name[2]);
 
-        $province1 = $tr->setSource('en')->setTarget('th')->translate($noise_province_name3);
+        $province1 = $tr->setSource('en')->setTarget('th')->translate($noise_province_name3[0]);
 
         $data['noise_area_name'] = $area1." ".$area2;
 

@@ -130,12 +130,12 @@ class WeatherStationController extends Controller
         weather_station.aqi_condition_name, 
         weather_station.area_name, weather_station.province_name,  
         weather_station.lat, weather_station.long, 
-        (3959 * acos(cos(radians(' . $lat . ')) * cos(radians(weather_station.lat)) 
+        (6371 * acos(cos(radians(' . $lat . ')) * cos(radians(weather_station.lat)) 
         * cos(radians(weather_station.long ) - radians(' . $lng . ')) 
         + sin(radians(' . $lat .')) * sin(radians(weather_station.lat)))) as distance
         from weather_station order by distance limit 1');
 
-        $ans = $ans.$result[0]->aqi_value.";".$result[0]->aqi_condition_name.";".$result[0]->area_name;
+        $ans = $ans.$result[0]->aqi_value.";".$result[0]->aqi_condition_name.";".$result[0]->area_name.";".number_format($result[0]->distance, 2);
 
         $arr['area'] = $ans;
 

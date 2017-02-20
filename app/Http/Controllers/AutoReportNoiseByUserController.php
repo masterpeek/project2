@@ -6,11 +6,14 @@ use App\AutoReportNoiseByUser;
 use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
+use Stichoza\GoogleTranslate\TranslateClient;
 
 class AutoReportNoiseByUserController extends Controller
 {
     public function getNoise(Request $request)
     {
+        $tr = new TranslateClient();
+
         $noise = $request->all();
 
         $latitude = doubleval($noise['Latitude']);
@@ -31,14 +34,11 @@ class AutoReportNoiseByUserController extends Controller
         $ans = GuzzleHttp\json_decode($store);
 
         $noise_area_name =  $ans->results[0]->formatted_address;
-        $noise_province_name = $ans->results[0]->address_components[4]->short_name;
+        $noise_province_name = $ans->results[5]->address_components[0]->long_name;
 
+        $data['noise_area_name'] = $tr->setSource('en')->setTarget('th')->translate($noise_area_name);
 
-        //$ans->results->address_components->short_name[3];
-        $data['noise_area_name'] = $noise_area_name;
-
-        //$ans->results->address_components->short_name[4];
-        $data['noise_province_name'] = $noise_province_name;
+        $data['noise_province_name'] = $tr->setSource('en')->setTarget('th')->translate($noise_province_name);
 
         $date = time();
         $data['noise_thai_date'] = $this->thai_date_and_time($date);

@@ -35,11 +35,11 @@ class AutoReportNoiseByUserController extends Controller
 
         $noise_area_name =  explode(",", $ans->results[0]->formatted_address);
         //$noise_province_name = $ans->results[5]->address_components[0]->long_name;
-        $noise_province_name = explode(" ",$ans->results[0]->formatted_address);
+        $noise_province_name = explode(",",$ans->results[0]->formatted_address);
 
         $check = array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Chang Wat");
 
-        $noise_province_name1 = $noise_province_name[3];
+        $noise_province_name1 = str_replace($check,"",$noise_province_name[3]);
 
         $area1 = $tr->setSource('en')->setTarget('th')->translate($noise_area_name[1]);
         $area2 = $tr->setSource('en')->setTarget('th')->translate($noise_area_name[2]);

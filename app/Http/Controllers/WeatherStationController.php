@@ -6,6 +6,7 @@ use App\WeatherStation;
 use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class WeatherStationController extends Controller
 {
@@ -216,11 +217,11 @@ class WeatherStationController extends Controller
         return $arrWeather;
     }
 
-    public function search(Request $request)
+    public function search()
     {
-        $province = $request->all();
+        $input = Input::all();
 
-        $datas = WeatherStation::where('province_name', $province)->get();
+        $datas = WeatherStation::where('province_name', $input['province'])->get();
 
         return view('index')->with('datas', $datas);
 

@@ -216,4 +216,14 @@ class WeatherStationController extends Controller
         return $arrWeather;
     }
 
+    public function search(Request $request)
+    {
+        $province = $request->all();
+
+        $data = WeatherStation::where('province_name', $province)->get();
+
+        return view('index')->with('data', $data);
+
+    }
+
 }

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
 use Stichoza\GoogleTranslate\TranslateClient;
+use Illuminate\Support\Facades\Input;
 
 class AutoReportNoiseByUserController extends Controller
 {

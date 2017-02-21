@@ -7,6 +7,7 @@ use GuzzleHttp;
 use Illuminate\Support\Facades\DB;
 use App\ReportAirByUser;
 use Stichoza\GoogleTranslate\TranslateClient;
+use Illuminate\Support\Facades\Input;
 
 class ReportAirByUserController extends Controller
 {

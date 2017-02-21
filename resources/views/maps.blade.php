@@ -12,6 +12,20 @@
 </head>
 <body>
 <br><br><br>
+
+{!! Form::open(['url' => 'select_condition', 'method' => 'post']) !!}
+<select class="selectpicker" name="condition">
+
+    <option value="ทั้งหมด">ทั้งหมด</option>
+    <option value="คุณภาพดี">คุณภาพดี</option>
+    <option value="คุณภาพปานกลาง">คุณภาพปานกลาง</option>
+    <option value="มีผลกระทบต่อสุขภาพ">มีผลกระทบต่อสุขภาพ</option>
+    <option value="มีผลกระทบต่อสุขภาพมาก">มีผลกระทบต่อสุขภาพ</option>
+    <option value="อันตราย">อันตราย</option>
+</select>
+<input type="submit" value="ค้นหา">
+{!! Form::close() !!}
+
 <div id="map" style="width:800px; margin:0 auto;"></div>
 <script>
     function initMap() {

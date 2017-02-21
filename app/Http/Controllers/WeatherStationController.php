@@ -229,4 +229,22 @@ class WeatherStationController extends Controller
 
     }
 
+    public function select_condition()
+    {
+        $input = Input::all();
+
+        $condition = $input["condition"];
+
+        if($condition === "ทั้งหมด")
+        {
+            $datas = WeatherStation::all();
+        }
+        else
+        {
+            $datas = WeatherStation::where('aqi_condition_name', $condition)->get();
+        }
+
+        return view('maps')->with('markers', $datas);
+    }
+
 }

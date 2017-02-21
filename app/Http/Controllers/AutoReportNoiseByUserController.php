@@ -45,7 +45,11 @@ class AutoReportNoiseByUserController extends Controller
         $area1 = $tr->setSource('en')->setTarget('th')->translate($noise_area_name[1]);
         $area2 = $tr->setSource('en')->setTarget('th')->translate($noise_area_name[2]);
 
-        $province1 = $tr->setSource('en')->setTarget('th')->translate($noise_province_name1);
+        $province = $tr->setSource('en')->setTarget('th')->translate($noise_province_name1);
+
+        $check2 = array("มหานคร", "ฯ", "จ.");
+
+        $province1 = str_replace($check2,"",$province);
 
         $data['noise_area_name'] = $area1." ".$area2;
 

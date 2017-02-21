@@ -14,8 +14,7 @@
 <br><br><br>
 
 {!! Form::open(['url' => 'select_condition', 'method' => 'post']) !!}
-<select class="selectpicker" name="condition">
-
+<select name="condition">
     <option value="ทั้งหมด">ทั้งหมด</option>
     <option value="คุณภาพดี">คุณภาพดี</option>
     <option value="คุณภาพปานกลาง">คุณภาพปานกลาง</option>

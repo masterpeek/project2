@@ -33,11 +33,15 @@ class WeatherStationController extends Controller
             $province_name_split = explode(", ", $ans->areaTH);
             $province_name_split = $province_name_split[sizeof($province_name_split) - 1];
 
+            $check = array("มหานคร", "ฯ", "จ.");
+
+            $province_name = str_replace($check,"",$province_name_split);
+
             $data = [];
             $data['station_id'] = $ans->stationID;
             $data['station_name'] = $ans->nameTH;
             $data['area_name'] = $ans->areaTH;
-            $data['province_name'] = $province_name_split;
+            $data['province_name'] = $province_name;
             $data['aqi_value'] = $ans->AQILast->AQI->aqi;
             $data['lat'] = $ans->lat;
             $data['long'] = $ans->long;

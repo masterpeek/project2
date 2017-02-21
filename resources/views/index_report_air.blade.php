@@ -3,6 +3,19 @@
 @section('content')
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
         <div class="mdl-grid">
+            <br>
+            {!! Form::open(['url' => 'about', 'method' => 'post']) !!}
+            <div class="row">
+                <div class="col-lg-6 col-centered">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="ค้นหาจังหวัด เช่น กรุงเทพมหานคร, นครปฐม...">
+                        <span class="input-group-btn">
+                            <input type="submit" value="ค้นหา" class="btn btn-default">
+                        </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+            {!! Form::close() !!}
             @foreach($datas as $data)
                 <div class="mdl-cell mdl-cell--4-col">
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">

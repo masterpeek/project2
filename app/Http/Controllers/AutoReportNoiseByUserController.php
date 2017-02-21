@@ -37,7 +37,7 @@ class AutoReportNoiseByUserController extends Controller
 
         $noise_province_name = explode(",",$ans->results[0]->formatted_address);
 
-        $check = array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Chang Wat");
+        $check = array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Chang Wat", "มหานคร", "ฯ", "จ.");
 
         $noise_province_name1 = str_replace($check,"",$noise_province_name[3]);
 

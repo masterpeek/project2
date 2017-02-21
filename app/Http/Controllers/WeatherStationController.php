@@ -220,7 +220,7 @@ class WeatherStationController extends Controller
     {
         $province = $request->all();
 
-        $datas = WeatherStation::where('province_name', $province);
+        $datas = WeatherStation::where('province_name', $province)->get();
 
         return view('index')->with('datas', $datas);
 

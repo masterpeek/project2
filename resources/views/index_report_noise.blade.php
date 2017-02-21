@@ -8,9 +8,9 @@
             <div class="row">
                 <div class="col-lg-6 col-centered">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="ค้นหาจังหวัด เช่น กรุงเทพมหานคร, นครปฐม...">
+                        <input type="text" name="province" class="form-control" placeholder="ค้นหาจังหวัด เช่น กรุงเทพมหานคร, นครปฐม...">
                         <span class="input-group-btn">
-                            <input type="submit" name="province" value="ค้นหา" class="btn btn-default">
+                            <input type="submit" value="ค้นหา" class="btn btn-default">
                         </span>
                     </div><!-- /input-group -->
                 </div><!-- /.col-lg-6 -->

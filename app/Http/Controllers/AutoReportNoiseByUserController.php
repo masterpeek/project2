@@ -212,5 +212,4 @@ class AutoReportNoiseByUserController extends Controller
     }
 
 
-
 }

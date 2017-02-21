@@ -10,7 +10,7 @@
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="ค้นหาจังหวัด เช่น กรุงเทพมหานคร, นครปฐม...">
                         <span class="input-group-btn">
-                            <input type="submit" value="ค้นหา" class="btn btn-default">
+                            <input type="submit" name="province" value="ค้นหา" class="btn btn-default">
                         </span>
                     </div><!-- /input-group -->
                 </div><!-- /.col-lg-6 -->

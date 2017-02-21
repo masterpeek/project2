@@ -43,6 +43,7 @@ Route::get('/all_report_noise', 'AutoReportNoiseByUserController@viewAll');
 Route::get('/show_report_noise/{id}', 'AutoReportNoiseByUserController@show');
 Route::post('/notify_nearby_noise', 'AutoReportNoiseByUserController@reportNoiseNearBy');
 Route::post('/delete_noise_marker', 'AutoReportNoiseByUserController@deleteNoiseMarker');
+Route::post('/search_noise', 'AutoReportNoiseByUserController@search');
 
 Route::post('get_air', 'ReportAirByUserController@getAir');
 Route::get('show_air', 'ReportAirByUserController@showAir');
@@ -53,3 +54,4 @@ Route::get('/all_report_air', 'ReportAirByUserController@viewAll');
 Route::get('/show_report_air/{id}', 'ReportAirByUserController@show');
 Route::post('/notify_nearby_air','ReportAirByUserController@reportAirNearBy');
 Route::post('/delete_air_marker', 'ReportAirByUserController@deleteAirMarker');
+Route::post('/search_air', 'ReportAirByUserController@search');

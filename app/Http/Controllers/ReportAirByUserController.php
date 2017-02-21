@@ -219,6 +219,17 @@ class ReportAirByUserController extends Controller
         return view('show_report_air')->with('data', $data);
     }
 
+    public function search()
+    {
+        $input = Input::all();
+
+        $datas = ReportAirByUser::where('air_province_name', $input['province'])
+            ->orderBy('created_at', 'DESC')->get();
+
+        return view('index_report_air')->with('datas', $datas);
+
+    }
+
 
 
 

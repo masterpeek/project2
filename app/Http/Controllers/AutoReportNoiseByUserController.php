@@ -199,6 +199,17 @@ class AutoReportNoiseByUserController extends Controller
         return view('show_report_noise')->with('data', $data);
     }
 
+    public function search()
+    {
+        $input = Input::all();
+
+        $datas = AutoReportNoiseByUser::where('noise_province_name', $input['province'])
+            ->orderBy('created_at', 'DESC')->get();
+
+        return view('index_report_noise')->with('datas', $datas);
+
+    }
+
 
 
 }

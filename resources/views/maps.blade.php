@@ -90,10 +90,8 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSolnKvQzksYqxOviOJrNTkRn7-voF9MA&callback=initMap">
 </script>
 </body>
-<br>
-<img src="show_color.png" style="width:700px;height:100px;>
-<br>
 </html>
 @stop
+
 
 

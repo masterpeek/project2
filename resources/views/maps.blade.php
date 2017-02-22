@@ -14,15 +14,17 @@
 <br><br><br>
 
 {!! Form::open(['url' => 'select_condition', 'method' => 'post']) !!}
+<div class="form-group" style="text-align:center">
 <select name="condition">
     <option value="ทั้งหมด">ทั้งหมด</option>
     <option value="คุณภาพดี">คุณภาพดี</option>
     <option value="คุณภาพปานกลาง">คุณภาพปานกลาง</option>
     <option value="มีผลกระทบต่อสุขภาพ">มีผลกระทบต่อสุขภาพ</option>
-    <option value="มีผลกระทบต่อสุขภาพมาก">มีผลกระทบต่อสุขภาพ</option>
+    <option value="มีผลกระทบต่อสุขภาพมาก">มีผลกระทบต่อสุขภาพมาก</option>
     <option value="อันตราย">อันตราย</option>
 </select>
 <input type="submit" value="ค้นหา">
+</div>
 {!! Form::close() !!}
 
 <div id="map" style="width:800px; margin:0 auto;"></div>

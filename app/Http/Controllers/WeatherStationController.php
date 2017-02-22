@@ -40,10 +40,12 @@ class WeatherStationController extends Controller
 
             $area_name = str_replace($check,"",$ans->areaTH);
 
+            $area_name1 = str_replace(","," ",$area_name);
+
             $data = [];
             $data['station_id'] = $ans->stationID;
             $data['station_name'] = $ans->nameTH;
-            $data['area_name'] = $area_name;
+            $data['area_name'] = $area_name1;
             $data['province_name'] = $province_name;
             $data['aqi_value'] = $ans->AQILast->AQI->aqi;
             $data['lat'] = $ans->lat;

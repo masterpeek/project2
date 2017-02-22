@@ -59,6 +59,16 @@ class ReportAirByUserController extends Controller
 
         $province1 = str_replace($check2,"",$province);
 
+        $check3 = array("ตำบล");
+
+        $province2 = str_replace($check3, "ต.", $province1);
+
+        $check4 = array("อำเภอ");
+
+        $province3 = str_replace($check4, "อ.", $province2);
+
+        $data['noise_area_name'] = $area1." ".$area2;
+
         if($air['SmellChoice'] === "Normal"){
             $smell_choice = "ปกติ";
         }
@@ -76,7 +86,7 @@ class ReportAirByUserController extends Controller
         $data['air_lat'] = $latitude;
         $data['air_long'] = $longitude;
         $data['air_area_name'] = $area1." ".$area2;
-        $data['air_province_name'] = $province1;
+        $data['air_province_name'] = $province3;
 
         $date = time();
         $data['air_thai_date'] = $this->thai_date_and_time($date);

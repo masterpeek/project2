@@ -67,8 +67,6 @@ class ReportAirByUserController extends Controller
 
         $area2_2 = str_replace($check4, "อ.", $area2);
 
-        $data['noise_area_name'] = $area1_1." ".$area2_2;
-
         if($air['SmellChoice'] === "Normal"){
             $smell_choice = "ปกติ";
         }
@@ -85,7 +83,7 @@ class ReportAirByUserController extends Controller
         $data['air_comment'] = $air['Detail'];
         $data['air_lat'] = $latitude;
         $data['air_long'] = $longitude;
-        $data['air_area_name'] = $area1." ".$area2;
+        $data['air_area_name'] = $area1_1." ".$area2_2;
         $data['air_province_name'] = $province1;
 
         $date = time();

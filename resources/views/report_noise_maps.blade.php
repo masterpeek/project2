@@ -25,7 +25,7 @@
         var markers = [
                 @foreach($markers as $marker)
             ['', {{ $marker->noise_lat }}, {{ $marker->noise_long }}, {{ $marker->noise_value }},
-                "{{ $marker->noise_area_name }}", "{{ $marker->noise_thai_date }}" ],
+                "{{ $marker->noise_area_name }}", "{{ $marker->noise_province_name }}", "{{ $marker->noise_thai_date }}" ],
             @endforeach
         ];
 
@@ -34,10 +34,11 @@
 
             var value = markers[i][3];
             var area = markers[i][4];
-            var date = markers[i][5];
+            var province = markers[i][5];
+            var date = markers[i][6];
 
             var content = "ความดังของเสียง: "+ value + " เดซิเบล" +
-                "<br>" + "พื้นที่: "+ area + "<br>" +
+                "<br>" + "พื้นที่: "+ area + " "+ province + "<br>" +
                 "วันที่: "+ date;
 
             var infowindow = new google.maps.InfoWindow({

@@ -20,7 +20,7 @@
             // Multiple Markers
             var markers = [
                 ['', {{ $data->noise_lat }}, {{ $data->noise_long }}, {{ $data->noise_value }},
-                    "{{ $data->noise_area_name }}", "{{ $data->noise_thai_date }}"],
+                    "{{ $data->noise_area_name }}", "{{ $data->noise_province_name }}", "{{ $data->noise_thai_date }}"],
             ];
 
             for (i = 0; i < markers.length; i++) {
@@ -28,10 +28,11 @@
 
                 var value = markers[i][3];
                 var area = markers[i][4];
-                var date = markers[i][5];
+                var province = markers[i][5];
+                var date = markers[i][6];
 
                 var content = "ความดังของเสียง: "+ value + " เดซิเบล" +
-                    "<br>" + "พื้นที่: "+ area + "<br>" +
+                    "<br>" + "พื้นที่: "+ area + " " + province +  "<br>" +
                     "วันที่: "+ date;
 
                 var infowindow = new google.maps.InfoWindow({

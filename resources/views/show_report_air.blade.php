@@ -68,7 +68,7 @@
 
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h5> พื้นที่: {{ $data->air_area_name }} </h5>
+                        <h5> พื้นที่: {{ $data->air_area_name }} {{ $data->air_province_name }} </h5>
                     </div>
                 </div>
             </div>

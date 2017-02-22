@@ -11,9 +11,9 @@
     </style>
 </head>
 <body>
-<br><br><br>
-
+<br><br>
 {!! Form::open(['url' => 'select_condition', 'method' => 'post']) !!}
+เลือกดูตามระดับคุณภาพอากาศ
 <div class="form-group" style="text-align:center">
 <select name="condition">
     <option value="ทั้งหมด">ทั้งหมด</option>

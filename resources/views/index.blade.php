@@ -47,7 +47,8 @@
 
         var noises = [
                 @foreach($noises as $noise)
-            ['', {{ $noise->noise_lat }}, {{ $noise->noise_long }}],
+            ['', {{ $noise->noise_lat }}, {{ $noise->noise_long }}, {{ $noise->noise_value }},
+                "{{ $noise->noise_area_name }}", "{{ $noise->noise_province_name }}", "{{ $noise->noise_thai_date }}" ],
             @endforeach
         ];
 
@@ -115,10 +116,28 @@
         for (i = 0; i < noises.length; i++) {
             var position = new google.maps.LatLng(noises[i][1], noises[i][2]);
 
+            var value = noises[i][3];
+            var area = noises[i][4];
+            var province = noises[i][5];
+            var date = noises[i][6];
+
+            var content = "ความดังเสียง: "+ value + " เดซิเบล" +
+                "<br>" + "พื้นที่: "+ area + " "+ province + "<br>" +
+                "วันที่: "+ date;
+
+            var infowindow = new google.maps.InfoWindow({
+                content: content
+            });
+
             marker = new google.maps.Marker({
                 position: position,
                 map: map,
                 title: content
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent(this.title);
+                infowindow.open(map, this);
             });
         }
 

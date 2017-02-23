@@ -11,6 +11,7 @@
                         <input type="text" name="province" class="form-control" placeholder="ค้นหาจังหวัด เช่น กรุงเทพ, นครปฐม...">
                         <span class="input-group-btn">
                             <input type="submit" value="ค้นหา" class="btn btn-default">
+                            <a href="{{ url('/all') }}" class="btn btn-default">ค้นหาทั้งหมด</a>
                         </span>
                     </div><!-- /input-group -->
                 </div><!-- /.col-lg-6 -->
@@ -37,9 +38,4 @@
             @endforeach
         </div>
     </section>
-    @unless(Request::url() == url('/all'))
-        <div class="mdl-layout__obfuscator"></div>
-        <a href="{{ url('/all') }}" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--white">รายการทั้งหมด</a>
-        <script src="$$hosted_libs_prefix$$/$$version$$/material.min.js"></script>
-    @endunless
 @stop

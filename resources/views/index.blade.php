@@ -45,9 +45,21 @@
             @endforeach
         ];
 
+        var noises = [
+                @foreach($noises as $noise)
+            ['', {{ $noise->noise_lat }}, {{ $noise->noise_long }}],
+            @endforeach
+        ];
+
+        var airs = [
+                @foreach($airs as $air)
+            ['', {{ $air->air_lat }}, {{ $air->air_long }}],
+            @endforeach
+        ];
+
 
         for (i = 0; i < markers.length; i++) {
-            var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+            var position = new google.maps.LatLng(markers[i][1], markers[i][2], noises[i][1], noises[i][2]);
 
             var aqi = markers[i][3];
             var aqi_condition = markers[i][4];

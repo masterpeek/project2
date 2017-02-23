@@ -213,7 +213,7 @@ class ReportAirByUserController extends Controller
 
     public function index()
     {
-        $datas = ReportAirByUser::orderBy('created_at', 'DESC')->take(6)->get();
+        $datas = ReportAirByUser::orderBy('created_at', 'DESC')->take(8)->get();
 
         return view('index_report_air')->with('datas', $datas);
     }

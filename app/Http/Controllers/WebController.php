@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\WeatherStation;
 
 class WebController extends Controller
 {
@@ -11,7 +12,7 @@ class WebController extends Controller
         $markers = WeatherStation::all();
 
         return view('index')->with('markers', $markers);
-        
+
     }
 
     public function about()

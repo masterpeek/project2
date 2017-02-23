@@ -204,7 +204,7 @@ class WeatherStationController extends Controller
     {
         $datas = WeatherStation::all();
 
-        return view('index')->with('datas', $datas);
+        return view('index_weather')->with('datas', $datas);
     }
 
     public function allData()
@@ -227,7 +227,7 @@ class WeatherStationController extends Controller
 
         $datas = WeatherStation::where('province_name', $input['province'])->get();
 
-        return view('index')->with('datas', $datas);
+        return view('index_weather')->with('datas', $datas);
 
     }
 

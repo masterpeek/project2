@@ -8,11 +8,11 @@
     <style>
         .demo-card-square.mdl-card {
             width: 100%;
-            height: 35%;
-            margin-left: 3%;
-            margin-right: 3%;
-            margin-bottom: 3%;
-            margin-top: 3%;
+            height: 30%;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            margin-top: 2%;
 
         }
         .demo-card-square > .mdl-card__title {

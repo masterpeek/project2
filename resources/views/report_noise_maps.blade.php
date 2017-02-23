@@ -37,7 +37,7 @@
             var province = markers[i][5];
             var date = markers[i][6];
 
-            var content = "ความดังของเสียง: "+ value + " เดซิเบล" +
+            var content = "ความดังเสียง: "+ value + " เดซิเบล" +
                 "<br>" + "พื้นที่: "+ area + " "+ province + "<br>" +
                 "วันที่: "+ date;
 

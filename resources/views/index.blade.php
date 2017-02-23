@@ -53,7 +53,8 @@
 
         var airs = [
                 @foreach($airs as $air)
-            ['', {{ $air->air_lat }}, {{ $air->air_long }}],
+            ['', {{ $air->air_lat }}, {{ $air->air_long }}, "{{ $marker->air_smell }}",
+                "{{ $marker->air_area_name }}", "{{ $marker->air_province_name }}", "{{ $marker->air_thai_date }}"],
             @endforeach
         ];
 
@@ -113,11 +114,39 @@
 
         for (i = 0; i < noises.length; i++) {
             var position = new google.maps.LatLng(noises[i][1], noises[i][2]);
-            
+
             marker = new google.maps.Marker({
                 position: position,
                 map: map,
                 title: content
+            });
+        }
+
+        for (i = 0; i < airs.length; i++) {
+            var position = new google.maps.LatLng(airs[i][1], airs[i][2]);
+
+            var value = airs[i][3];
+            var area = airs[i][4];
+            var province = airs[i][5];
+            var date = airs[i][6];
+
+            var content = "ระดับมลพิษทางอากาศ: "+ value +
+                "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
+                "วันที่: "+ date;
+
+            var infowindow = new google.maps.InfoWindow({
+                content: content
+            });
+
+            marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                title: content
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent(this.title);
+                infowindow.open(map, this);
             });
         }
 

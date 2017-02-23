@@ -19,8 +19,8 @@
     <option value="ทั้งหมด">ทั้งหมด</option>
     <option value="คุณภาพดี">คุณภาพดี</option>
     <option value="คุณภาพปานกลาง">คุณภาพปานกลาง</option>
-    <option value="มีผลกระทบต่อสุขภาพ">มีผลกระทบต่อสุขภาพ</option>
-    <option value="มีผลกระทบต่อสุขภาพมาก">มีผลกระทบต่อสุขภาพมาก</option>
+    <option value="กระทบต่อสุขภาพ">กระทบต่อสุขภาพ</option>
+    <option value="กระทบต่อสุขภาพมาก">กระทบต่อสุขภาพมาก</option>
     <option value="อันตราย">อันตราย</option>
 </select>
 <input type="submit" value="ค้นหา">

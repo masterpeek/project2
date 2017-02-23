@@ -12,6 +12,7 @@
                         <span class="input-group-btn">
                             <input type="submit" value="ค้นหา" class="btn btn-default">
                             <a href="{{ url('/all_report_air') }}" class="btn btn-default">ค้นหาทั้งหมด</a>
+                            <a href="{{ url('/report_air_maps') }}" class="btn btn-default">แผนที่</a>
                         </span>
                     </div><!-- /input-group -->
                 </div><!-- /.col-lg-6 -->

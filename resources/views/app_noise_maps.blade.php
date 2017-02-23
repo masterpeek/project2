@@ -40,25 +40,19 @@
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
                 <a class="mdl-navigation__link" href="{{ url('/') }}">หน้าแรก</a>
-                <a class="mdl-navigation__link" href="{{ url('/maps') }}">แผนที่คุณภาพเสียงและอากาศ</a>
                 <a class="mdl-navigation__link" href="{{ url('/about') }}">เกี่ยวกับ</a>
                 <a class="mdl-navigation__link" href="{{ url('/contact') }}">ติดต่อ</a>
             </nav>
         </div>
 
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+            <a href="{{ url('/') }}" class="mdl-layout__tab">แผนที่คุณภาพเสียงและอากาศ</a>
             <a href="" class="mdl-layout__tab"></a>
+            <a href="{{ url('/index_weather') }}" class="mdl-layout__tab">สถานีวัดคุณภาพอากาศ</a>
             <a href="" class="mdl-layout__tab"></a>
+            <a href="{{ url('/index_report_noise') }}" class="mdl-layout__tab is-active">รายงานมลพิษทางเสียง</a>
             <a href="" class="mdl-layout__tab"></a>
-            <a href="{{ url('/maps') }}" class="mdl-layout__tab">แผนที่สถานีวัดคุณภาพอากาศ</a>
-            <a href="" class="mdl-layout__tab"></a>
-            <a href="" class="mdl-layout__tab"></a>
-            <a href="" class="mdl-layout__tab"></a>
-            <a href="{{ url('/report_noise_maps') }}" class="mdl-layout__tab is-active">แผนที่รายงานคุณภาพเสียง</a>
-            <a href="" class="mdl-layout__tab"></a>
-            <a href="" class="mdl-layout__tab"></a>
-            <a href="" class="mdl-layout__tab"></a>
-            <a href="{{ url('/report_air_maps') }}" class="mdl-layout__tab">แผนที่รายงานคุณภาพอากาศ</a>
+            <a href="{{ url('/index_report_air') }}" class="mdl-layout__tab">รายงานมลพิษทางอากาศ</a>
         </div>
 
 

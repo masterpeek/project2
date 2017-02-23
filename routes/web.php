@@ -22,7 +22,7 @@ Route::post('aqi_near_by', 'WeatherStationController@nearByLatLong');
 Route::get('good_rank', 'WeatherStationController@goodRank');
 Route::get('bad_rank', 'WeatherStationController@badRank');
 Route::get('maps', 'WeatherStationController@maps');
-Route::get('/', 'WeatherStationController@index');
+Route::get('/index_weather', 'WeatherStationController@index');
 Route::get('/all', 'WeatherStationController@viewAll');
 Route::get('/next/{number}', 'WeatherStationController@next');
 Route::get('/show_weather_station/{id}', 'WeatherStationController@show');

@@ -7,7 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <style>
         .demo-card-square.mdl-card {
-            width: 110%;
+            width: 105%;
             height: 30%;
             margin-left: 1%;
             margin-right: 1%;

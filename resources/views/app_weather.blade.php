@@ -8,7 +8,7 @@
     <style>
         .demo-card-square.mdl-card {
             width: 80%;
-            height: 40%;
+            height: 30%;
             margin-left: 5%;
             margin-right: 5%;
             margin-bottom: 3%;

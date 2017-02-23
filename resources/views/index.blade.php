@@ -60,8 +60,6 @@
 
         for (i = 0; i < markers.length; i++) {
             var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-            var position = new google.maps.LatLng(noises[i][1], noises[i][2]);
-
 
             var aqi = markers[i][3];
             var aqi_condition = markers[i][4];
@@ -115,6 +113,7 @@
 
         for (i = 0; i < noises.length; i++) {
             var position = new google.maps.LatLng(noises[i][1], noises[i][2]);
+            
             marker = new google.maps.Marker({
                 position: position,
                 map: map,

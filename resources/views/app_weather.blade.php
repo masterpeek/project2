@@ -7,12 +7,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <style>
         .demo-card-square.mdl-card {
-            width: 105%;
+            width: 100%;
             height: 30%;
-            margin-left: 1%;
-            margin-right: 1%;
-            margin-bottom: 1%;
-            margin-top: 1%;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            margin-top: 2%;
 
         }
         .demo-card-square > .mdl-card__title {

@@ -60,9 +60,9 @@ class WeatherStationController extends Controller
             } else if ($ans->AQILast->AQI->aqi >= 51 && $ans->AQILast->AQI->aqi <= 100) {
                 $data['aqi_condition_name'] = 'คุณภาพปานกลาง';
             } else if ($ans->AQILast->AQI->aqi >= 101 && $ans->AQILast->AQI->aqi <= 200) {
-                $data['aqi_condition_name'] = 'มีผลกระทบต่อสุขภาพ';
+                $data['aqi_condition_name'] = 'กระทบต่อสุขภาพ';
             } else if ($ans->AQILast->AQI->aqi >= 201 && $ans->AQILast->AQI->aqi <= 300) {
-                $data['aqi_condition_name'] = 'มีผลกระทบต่อสุขภาพมาก';
+                $data['aqi_condition_name'] = 'กระทบต่อสุขภาพมาก';
             } else if ($ans->AQILast->AQI->aqi > 300) {
                 $data['aqi_condition_name'] = 'อันตราย';
             }

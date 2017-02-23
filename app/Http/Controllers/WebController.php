@@ -8,7 +8,10 @@ class WebController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $markers = WeatherStation::all();
+
+        return view('index')->with('markers', $markers);
+        
     }
 
     public function about()

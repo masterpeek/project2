@@ -21,7 +21,7 @@
             @foreach($datas as $data)
                 <div class="mdl-cell mdl-cell--4-col">
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
-                        {{ $data->aqi_value }}
+                        <div class="mdl-card__title mdl-card--expand">
                             <h2 class="mdl-card__title-text"></h2>
                         </div>
                         <div class="mdl-card__supporting-text">

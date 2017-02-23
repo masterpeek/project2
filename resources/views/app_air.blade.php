@@ -58,17 +58,11 @@
         </div>
 
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a href="" class="mdl-layout__tab"></a>
-            <a href="" class="mdl-layout__tab"></a>
+            <a href="{{ url('/') }}" class="mdl-layout__tab is-active">แผนที่คุณภาพเสียงและอากาศ</a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="{{ url('/') }}" class="mdl-layout__tab">สถานีวัดคุณภาพอากาศ</a>
             <a href="" class="mdl-layout__tab"></a>
-            <a href="" class="mdl-layout__tab"></a>
-            <a href="" class="mdl-layout__tab"></a>
-            <a href="" class="mdl-layout__tab"></a>
             <a href="{{ url('/index_report_noise') }}" class="mdl-layout__tab">รายงานมลพิษทางเสียง</a>
-            <a href="" class="mdl-layout__tab"></a>
-            <a href="" class="mdl-layout__tab"></a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="{{ url('/index_report_air') }}" class="mdl-layout__tab is-active">รายงานมลพิษทางอากาศ</a>
         </div>

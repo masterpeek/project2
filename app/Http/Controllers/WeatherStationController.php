@@ -190,7 +190,7 @@ class WeatherStationController extends Controller
     {
         $datas = WeatherStation::all()->take(6);
 
-        return view('index')->with('datas', $datas);
+        return view('index_weather')->with('datas', $datas);
     }
 
     public function show($id)

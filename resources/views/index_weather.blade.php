@@ -7,8 +7,8 @@
             {!! Form::open(['url' => 'search_weather', 'method' => 'post']) !!}
             <div class="row">
                 <div class="col-lg-6 col-centered">
+                    <a href="{{ url('/maps') }}" class="btn btn-default">แผนที่</a>
                     <div class="input-group">
-                        <a href="{{ url('/maps') }}" class="btn btn-default">แผนที่</a>
                         <input type="text" name="province" class="form-control" placeholder="ค้นหาจังหวัด เช่น กรุงเทพ, นครปฐม...">
                         <span class="input-group-btn">
                             <input type="submit" value="ค้นหา" class="btn btn-default">

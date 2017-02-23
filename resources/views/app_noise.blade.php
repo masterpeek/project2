@@ -51,14 +51,13 @@
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
                 <a class="mdl-navigation__link" href="{{ url('/') }}">หน้าแรก</a>
-                <a class="mdl-navigation__link" href="{{ url('/maps') }}">แผนที่คุณภาพเสียงและอากาศ</a>
                 <a class="mdl-navigation__link" href="{{ url('/about') }}">เกี่ยวกับ</a>
                 <a class="mdl-navigation__link" href="{{ url('/contact') }}">ติดต่อ</a>
             </nav>
         </div>
 
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a href="{{ url('/') }}" class="mdl-layout__tab is-active">แผนที่คุณภาพเสียงและอากาศ</a>
+            <a href="{{ url('/') }}" class="mdl-layout__tab">แผนที่คุณภาพเสียงและอากาศ</a>
             <a href="" class="mdl-layout__tab"></a>
             <a href="{{ url('/') }}" class="mdl-layout__tab">สถานีวัดคุณภาพอากาศ</a>
             <a href="" class="mdl-layout__tab"></a>

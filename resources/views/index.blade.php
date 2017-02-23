@@ -54,8 +54,8 @@
 
         var airs = [
                 @foreach($airs as $air)
-            ['', {{ $air->air_lat }}, {{ $air->air_long }}, "{{ $marker->air_smell }}",
-                "{{ $marker->air_area_name }}", "{{ $marker->air_province_name }}", "{{ $marker->air_thai_date }}"],
+            ['', {{ $air->air_lat }}, {{ $air->air_long }}, "{{ $air->air_smell }}",
+                "{{ $air->air_area_name }}", "{{ $air->air_province_name }}", "{{ $air->air_thai_date }}"],
             @endforeach
         ];
 

@@ -36,7 +36,6 @@
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
                 <a class="mdl-navigation__link" href="{{ url('/') }}">หน้าแรก</a>
-                <a class="mdl-navigation__link" href="{{ url('/maps') }}">แผนที่คุณภาพเสียงและอากาศ</a>
                 <a class="mdl-navigation__link" href="{{ url('/about') }}">เกี่ยวกับ</a>
                 <a class="mdl-navigation__link" href="{{ url('/contact') }}">ติดต่อ</a>
             </nav>

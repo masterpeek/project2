@@ -18,6 +18,11 @@ class WebController extends Controller
         return view('index')->with('markers', $markers)->with('noises', $noises)->with('airs', $airs);
     }
 
+    public function select()
+    {
+
+    }
+
     public function about()
     {
         return view('about');

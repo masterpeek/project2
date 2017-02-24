@@ -17,8 +17,8 @@
     <h4>เลือกดูตามระดับคุณภาพอากาศ</h4>
 <select name="condition">
     <option value="ทั้งหมด">ทั้งหมด</option>
-    <option value="คุณภาพดี">คุณภาพดี</option>
-    <option value="คุณภาพปานกลาง">คุณภาพปานกลาง</option>
+    <option value="ดี">คุณภาพดี</option>
+    <option value="ปานกลาง">คุณภาพปานกลาง</option>
     <option value="กระทบต่อสุขภาพ">กระทบต่อสุขภาพ</option>
     <option value="กระทบต่อสุขภาพมาก">กระทบต่อสุขภาพมาก</option>
     <option value="อันตราย">อันตราย</option>

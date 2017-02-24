@@ -22,7 +22,7 @@
                 <div class="mdl-cell mdl-cell--3-col">
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
                         <div class="mdl-card__title mdl-card--expand">
-                            <h2 class="mdl-card__title-text">ค่า AQI: {{ $data->aqi_value }} <br> สถานะ: {{ $data->aqi_condition_name }} </h2>
+                            <h2 class="mdl-card__title-text">ค่า AQI: {{ $data->aqi_value }} <br> คุณภาพ: {{ $data->aqi_condition_name }} </h2>
 
                         </div>
                         <div class="mdl-card__supporting-text">

@@ -72,7 +72,7 @@
         </nav>
     </div>
 
-    <main class="mdl-layout__content" style="height: 100%">
+    <main class="mdl-layout__content">
 
 
         @yield('content')

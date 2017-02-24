@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .demo-card-square.mdl-card {
-            width: 103%;
+            width: 102%;
             height: 33%;
             margin-left: 0%;
             margin-right: 0%;
@@ -79,9 +79,6 @@
 
 
     </main>
-    <footer class="mdl-mini-footer">
-
-    </footer>
 </div>
 </body>
 </html>

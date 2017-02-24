@@ -10,10 +10,10 @@
         .demo-card-square.mdl-card {
             width: 103%;
             height: 33%;
-            margin-left: 1%;
-            margin-right: 2%;
-            margin-bottom: 1%;
-            margin-top: 1%;
+            margin-left: 0%;
+            margin-right: 0%;
+            margin-bottom: 0%;
+            margin-top: 0%;
 
         }
         .demo-card-square > .mdl-card__title {

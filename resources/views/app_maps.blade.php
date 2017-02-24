@@ -34,7 +34,7 @@
     <title>App Name</title>
 </head>
 <body>
-<div class="mdl-layout mdl-js-layout mdl-layout">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
             <!-- Title -->
@@ -51,15 +51,20 @@
 
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
             <a href="{{ url('/') }}" class="mdl-layout__tab">แผนที่คุณภาพเสียงและอากาศ</a>
-            <a href="" class="mdl-layout__tab"></a>
             <a href="{{ url('/index_weather') }}" class="mdl-layout__tab is-active">สถานีวัดคุณภาพอากาศ</a>
-            <a href="" class="mdl-layout__tab"></a>
             <a href="{{ url('/index_report_noise') }}" class="mdl-layout__tab">รายงานมลพิษทางเสียง</a>
-            <a href="" class="mdl-layout__tab"></a>
             <a href="{{ url('/index_report_air') }}" class="mdl-layout__tab">รายงานมลพิษทางอากาศ</a>
         </div>
-
     </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">เว็บไซต์แสดงมลพิษทางเสียงเเละอากาศ</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="{{ url('/') }}">หน้าแรก</a>
+            <a class="mdl-navigation__link" href="{{ url('/about') }}">เกี่ยวกับ</a>
+            <a class="mdl-navigation__link" href="{{ url('/contact') }}">ติดต่อ</a>
+        </nav>
+    </div>
+
 
     <main class="mdl-layout__content">
 

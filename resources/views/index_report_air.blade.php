@@ -38,4 +38,7 @@
             @endforeach
         </div>
     </section>
+    <footer class="mdl-mini-footer">
+
+    </footer>
 @stop

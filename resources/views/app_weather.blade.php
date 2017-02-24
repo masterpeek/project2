@@ -79,6 +79,9 @@
 
 
     </main>
+    <footer class="mdl-mini-footer">
+
+    </footer>
 </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-        <div class="mdl-grid" style="max-height: 1000px">
+        <div class="mdl-grid">
             <br>
             {!! Form::open(['url' => 'search_weather', 'method' => 'post']) !!}
             <div class="row">

@@ -9,7 +9,7 @@
     <style>
         .demo-card-square.mdl-card {
             width: 100%;
-            height: 30%;
+            height: 35%;
             margin-left: 2%;
             margin-right: 2%;
             margin-bottom: 2%;

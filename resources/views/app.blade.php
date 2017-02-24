@@ -66,6 +66,14 @@
         </div>
 
     </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">เว็บไซต์แสดงมลพิษทางเสียงเเละอากาศ</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="{{ url('/') }}">หน้าแรก</a>
+            <a class="mdl-navigation__link" href="{{ url('/about') }}">เกี่ยวกับ</a>
+            <a class="mdl-navigation__link" href="{{ url('/contact') }}">ติดต่อ</a>
+        </nav>
+    </div>
 
     <main class="mdl-layout__content">
 

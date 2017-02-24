@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .demo-card-square.mdl-card {
-            width: 105%;
-            height: 30%;
+            width: 103%;
+            height: 33%;
             margin-left: 1%;
             margin-right: 2%;
             margin-bottom: 1%;

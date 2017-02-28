@@ -19,8 +19,6 @@
             <input type="text" name="province" class="form-control" placeholder="ค้นหาจังหวัด เช่น กรุงเทพ, นครปฐม...">
             <span class="input-group-btn">
                             <input type="submit" value="ค้นหา" class="btn btn-default">
-                            <a href="{{ url('/all') }}" class="btn btn-default">ค้นหาทั้งหมด</a>
-                            <a href="{{ url('/maps') }}" class="btn btn-default">แผนที่</a>
                         </span>
         </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->

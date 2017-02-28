@@ -44,7 +44,7 @@ class WebController extends Controller
         else if($condition == "รายงานมลพิษทางเสียง")
         {
             $noises = AutoReportNoiseByUser::all();
-            $markers = WeatherStation::where('aqi_value', $condition)->get();
+            $markers = WeatherStation::where('id', $condition)->get();
             $airs = ReportAirByUser::where('air_pollution', $condition)->get();
 
             return view('index')->with('markers', $markers)->with('noises', $noises)->with('airs', $airs);
@@ -52,7 +52,7 @@ class WebController extends Controller
         else if($condition == "รายงานมลพิษทางอากาศ")
         {
             $airs = ReportAirByUser::all();
-            $markers = WeatherStation::where('aqi_value', $condition)->get();
+            $markers = WeatherStation::where('id', $condition)->get();
             $noises = AutoReportNoiseByUser::where('noise_value', $condition)->get();
 
             return view('index')->with('markers', $markers)->with('noises', $noises)->with('airs', $airs);

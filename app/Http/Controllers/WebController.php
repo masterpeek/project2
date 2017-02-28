@@ -36,20 +36,26 @@ class WebController extends Controller
         else if($condition == "สถานีวัดคุณภาพอากาศ")
         {
             $markers = WeatherStation::all();
+            $noises = "";
+            $airs = "";
 
-            return view('index')->with('markers', $markers);
+            return view('index')->with('markers', $markers)->with('noises', $noises)->with('airs', $airs);
         }
         else if($condition == "รายงานมลพิษทางเสียง")
         {
             $noises = AutoReportNoiseByUser::all();
+            $markers = "";
+            $airs = "";
 
-            return view('index')->with('noises', $noises);
+            return view('index')->with('markers', $markers)->with('noises', $noises)->with('airs', $airs);
         }
         else if($condition == "รายงานมลพิษทางอากาศ")
         {
             $airs = ReportAirByUser::all();
-            
-            return view('index')->with('airs', $airs);
+            $noises = "";
+            $markers = "";
+
+            return view('index')->with('markers', $markers)->with('noises', $noises)->with('airs', $airs);
         }
 
     }

@@ -25,6 +25,8 @@
         </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->
+{!! Form::close() !!}
+
 {!! Form::open(['url' => 'select_condition_all', 'method' => 'post']) !!}
 <div class="form-group" style="text-align:center">
     <h4>เลือกดูตามหัวข้อ</h4>

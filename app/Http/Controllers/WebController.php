@@ -37,7 +37,7 @@ class WebController extends Controller
         {
             $markers = WeatherStation::all();
             $noises = AutoReportNoiseByUser::where('noise_value', $condition)->get();
-            $airs = ReportAirByUser::where('pollution_value', $condition)->get();
+            $airs = ReportAirByUser::where('air_pollution', $condition)->get();
 
             return view('index')->with('markers', $markers)->with('noises', $noises)->with('airs', $airs);
         }
@@ -45,7 +45,7 @@ class WebController extends Controller
         {
             $noises = AutoReportNoiseByUser::all();
             $markers = WeatherStation::where('aqi_value', $condition)->get();
-            $airs = ReportAirByUser::where('pollution_value', $condition)->get();
+            $airs = ReportAirByUser::where('air_pollution', $condition)->get();
 
             return view('index')->with('markers', $markers)->with('noises', $noises)->with('airs', $airs);
         }

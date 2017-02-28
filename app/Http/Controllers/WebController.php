@@ -25,24 +25,30 @@ class WebController extends Controller
 
         $condition = $input["condition"];
 
-        $markers = WeatherStation::all();
-        $noises = AutoReportNoiseByUser::all();
-        $airs = ReportAirByUser::all();
-
         if($condition == "ทั้งหมด")
         {
+            $markers = WeatherStation::all();
+            $noises = AutoReportNoiseByUser::all();
+            $airs = ReportAirByUser::all();
+
             return view('index')->with('markers', $markers)->with('noises', $noises)->with('airs', $airs);
         }
         else if($condition == "สถานีวัดคุณภาพอากาศ")
         {
+            $markers = WeatherStation::all();
+
             return view('index')->with('markers', $markers);
         }
         else if($condition == "รายงานมลพิษทางเสียง")
         {
+            $noises = AutoReportNoiseByUser::all();
+
             return view('index')->with('noises', $noises);
         }
         else if($condition == "รายงานมลพิษทางอากาศ")
         {
+            $airs = ReportAirByUser::all();
+            
             return view('index')->with('airs', $airs);
         }
 

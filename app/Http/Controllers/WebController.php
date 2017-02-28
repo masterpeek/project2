@@ -19,6 +19,19 @@ class WebController extends Controller
         return view('index')->with('markers', $markers)->with('noises', $noises)->with('airs', $airs);
     }
 
+    public function search_all()
+    {
+        $input = Input::all();
+
+        $province = $input["province"];
+
+        $markers = WeatherStation::where('province_name', $province)->get();
+        $noises = AutoReportNoiseByUser::where('noise_province_name', $province)->get();
+        $airs = ReportAirByUser::where('air_province_name', $province)->get();
+
+        return view('index')->with('markers', $markers)->with('noises', $noises)->with('airs', $airs);
+    }
+
     public function select_condition_all()
     {
         $input = Input::all();

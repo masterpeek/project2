@@ -12,7 +12,7 @@
 </head>
 <body>
 <br>
-{!! Form::open(['url' => 'search_weather', 'method' => 'post']) !!}
+{!! Form::open(['url' => 'search_all', 'method' => 'post']) !!}
 <div class="row">
     <div class="col-lg-6 col-centered">
         <div class="input-group">

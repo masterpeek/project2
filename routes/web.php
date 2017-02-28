@@ -15,6 +15,7 @@ Route::get('/', 'WebController@index');
 Route::get('/about', 'WebController@about');
 Route::get('/contact', 'WebController@contact');
 Route::post('/select_condition_all', 'WebController@select_condition_all');
+Route::post('/search_all', 'WebController@search_all');
 
 Route::get('call_data_weather_station', 'WeatherStationController@callData');
 Route::get('return_data_weather_station', 'WeatherStationController@allData');

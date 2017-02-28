@@ -143,8 +143,7 @@
             marker = new google.maps.Marker({
                 position: position,
                 map: map,
-                title: content,
-                icon: 's.png'
+                title: content
             });
 
             google.maps.event.addListener(marker, 'click', function() {

@@ -25,16 +25,14 @@
         </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->
-{!! Form::open(['url' => 'select_condition', 'method' => 'post']) !!}
+{!! Form::open(['url' => 'select_condition_all', 'method' => 'post']) !!}
 <div class="form-group" style="text-align:center">
-    <h4>เลือกดูตามระดับคุณภาพอากาศ</h4>
+    <h4>เลือกดูตามหัวข้อ</h4>
     <select name="condition">
         <option value="ทั้งหมด">ทั้งหมด</option>
-        <option value="ดี">คุณภาพดี</option>
-        <option value="ปานกลาง">คุณภาพปานกลาง</option>
-        <option value="กระทบต่อสุขภาพ">กระทบต่อสุขภาพ</option>
-        <option value="กระทบต่อสุขภาพมาก">กระทบต่อสุขภาพมาก</option>
-        <option value="อันตราย">อันตราย</option>
+        <option value="สถานีวัดคุณภาพอากาศ">สถานีวัดคุณภาพอากาศ</option>
+        <option value="รายงานมลพิษทางเสียง">รายงานมลพิษทางเสียง</option>
+        <option value="รายงานมลพิษทางอากาศ">รายงานมลพิษทางอากาศ</option>
     </select>
     <input type="submit" value="ค้นหา">
 </div>

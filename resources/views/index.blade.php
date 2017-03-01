@@ -11,7 +11,9 @@
     </style>
 </head>
 <body>
-<h1> แผนที่คุณภาพเสียงและอากาศ</h1>
+<div class="form-group" style="text-align:center">
+<h4> แผนที่คุณภาพเสียงและอากาศ</h4>
+</div>
 <br>
 {!! Form::open(['url' => 'search_all', 'method' => 'post']) !!}
 <div class="row">

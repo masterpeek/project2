@@ -1,11 +1,11 @@
 @extends('app_weather')
 
 @section('content')
+    <div class="form-group" style="text-align:center">
+        <h3> สถานีวัดคุณภาพอากาศ</h3>
+    </div>
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
         <div class="mdl-grid">
-            <div class="form-group" style="text-align:center">
-                <h3> สถานีวัดคุณภาพอากาศ</h3>
-            </div>
             {!! Form::open(['url' => 'search_weather', 'method' => 'post']) !!}
             <div class="row">
                 <div class="col-lg-6 col-centered">

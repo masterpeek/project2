@@ -1,6 +1,9 @@
 @extends('app_noise')
 
 @section('content')
+    <div class="form-group" style="text-align:center">
+        <h3> รายงานมลพิษทางเสียง </h3>
+    </div>
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
         <div class="mdl-grid">
             <br>

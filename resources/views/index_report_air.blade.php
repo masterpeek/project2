@@ -1,10 +1,10 @@
 @extends('app_air')
 
 @section('content')
-    <div class="form-group" style="text-align:center">
-        <h3> รายงานมลพิษทางอากาศ </h3>
-    </div>
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+        <div class="form-group" style="text-align:center">
+            <h3> รายงานมลพิษทางอากาศ </h3>
+        </div>
         <div class="mdl-grid">
             <br>
             {!! Form::open(['url' => 'search_air', 'method' => 'post']) !!}

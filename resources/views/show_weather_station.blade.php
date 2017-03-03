@@ -87,7 +87,15 @@
         <div class="mdl-grid">
                 <div class="mdl-cell mdl-cell--4-col">
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
-                        <div class="mdl-card__title mdl-card--expand">
+                        @if($data->aqi_value >= 0 && $data->aqi_value <= 50)
+                            <div class="mdl-card__title mdl-card--expand" style="background: #0099ff">
+                                @elseif($data->aqi_value >= 51 && $data->aqi_value <= 100)
+                                    <div class="mdl-card__title mdl-card--expand" style="background: #33cc33">
+                                        @elseif($data->aqi_value >= 101 && $data->aqi_value <= 200)
+                                            <div class="mdl-card__title mdl-card--expand" style="background: #f7ca18">
+                                                @elseif($data->aqi_value >= 201 && $data->aqi_value <= 300)
+                                                    <div class="mdl-card__title mdl-card--expand" style="background: #ff9900">
+                                                        @endif
                             <h4> AQI: {{ $data->aqi_value }} &nbsp;
                                 สถานะ: {{ $data->aqi_condition_name }}
                                 &nbsp;วันที่: {{ $data->thai_date }}&nbsp;เวลา: {{ $data->time }}  น.</h4>

@@ -16,7 +16,8 @@
 
         }
         .demo-card-square > .mdl-card__title {
-            color: #fff;
+            background-size: cover;
+            background-position: center;
         }
         .col-centered{
             float: none;

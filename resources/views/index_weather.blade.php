@@ -24,11 +24,15 @@
                 <div class="mdl-cell mdl-cell--3-col">
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
                         @if($data->aqi_value >= 0 && $data->aqi_value <= 50)
-                        <div class="mdl-card__title mdl-card--expand" style="background: #3E4EB8">
-                            @elseif($data->aqi_value >= 51 && $data->aqi_value <= 300)
-                                <div class="mdl-card__title mdl-card--expand" style="background: #ffff00">
+                        <div class="mdl-card__title mdl-card--expand" style="background: #0099ff">
+                            @elseif($data->aqi_value >= 51 && $data->aqi_value <= 100)
+                                <div class="mdl-card__title mdl-card--expand" style="background: #33cc33">
+                                    @elseif($data->aqi_value >= 101 && $data->aqi_value <= 200)
+                                        <div class="mdl-card__title mdl-card--expand" style="background: #ffcc00">
+                                            @elseif($data->aqi_value >= 201 && $data->aqi_value <= 300)
+                                                <div class="mdl-card__title mdl-card--expand" style="background: #ff9900">
                                     @endif
-                            <h2 class="mdl-card__title-text">ค่า AQI: {{ $data->aqi_value }} <br> คุณภาพ: {{ $data->aqi_condition_name }} </h2>
+                            <h2 class="mdl-card__title-text" style="color: #ffffff">ค่า AQI: {{ $data->aqi_value }} <br> คุณภาพ: {{ $data->aqi_condition_name }} </h2>
 
                         </div>
                         <div class="mdl-card__supporting-text">

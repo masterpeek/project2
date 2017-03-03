@@ -25,7 +25,7 @@
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
                         @if($data->aqi_value >= 0 && $data->aqi_value <= 50)
                         <div class="mdl-card__title mdl-card--expand" style="background: #3E4EB8">
-                            @elseif($data->aqi_value >= 51 && $data->aqi_value <= 100)
+                            @elseif($data->aqi_value >= 51 && $data->aqi_value <= 300)
                                 <div class="mdl-card__title mdl-card--expand" style="background: #ffff00">
                                     @endif
                             <h2 class="mdl-card__title-text">ค่า AQI: {{ $data->aqi_value }} <br> คุณภาพ: {{ $data->aqi_condition_name }} </h2>

@@ -137,7 +137,7 @@ class WeatherStationController extends Controller
 
         $result = DB::select('select weather_station.aqi_value, 
         weather_station.aqi_condition_name, 
-        weather_station.area_name, weather_station.province_name,  
+        weather_station.area_name, weather_station.province_name, weather_station.thai_date,weather_station.time,   
         weather_station.lat, weather_station.long, 
         (6371 * acos(cos(radians(' . $lat . ')) * cos(radians(weather_station.lat)) 
         * cos(radians(weather_station.long ) - radians(' . $lng . ')) 

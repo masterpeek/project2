@@ -23,7 +23,7 @@
             @foreach($datas as $data)
                 <div class="mdl-cell mdl-cell--3-col">
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
-                        <div class="mdl-card__title mdl-card--expand">
+                        <div class="mdl-card__title mdl-card--expand" style="background: #3E4EB8">
                             <h2 class="mdl-card__title-text">ค่า AQI: {{ $data->aqi_value }} <br> คุณภาพ: {{ $data->aqi_condition_name }} </h2>
 
                         </div>

@@ -146,6 +146,7 @@
                 position: position,
                 map: map,
                 title: content
+                icon: 'voice1.png'
             });
 
             google.maps.event.addListener(marker, 'click', function() {

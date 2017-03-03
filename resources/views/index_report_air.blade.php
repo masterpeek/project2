@@ -6,7 +6,6 @@
     </div>
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
         <div class="mdl-grid">
-            <br>
             {!! Form::open(['url' => 'search_air', 'method' => 'post']) !!}
             <div class="row">
                 <div class="col-lg-6 col-centered">

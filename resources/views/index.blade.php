@@ -145,7 +145,7 @@
             marker = new google.maps.Marker({
                 position: position,
                 map: map,
-                title: content
+                title: content,
                 icon: 'voice1.png'
             });
 

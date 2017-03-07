@@ -61,7 +61,13 @@
         <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--4-col">
                 <div class="demo-card-square mdl-card mdl-shadow--2dp">
-                    <div class="mdl-card__title mdl-card--expand">
+                    @if($data->air_pollution == "เล็กน้อย")
+                        <div class="mdl-card__title mdl-card--expand" style="background: #f7ca18">
+                            @elseif($data->air_pollution == "ปานกลาง")
+                                <div class="mdl-card__title mdl-card--expand" style="background: #ff9900">
+                                    @elseif($data->air_pollution == "รุนแรง")
+                                        <div class="mdl-card__title mdl-card--expand" style="background: red">
+                                            @endif
                         <h4> มลพิษทางอากาศ: {{ $data->air_pollution }} &nbsp;วันที่: {{ $data->air_thai_date }}
                             <br>
                             ความคิดเห็น: {{ $data->air_comment }}</h4>

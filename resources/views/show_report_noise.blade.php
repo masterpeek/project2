@@ -42,8 +42,7 @@
                 marker = new google.maps.Marker({
                     position: position,
                     map: map,
-                    title: content,
-                    icon: 'voice1.png'
+                    title: content
                 });
 
                 google.maps.event.addListener(marker, 'click', function() {

@@ -24,7 +24,7 @@
                 <div class="mdl-cell mdl-cell--3-col">
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
                         <div class="mdl-card__title mdl-card--expand">
-                            <h2 class="mdl-card__title-text">ระดับมลพิษอากาศ: {{ $data->air_pollution }}</h2>
+                            <h2 class="mdl-card__title-text">มลพิษอากาศ: {{ $data->air_pollution }}</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
                             วันที่: {{ $data->air_thai_date }}  <br>

@@ -31,7 +31,7 @@
                 var province = markers[i][5];
                 var date = markers[i][6];
 
-                var content = "ระดับมลพิษทางอากาศ: "+ value +
+                var content = "มลพิษทางอากาศ: "+ value +
                     "<br>" + "พื้นที่: "+ area + " " + province + "<br>" +
                     "วันที่: "+ date;
 
@@ -76,7 +76,7 @@
             <div class="mdl-cell mdl-cell--4-col">
                 <div class="demo-card-square mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title mdl-card--expand">
-                        <h4> ระดับมลพิษทางอากาศ: {{ $data->air_pollution }} &nbsp;วันที่: {{ $data->air_thai_date }}
+                        <h4> มลพิษทางอากาศ: {{ $data->air_pollution }} &nbsp;วันที่: {{ $data->air_thai_date }}
                             <br>
                             ความคิดเห็น: {{ $data->air_comment }}</h4>
 

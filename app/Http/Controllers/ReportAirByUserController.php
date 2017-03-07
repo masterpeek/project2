@@ -53,7 +53,7 @@ class ReportAirByUserController extends Controller
         $check4 = array("อำเภอ");
 
         $area2_2 = str_replace($check4, "อ.", $area2);
-        
+
         $data = [];
         $data['air_smell'] = $air['SmellChoice'];
         $data['air_pollution'] = $air['PollutionChoice'];

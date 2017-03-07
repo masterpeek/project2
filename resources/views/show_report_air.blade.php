@@ -19,7 +19,7 @@
 
             // Multiple Markers
             var markers = [
-                ['', {{ $data->air_lat }}, {{ $data->air_long }}, "{{ $data->air_smell }}",
+                ['', {{ $data->air_lat }}, {{ $data->air_long }}, "{{ $data->air_pollution }}",
                     "{{ $data->air_area_name }}","{{ $data->air_province_name }}", "{{ $data->air_thai_date }}"],
             ];
 
@@ -62,7 +62,7 @@
             <div class="mdl-cell mdl-cell--4-col">
                 <div class="demo-card-square mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title mdl-card--expand">
-                        <h4> ระดับมลพิษทางอากาศ: {{ $data->air_smell }} &nbsp;วันที่: {{ $data->air_thai_date }}
+                        <h4> ระดับมลพิษทางอากาศ: {{ $data->air_pollution }} &nbsp;วันที่: {{ $data->air_thai_date }}
                             <br>
                             ความคิดเห็น: {{ $data->air_comment }}</h4>
 

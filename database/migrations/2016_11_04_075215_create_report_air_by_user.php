@@ -16,7 +16,7 @@ class CreateReportAirByUser extends Migration
         Schema::create('report_air_by_user', function (Blueprint $table) {
             $table->increments('id');
             $table->string('air_smell');
-            $table->integer('air_pollution');
+            $table->string('air_pollution');
             $table->string('air_comment');
             $table->double('air_lat');
             $table->double('air_long');

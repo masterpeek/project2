@@ -159,25 +159,11 @@
             var position = new google.maps.LatLng(airs[i][1], airs[i][2]);
 
             var value = airs[i][3];
-
-            if(value == 3)
-            {
-                var pollution = "ปานกลาง";
-            }
-            else if(value == 4)
-            {
-                var pollution = "สูง";
-            }
-            else if(value == 5)
-            {
-                var pollution = "สูงมาก";
-            }
-
             var area = airs[i][4];
             var province = airs[i][5];
             var date = airs[i][6];
 
-            var content = "ระดับมลพิษทางอากาศ: "+ pollution +
+            var content = "ระดับมลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
                 "วันที่: "+ date;
 

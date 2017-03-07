@@ -25,13 +25,13 @@
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
                         <div class="mdl-card__title mdl-card--expand">
                             @if($data->pollution_value == 3)
-                                {{ $pollution = "ปานกลาง"; }}
+                                {{ $pollution = "ปานกลาง" }}
                                 @endif
                                 @if($data->pollution_value == 4)
-                                   {{ $pollution = "สูง"; }}
+                                   {{ $pollution = "สูง" }}
                                     @endif
                                     @if($data->pollution_value == 5)
-                                    {{ $pollution = "สูงมาก"; }}
+                                    {{ $pollution = "สูงมาก" }}
                                         @endif
 
                             <h2 class="mdl-card__title-text">ระดับมลพิษอากาศ: {{ $pollution }}</h2>

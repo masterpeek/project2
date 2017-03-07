@@ -50,14 +50,6 @@
                     marker.setIcon('cloud1.png');
 
                 }
-                else if(value == "ปานกลาง")
-                {
-                    marker.setIcon('cloud2.png');
-                }
-                else if(value == "รุนแรง")
-                {
-                    marker.setIcon('cloud3.png');
-                }
 
                 google.maps.event.addListener(marker, 'click', function() {
                     infowindow.setContent(this.title);

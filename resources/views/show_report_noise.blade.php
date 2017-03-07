@@ -61,7 +61,7 @@
         <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--4-col">
                 <div class="demo-card-square mdl-card mdl-shadow--2dp">
-                    <div class="mdl-card__title mdl-card--expand" style="color: #ffffff">
+                    <div class="mdl-card__title mdl-card--expand" style="color: red">
                         <h4> ความดังเสียง: {{ $data->noise_value }} เดซิเบล
                             &nbsp;วันที่: {{ $data->noise_thai_date }}
                         </h4>

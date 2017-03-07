@@ -174,7 +174,8 @@
             marker = new google.maps.Marker({
                 position: position,
                 map: map,
-                title: content
+                title: content,
+                icon: 'cloud.png'
             });
 
             google.maps.event.addListener(marker, 'click', function() {

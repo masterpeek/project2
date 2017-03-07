@@ -45,12 +45,6 @@
                     title: content
                 });
 
-                if(value == "เล็กน้อย")
-                {
-                    marker.setIcon('cloud1.png');
-
-                }
-
                 google.maps.event.addListener(marker, 'click', function() {
                     infowindow.setContent(this.title);
                     infowindow.open(map, this);

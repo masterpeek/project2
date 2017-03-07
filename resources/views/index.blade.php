@@ -67,7 +67,7 @@
 
         var airs = [
                 @foreach($airs as $air)
-            ['', {{ $air->air_lat }}, {{ $air->air_long }}, "{{ $air->air_smell }}",
+            ['', {{ $air->air_lat }}, {{ $air->air_long }}, "{{ $air->air_pollution }}",
                 "{{ $air->air_area_name }}", "{{ $air->air_province_name }}", "{{ $air->air_thai_date }}"],
             @endforeach
         ];
@@ -175,8 +175,21 @@
                 position: position,
                 map: map,
                 title: content,
-                icon: 'cloud.png'
             });
+
+            if(value == 3)
+            {
+                marker.setIcon('cloud1.png');
+
+            }
+            else if(value == 4)
+            {
+                marker.setIcon('cloud2.png');
+            }
+            else if(value == 5)
+            {
+                marker.setIcon('cloud3.png');
+            }
 
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.setContent(this.title);

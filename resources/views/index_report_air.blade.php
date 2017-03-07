@@ -23,8 +23,15 @@
             @foreach($datas as $data)
                 <div class="mdl-cell mdl-cell--3-col">
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        @if($data->air_pollution == "เล็กน้อย")
+                            <div class="mdl-card__title mdl-card--expand" style="background: #f7ca18">
+                                @elseif($data->air_pollution == "ปานกลาง")
+                                    <div class="mdl-card__title mdl-card--expand" style="background: #ff9900">
+                                        @elseif($data->air_pollution == "รุนแรง")
+                                            <div class="mdl-card__title mdl-card--expand" style="background: red">
+                                                        @endif
                         <div class="mdl-card__title mdl-card--expand">
-                            <h2 class="mdl-card__title-text">มลพิษอากาศ: {{ $data->air_pollution }}</h2>
+                            <h2 class="mdl-card__title-text" style="color: #ffffff">มลพิษอากาศ: {{ $data->air_pollution }}</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
                             วันที่: {{ $data->air_thai_date }}  <br>

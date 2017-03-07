@@ -177,16 +177,16 @@
                 title: content,
             });
 
-            if(value == 3)
+            if(value == "เล็กน้อย")
             {
                 marker.setIcon('cloud1.png');
 
             }
-            else if(value == 4)
+            else if(value == "ปานกลาง")
             {
                 marker.setIcon('cloud2.png');
             }
-            else if(value == 5)
+            else if(value == "รุนแรง")
             {
                 marker.setIcon('cloud3.png');
             }

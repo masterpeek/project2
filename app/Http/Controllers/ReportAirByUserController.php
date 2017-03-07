@@ -68,13 +68,13 @@ class ReportAirByUserController extends Controller
         $area2_2 = str_replace($check4, "อ.", $area2);
 
         if($air['SmellChoice'] === "Normal"){
-            $smell_choice = "ปานกลาง";
+            $smell_choice = "เล็กน้อย";
         }
         else if($air['SmellChoice'] === "High"){
-            $smell_choice = "สูง";
+            $smell_choice = "ปานกลาง";
         }
         else if($air['SmellChoice'] === "Very High"){
-            $smell_choice = "สูงมาก";
+            $smell_choice = "รุนแรง";
         }
 
         $data = [];

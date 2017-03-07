@@ -162,7 +162,7 @@
 
             if(value == 3)
             {
-                var pollution = "ปกติ";
+                var pollution = "ปานกลาง";
             }
             else if(value == 4)
             {

@@ -29,7 +29,7 @@
 
 {!! Form::open(['url' => 'select_condition_all', 'method' => 'post']) !!}
 <div class="form-group" style="text-align:center">
-    <h4>เลือกดูตามหัวข้อ</h4>
+    <h4>เลือกดูตามมลพิษทางเสียงและอากาศ</h4>
     <select name="condition">
         <option value="ทั้งหมด">ทั้งหมด</option>
         <option value="สถานีวัดคุณภาพอากาศ">สถานีวัดคุณภาพอากาศ</option>

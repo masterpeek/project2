@@ -138,7 +138,7 @@ class AutoReportNoiseByUserController extends Controller
         (6371 * acos(cos(radians(' . $lat . ')) * cos(radians(auto_report_noise_by_user.noise_lat)) 
         * cos(radians(auto_report_noise_by_user.noise_long ) - radians(' . $lng . ')) 
         + sin(radians(' . $lat .')) * sin(radians(auto_report_noise_by_user.noise_lat)))) as distance
-        from auto_report_noise_by_user having distance < '. $distance .' order by distance limit 1');
+        from auto_report_noise_by_user having distance <= '. $distance .' order by distance limit 1');
 
         if($result != null)
         {
@@ -223,9 +223,18 @@ class AutoReportNoiseByUserController extends Controller
 
     }
 
-    public function updateNoise($id)
+    public function updateNoise(Request $request)
     {
-        AutoReportNoiseByUser::where('id', $id)->delete();
+        $data = $request->all();
+
+        $id = $data["ID"];
+
+        $choice = $data["Choice"];
+
+        if($choice == 0)
+        {
+            AutoReportNoiseByUser::where('id', $id)->delete();
+        }
     }
 
 

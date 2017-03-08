@@ -135,7 +135,7 @@ class ReportAirByUserController extends Controller
         (6371 * acos(cos(radians(' . $lat . ')) * cos(radians(report_air_by_user.air_lat)) 
         * cos(radians(report_air_by_user.air_long ) - radians(' . $lng . ')) 
         + sin(radians(' . $lat .')) * sin(radians(report_air_by_user.air_lat)))) as distance
-        from report_air_by_user having distance < '. $distance .' order by distance limit 1');
+        from report_air_by_user having distance <= '. $distance .' order by distance limit 1');
 
         if($result != null)
         {

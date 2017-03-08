@@ -223,5 +223,10 @@ class AutoReportNoiseByUserController extends Controller
 
     }
 
+    public function updateNoise($id)
+    {
+        AutoReportNoiseByUser::where('id', $id)->delete();
+    }
+
 
 }

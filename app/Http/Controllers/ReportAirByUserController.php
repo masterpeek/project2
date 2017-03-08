@@ -220,6 +220,11 @@ class ReportAirByUserController extends Controller
 
     }
 
+    public function updateAir($id)
+    {
+        ReportAirByUser::where('id', $id)->delete();
+    }
+
 
 
 

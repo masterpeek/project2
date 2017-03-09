@@ -14,7 +14,7 @@
 <br>
 {!! Form::open(['url' => 'select_condition', 'method' => 'post']) !!}
 <div class="form-group" style="text-align:center">
-    <h4> แผนที่คุณภาพอากาศ</h4>
+    <h3> แผนที่คุณภาพอากาศ</h3>
 </div>
 <div class="form-group" style="text-align:center">
     <h4>เลือกดูตามระดับคุณภาพอากาศ</h4>

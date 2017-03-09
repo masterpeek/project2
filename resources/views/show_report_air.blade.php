@@ -45,6 +45,19 @@
                     title: content
                 });
 
+                if(value == "เล็กน้อย")
+                {
+                    marker.setIcon('http://maps.google.com/mapfiles/ms/icons/yellow-dot.png');
+                }
+                else if(value == "ปานกลาง")
+                {
+                    marker.setIcon('http://maps.google.com/mapfiles/ms/icons/orange-dot.png');
+                }
+                else if(value == "รุนแรง")
+                {
+                    marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+                }
+
                 google.maps.event.addListener(marker, 'click', function() {
                     infowindow.setContent(this.title);
                     infowindow.open(map, this);

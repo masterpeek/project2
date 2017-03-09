@@ -65,7 +65,7 @@
 </script>
 <br>
 <div class="form-group" style="text-align:center">
-    <img src="noise_color.png" height="100" width="750">
+    <img src="noise_color.png" height="80" width="750">
 </div>
 </body>
 </html>

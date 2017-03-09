@@ -203,7 +203,9 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSolnKvQzksYqxOviOJrNTkRn7-voF9MA&callback=initMap">
 </script>
-<img src="show_color.png" height="300" width="500">
+<div class="form-group" style="text-align:center">
+<img src="show_color.png" height="100" width="200">
+</div>
 </body>
 </html>
 @stop

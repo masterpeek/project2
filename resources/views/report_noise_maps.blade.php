@@ -11,7 +11,9 @@
     </style>
 </head>
 <body>
-<br><br><br>
+<div class="form-group" style="text-align:center">
+    <h3> แผนที่มลพิษทางเสียง</h3>
+</div>
 <div id="map" style="width:800px; margin:0 auto;"></div>
 <script>
     function initMap() {

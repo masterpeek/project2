@@ -49,5 +49,11 @@
                 </div>
             @endforeach
         </div>
+                    </div>
+                </div>
+        </div>
     </section>
+    <div class="form-group" style="text-align:center">
+        <img src="show_color.png" height="150" width="800">
+    </div>
 @stop

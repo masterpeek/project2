@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="form-group" style="text-align:center">
-    <h3> แผนที่มลพิษทางเสียง</h3>
+    <h4> แผนที่มลพิษทางเสียง</h4>
 </div>
 <div id="map" style="width:800px; margin:0 auto;"></div>
 <script>

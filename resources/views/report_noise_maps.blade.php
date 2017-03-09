@@ -65,7 +65,6 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSolnKvQzksYqxOviOJrNTkRn7-voF9MA&callback=initMap">
 </script>
-<br>
 <div class="form-group" style="text-align:center">
     <img src="noise_color.png" height="95" width="750">
 </div>

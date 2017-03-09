@@ -14,6 +14,9 @@
 <br>
 {!! Form::open(['url' => 'select_condition', 'method' => 'post']) !!}
 <div class="form-group" style="text-align:center">
+    <h4> แผนที่คุณภาพอากาศ</h4>
+</div>
+<div class="form-group" style="text-align:center">
     <h4>เลือกดูตามระดับคุณภาพอากาศ</h4>
 <select name="condition">
     <option value="ทั้งหมด">ทั้งหมด</option>
@@ -105,7 +108,7 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSolnKvQzksYqxOviOJrNTkRn7-voF9MA&callback=initMap">
 </script>
 <div class="form-group" style="text-align:center">
-    <img src="show_color.png" height="150" width="800">
+    <img src="station_color.png" height="100" width="700">
 </div>
 </body>
 </html>

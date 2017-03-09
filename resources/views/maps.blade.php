@@ -11,11 +11,10 @@
     </style>
 </head>
 <body>
-<br>
-{!! Form::open(['url' => 'select_condition', 'method' => 'post']) !!}
 <div class="form-group" style="text-align:center">
     <h3> แผนที่คุณภาพอากาศ</h3>
 </div>
+{!! Form::open(['url' => 'select_condition', 'method' => 'post']) !!}
 <div class="form-group" style="text-align:center">
     <h4>เลือกดูตามระดับคุณภาพอากาศ</h4>
 <select name="condition">
@@ -108,7 +107,7 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSolnKvQzksYqxOviOJrNTkRn7-voF9MA&callback=initMap">
 </script>
 <div class="form-group" style="text-align:center">
-    <img src="station_color.png" height="100" width="700">
+    <img src="station_color1.png" height="100" width="700">
 </div>
 </body>
 </html>

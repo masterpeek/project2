@@ -78,7 +78,7 @@
 </script>
 <br>
 <div class="form-group" style="text-align:center">
-    <img src="air_color.png" height="150" width="550">
+    <img src="air_color.png" height="100" width="700">
 </div>
 </body>
 </html>

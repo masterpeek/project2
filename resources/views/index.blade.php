@@ -205,7 +205,7 @@
 </script>
 <br><br>
 <div class="form-group" style="text-align:center">
-    <img src="all_color.png" height="200" width="700">
+    <img src="all_color1.png" height="250" width="700">
 </div>
 </body>
 </html>

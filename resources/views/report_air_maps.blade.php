@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="form-group" style="text-align:center">
-    <h4> แผนที่มลพิษทางอากาศ</h4>
+    <h3> แผนที่มลพิษทางอากาศ</h3>
 </div>
 {!! Form::open(['url' => 'select_condition_air', 'method' => 'post']) !!}
 <div class="form-group" style="text-align:center">

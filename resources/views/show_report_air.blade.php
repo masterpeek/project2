@@ -47,15 +47,15 @@
 
                 if(value == "เล็กน้อย")
                 {
-                    marker.setIcon('http://maps.google.com/mapfiles/ms/icons/yellow-dot.png');
+                    marker.setIcon('cloud1.png');
                 }
                 else if(value == "ปานกลาง")
                 {
-                    marker.setIcon('http://maps.google.com/mapfiles/ms/icons/orange-dot.png');
+                    marker.setIcon('cloud2.png');
                 }
                 else if(value == "รุนแรง")
                 {
-                    marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+                    marker.setIcon('cloud3.png');
                 }
 
                 google.maps.event.addListener(marker, 'click', function() {

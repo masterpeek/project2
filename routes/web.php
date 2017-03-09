@@ -60,3 +60,4 @@ Route::post('/notify_nearby_air','ReportAirByUserController@reportAirNearBy');
 Route::post('/delete_air_marker', 'ReportAirByUserController@deleteAirMarker');
 Route::post('/search_air', 'ReportAirByUserController@search');
 Route::post('/update_air', 'ReportAirByUserController@updateAir');
+Route::post('/select_condition_air', 'ReportAirByUserController@select_condition_air');

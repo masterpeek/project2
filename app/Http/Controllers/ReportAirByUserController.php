@@ -225,8 +225,22 @@ class ReportAirByUserController extends Controller
         ReportAirByUser::where('id', $id)->delete();
     }
 
+    public function select_condition_air()
+    {
+        $input = Input::all();
 
+        $condition = $input["condition"];
 
+        if($condition === "ทั้งหมด")
+        {
+            $markers = ReportAirByUser::all();
+        }
+        else
+        {
+            $markers = ReportAirByUser::where('air_pollution', $condition)->get();
+        }
 
+        return view('report_air_maps')->with('markers', $markers);
+    }
 
 }

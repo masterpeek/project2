@@ -14,6 +14,18 @@
 <div class="form-group" style="text-align:center">
     <h4> แผนที่มลพิษทางอากาศ</h4>
 </div>
+{!! Form::open(['url' => 'select_condition_air', 'method' => 'post']) !!}
+<div class="form-group" style="text-align:center">
+    <h4>เลือกดูตามระดับมลพิษทางอากาศ</h4>
+    <select name="condition">
+        <option value="ทั้งหมด">ทั้งหมด</option>
+        <option value="เล็กน้อย">เล็กน้อย</option>
+        <option value="ปานกลาง">ปานกลาง</option>
+        <option value="รุนแรง">รุนแรง</option>
+    </select>
+    <input type="submit" value="ค้นหา">
+</div>
+{!! Form::close() !!}
 <div id="map" style="width:800px; margin:0 auto;"></div>
 <script>
     function initMap() {

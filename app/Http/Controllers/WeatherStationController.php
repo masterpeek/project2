@@ -203,7 +203,7 @@ class WeatherStationController extends Controller
 
     public function viewAll()
     {
-        $datas = WeatherStation::all();
+        $datas = WeatherStation::orderBy('date', 'ASC')->get();
 
         return view('index_weather')->with('datas', $datas);
     }

@@ -189,7 +189,7 @@ class WeatherStationController extends Controller
 
     public function index()
     {
-        $datas = WeatherStation::all()->take(8);
+        $datas = WeatherStation::orderBy('date', 'DESC')->orderBy('time', 'DESC')->take(8)-get();
 
         return view('index_weather')->with('datas', $datas);
     }

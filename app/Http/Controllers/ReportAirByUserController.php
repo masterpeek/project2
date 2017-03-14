@@ -220,9 +220,35 @@ class ReportAirByUserController extends Controller
 
     }
 
-    public function updateAir($id)
+    public function updateAir(Request $request)
     {
-        ReportAirByUser::where('id', $id)->delete();
+        $data = $request->all();
+
+        $id = $data["ID"];
+
+        $choice = $data["Choice"];
+
+        if($choice == 0)
+        {
+            ReportAirByUser::where('id', $id)->delete();
+        }
+        else if($choice == 2)
+        {
+            $air = ReportAirByUser::where('id', $id)->get();
+
+            if($air[0]->air_pollution == "เล็กน้อย")
+            {
+                ReportAirByUser::where('id', $id)->update(['air_pollution' => 'ปานกลาง']);
+            }
+            else if($air[0]->air_pollution  == "ปานกลาง")
+            {
+                ReportAirByUser::where('id', $id)->update(['air_pollution' => 'รุนแรง']);
+            }
+            else if($air[0]->air_pollution  == "รุนแรง")
+            {
+                ReportAirByUser::where('id', $id)->update(['air_pollution' => 'รุนแรง']);
+            }
+        }
     }
 
     public function select_condition_air()
@@ -242,5 +268,6 @@ class ReportAirByUserController extends Controller
 
         return view('report_air_maps')->with('markers', $markers);
     }
+
 
 }

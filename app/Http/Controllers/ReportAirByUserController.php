@@ -228,11 +228,11 @@ class ReportAirByUserController extends Controller
 
         $choice = $data["Choice"];
 
-        if($choice == 0)
+        if($choice == "0")
         {
             ReportAirByUser::where('id', $id)->delete();
         }
-        else if($choice == 2)
+        else if($choice == "2")
         {
             $air = ReportAirByUser::where('id', $id)->get();
 

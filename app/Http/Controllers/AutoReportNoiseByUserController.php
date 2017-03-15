@@ -229,7 +229,7 @@ class AutoReportNoiseByUserController extends Controller
     {
         $data = $request->all();
 
-        $id = $data["ID"];
+        $id = intval($data["ID"]);
 
         $choice = $data["Choice"];
 

@@ -132,7 +132,8 @@ class AutoReportNoiseByUserController extends Controller
         $lng = $data["Longitude"];
         $distance = $data["Distance"];
 
-        $result = DB::select('select auto_report_noise_by_user.noise_value, 
+        $result = DB::select('select auto_report_noise_by_user.id,
+        select auto_report_noise_by_user.noise_value, 
         auto_report_noise_by_user.noise_area_name, auto_report_noise_by_user.noise_province_name,  
         auto_report_noise_by_user.noise_lat, auto_report_noise_by_user.noise_long, 
         (6371 * acos(cos(radians(' . $lat . ')) * cos(radians(auto_report_noise_by_user.noise_lat)) 
@@ -143,7 +144,7 @@ class AutoReportNoiseByUserController extends Controller
         if($result != null)
         {
             $ans = $ans.$result[0]->noise_value.";".$result[0]->noise_area_name.";".$result[0]->noise_province_name.";".
-                number_format($result[0]->distance, 2);
+                $result[0]->id;
 
             return $ans;
         }

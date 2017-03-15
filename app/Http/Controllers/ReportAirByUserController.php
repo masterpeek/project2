@@ -129,7 +129,8 @@ class ReportAirByUserController extends Controller
         $lng = $data["Longitude"];
         $distance = $data["Distance"];
 
-        $result = DB::select('select report_air_by_user.air_smell, 
+        $result = DB::select('select report_air_by_user.id,
+        select report_air_by_user.air_smell, 
         report_air_by_user.air_area_name, report_air_by_user.air_province_name,  
         report_air_by_user.air_lat, report_air_by_user.air_long, 
         (6371 * acos(cos(radians(' . $lat . ')) * cos(radians(report_air_by_user.air_lat)) 
@@ -139,7 +140,8 @@ class ReportAirByUserController extends Controller
 
         if($result != null)
         {
-            $ans = $ans.$result[0]->air_smell.";".$result[0]->air_area_name.";".$result[0]->air_province_name;
+            $ans = $ans.$result[0]->air_smell.";".$result[0]->air_area_name.";".$result[0]->air_province_name.";".
+            $result[0]->id;
 
             return $ans;
         }

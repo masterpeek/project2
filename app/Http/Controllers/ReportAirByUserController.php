@@ -19,7 +19,7 @@ class ReportAirByUserController extends Controller
 
         $imageTempName = $request->file('PicPath')->getPathname();
         $imageName = $request->file('PicPath')->getClientOriginalName();
-        $path = base_path() . 'public/upload/';
+        $path = public_path(sprintf("\\uploads\\%s\\", str_random(8)));
         $request->file('PicPath')->move($path, $imageName);
         DB::table('report_air_by_user')
             ->where('air_picture', $imageTempName)

@@ -9,6 +9,7 @@ use App\ReportAirByUser;
 use Stichoza\GoogleTranslate\TranslateClient;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 
 class ReportAirByUserController extends Controller
 {
@@ -18,12 +19,16 @@ class ReportAirByUserController extends Controller
 
         $air = $request->all();
 
-        $imageTempName = $request->file('PicPath')->getPathname();
-        $imageName = $request->file('PicPath')->getClientOriginalName();
-        
-        DB::table('report_air_by_user')
-            ->where('air_picture', $imageTempName)
-            ->update(['air_picture' => $imageName]);
+        $image = $request->file('PicPath')->getPathname();
+        $fileName = $image->getClientOriginalName();
+        Storage::put('upload/images/' . $fileName, file_get_contents(
+            $request->file('PicPath')->getRealPath()
+        ));
+
+
+       //DB::table('report_air_by_user')
+         //->where('air_picture', $imageTempName)
+           //->update(['air_picture' => $imageName]);
 
         $latitude = doubleval($air['Latitude']);
         $longitude = doubleval($air['Longitude']);
@@ -63,6 +68,7 @@ class ReportAirByUserController extends Controller
         $area2_2 = str_replace($check4, "อ.", $area2);
 
         $data = [];
+        $data['air_picture'] = $fileName;
         $data['air_smell'] = $air['SmellChoice'];
         $data['air_pollution'] = $air['PollutionChoice'];
         $data['air_comment'] = $air['Detail'];

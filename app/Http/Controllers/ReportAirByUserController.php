@@ -20,7 +20,7 @@ class ReportAirByUserController extends Controller
         $air = $request->all();
 
         $image = $request->file('PicPath')->getPathname();
-        $fileName = $image->getClientOriginalName();
+        $fileName = $image[0]->getClientOriginalName();
         Storage::put('upload/images/' . $fileName, file_get_contents(
             $request->file('PicPath')->getRealPath()
         ));

@@ -17,6 +17,14 @@ class ReportAirByUserController extends Controller
 
         $air = $request->all();
 
+        $imageTempName = $request->file('PicPath')->getPathname();
+        $imageName = $request->file('PicPath')->getClientOriginalName();
+        $path = base_path() . 'public/upload/';
+        $request->file('PicPath')->move($path, $imageName);
+        DB::table('report_air_by_user')
+            ->where('air_picture', $imageTempName)
+            ->update(['air_picture' => $imageName]);
+
         $latitude = doubleval($air['Latitude']);
         $longitude = doubleval($air['Longitude']);
 

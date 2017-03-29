@@ -54,7 +54,7 @@
                 @foreach($markers as $marker)
             ['', {{ $marker->lat }}, {{ $marker->long }}, {{ $marker->aqi_value }},
                 "{{ $marker->aqi_condition_name }}", "{{ $marker->station_name }}",
-                "{{ $marker->area_name }}", "{{ $marker->date }}", "{{ $marker->time }}"],
+                "{{ $marker->area_name }}", "{{ $marker->thai_date }}", "{{ $marker->time }}"],
             @endforeach
         ];
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -45,19 +46,19 @@ class AdminController extends Controller
         }
     }
 
-    public function updateUser()
+    public function updateUser($id)
     {
 
     }
 
-    public function deleteUser(Request $request)
+    public function deleteUser($id)
     {
-
+        User::where('id', $id)->delete();
     }
 
     public function showUser()
     {
-
+        $users = User::all();
     }
 
 }

@@ -1,13 +1,13 @@
 @extends('app_admin')
 @section('content')
-    <div class="container">
+    <div class="container" id="form_login">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h1 class="panel-title" align="center">เข้าสู่ระบบ</h1>
                     </div>
-                    <div class="panel-body" id="form_login">
+                    <div class="panel-body">
                         {!! Form::open(['url' => 'login_admin', 'method' => 'post']) !!}
                             <fieldset>
                                 <div class="form-group">

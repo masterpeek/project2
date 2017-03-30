@@ -25,8 +25,7 @@
             top: 50%;
             margin-top: -50px;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 50%;
         }
 
         /* On small screens, set height to 'auto' for the grid */

@@ -21,12 +21,10 @@
             margin: 0 auto;
         }
         .container1 {
-            margin: auto;
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-            position:relative;
-            top: 50%;
+            position: absolute;
+            top: 35%;
+            left: 0;
+            width: 100%;
         }
 
         /* On small screens, set height to 'auto' for the grid */

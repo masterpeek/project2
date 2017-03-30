@@ -20,6 +20,11 @@
             float: none;
             margin: 0 auto;
         }
+        #form_login {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
 
         /* On small screens, set height to 'auto' for the grid */
         @media screen and (max-width: 767px) {

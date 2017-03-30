@@ -7,7 +7,7 @@
                     <div class="panel-heading">
                         <h1 class="panel-title" align="center">เข้าสู่ระบบ</h1>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" id="form_login">
                         {!! Form::open(['url' => 'login_admin', 'method' => 'post']) !!}
                             <fieldset>
                                 <div class="form-group">

@@ -21,7 +21,7 @@
             margin: 0 auto;
         }
         .container1 {
-            position: absolute;
+            position: center;
             top: 50%;
             left: 0;
             width: 100%;

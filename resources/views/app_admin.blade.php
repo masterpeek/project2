@@ -22,7 +22,7 @@
         }
         .container1 {
             position: absolute;
-            top: 100%;
+            top: 0%;
             left: 0;
             width: 100%;
         }

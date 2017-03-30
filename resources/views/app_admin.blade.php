@@ -20,10 +20,12 @@
             float: none;
             margin: 0 auto;
         }
-        #form_login {
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
+        .container1 {
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            left: 0;
+            width: 100%;
         }
 
         /* On small screens, set height to 'auto' for the grid */

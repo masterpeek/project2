@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function createUser(Request $request)
+    public function index()
+    {
+        return view('/index_admin');
+    }
+
+    public function createAdmin(Request $request)
     {
         $admin = $request->all();
 
@@ -43,6 +48,37 @@ class AdminController extends Controller
             User::create($data);
 
             return "success";
+        }
+    }
+
+    public function loginAdmin(Request $request)
+    {
+        $result = "";
+
+        $user = $request->all();
+
+        $username = $user["Username"];
+        $password = md5($user["Password"]);
+
+        $data = User::where('username', '=', $username)->get()->first();
+
+
+        if($data != null)
+        {
+            if($data->password == $password)
+            {
+                $result = $result.$data->id.";".$data->username.";".$data->fname.";".$data->lname.";".$data->tel;
+
+                return $result;
+            }
+            else
+            {
+                return "incorrect password";
+            }
+        }
+        else
+        {
+            return "incorrect username";
         }
     }
 

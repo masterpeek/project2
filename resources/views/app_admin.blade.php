@@ -23,9 +23,8 @@
         .container1 {
             position: absolute;
             top: 50%;
-            margin-top: -50px;
             left: 0;
-            width: 50%;
+            width: 100%;
         }
 
         /* On small screens, set height to 'auto' for the grid */

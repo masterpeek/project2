@@ -24,7 +24,7 @@
             position: absolute;
             top: 35%;
             left: 0;
-            width: 100%;
+            width: 90%;
         }
 
         /* On small screens, set height to 'auto' for the grid */

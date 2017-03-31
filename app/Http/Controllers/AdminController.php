@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\WeatherStation;
+use App\AutoReportNoiseByUser;
+use App\ReportAirByUser;
 use Illuminate\Http\Request;
 use Validator;
 

@@ -39,7 +39,7 @@
                     <td>{{ $user->id }}</td>
                     <td>{{ $user->username }}</td>
                     <td>{{ $user->password }}</td>
-                    <td>{{ $users->fname }}</td>
+                    <td>{{ $user->fname }}</td>
                     <td>{{ $user->lname }}</td>
                     <td>{{ $user->tel }}</td>
                     @if($user->user_level = 1)

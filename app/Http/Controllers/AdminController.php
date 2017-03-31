@@ -7,6 +7,7 @@ use App\WeatherStation;
 use App\AutoReportNoiseByUser;
 use App\ReportAirByUser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Validator;
 
 class AdminController extends Controller
@@ -130,7 +131,9 @@ class AdminController extends Controller
 
     public function deleteUser($id)
     {
-        User::where('id', $id)->delete();
+        $users = User::where('id', $id)->delete();
+
+        return redirect()->route('index_admin');
     }
 
     public function showUser()

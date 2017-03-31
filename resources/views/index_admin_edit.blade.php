@@ -13,12 +13,13 @@
             </div>
 
             <div class="col-sm-9">
+                <br>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-md-offset-2">
+            <div class="col-md-4 col-md-offset-3">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h1 class="panel-title" align="center">สมัครสมาชิก</h1>
+                        <h1 class="panel-title" align="center">แก้ไข {{ $user->username }}</h1>
                     </div>
                     <div class="panel-body">
                         {!! Form::open(['url' => 'update_user', 'method' => 'post']) !!}

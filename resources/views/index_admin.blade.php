@@ -47,7 +47,9 @@
                         @elseif($user->user_level == 2)
                             <td> ผู้ดูแลระบบ </td>
                         @endif
-                    <td><input type="button" class="btn btn-warning" value="แก้ไข"></td>
+                    <td><a class="btn btn-small btn-success" href="{{ url('index_admin_edit/'.$user->id) }}">
+                        แก้ไข</a>
+                    </td>
                     <td>{!! Form::open(['method' => 'DELETE', 'url' => 'index_admin/'.$user->id]) !!}
                         {!! Form::submit('ลบ', ['class' => 'btn btn-danger']) !!}
                         {!! Form::close() !!}</td>

@@ -8,6 +8,7 @@ use App\AutoReportNoiseByUser;
 use App\ReportAirByUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
 use Validator;
 
 class AdminController extends Controller
@@ -28,6 +29,13 @@ class AdminController extends Controller
 
         return view('/index_admin')->with('users', $users);
 
+    }
+
+    public function editUser($id)
+    {
+        $user = User::where('id', $id)->get();
+
+        return view('index_admin_edit')->with('user', $user);
     }
 
     public function deleteUser($id)

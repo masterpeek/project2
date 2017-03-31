@@ -18,6 +18,11 @@ class AdminController extends Controller
         return view('/create_form_admin');
     }
 
+    public function indexAdmin()
+    {
+        return view('/index_admin');
+    }
+
     public function createAdmin(Request $request)
     {
         $admin = $request->all();

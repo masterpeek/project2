@@ -1,5 +1,18 @@
 @extends('app_admin')
 @section('content')
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav hidden-xs">
+                <h3>หน้าจัดการระบบ</h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="{{ url('/index_admin') }}">ผู้ใช้งาน</a></li>
+                    <li><a href="{{ url('/index_admin_ws') }}">สถานีวัดคุณภาพอากาศ</a></li>
+                    <li><a href="{{ url('/index_admin_noise') }}">รายงานมลพิษทางเสียง</a></li>
+                    <li><a href="{{ url('/index_admin_air') }}">รายงานมลพิษทางอากาศ</a></li>
+                </ul><br>
+            </div>
+
+            <div class="col-sm-9">
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-3">
@@ -33,6 +46,9 @@
                         {!! Form::close() !!}
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
             </div>
         </div>
     </div>

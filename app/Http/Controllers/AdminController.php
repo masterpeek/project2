@@ -75,7 +75,7 @@ class AdminController extends Controller
             {
                 $result = $result.$data->id.";".$data->username.";".$data->fname.";".$data->lname.";".$data->tel;
 
-                return $result;
+                return redirect()->route('index_admin');
             }
             else
             {

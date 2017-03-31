@@ -26,6 +26,30 @@ class AdminController extends Controller
 
     }
 
+    public function indexWeatherStation()
+    {
+        $datas = WeatherStationController::all();
+
+        return view('/index_admin_ws')->with('datas', $datas);
+
+    }
+
+    public function indexNoise()
+    {
+        $datas = AutoReportNoiseByUserController::all();
+
+        return view('/index_admin_noise')->with('datas', $datas);
+
+    }
+
+    public function indexAir()
+    {
+        $datas = ReportAirByUserController::all();
+
+        return view('/index_admin_air')->with('datas', $datas);
+
+    }
+
     public function createAdmin(Request $request)
     {
         $admin = $request->all();

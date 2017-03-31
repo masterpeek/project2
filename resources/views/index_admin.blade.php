@@ -5,10 +5,10 @@
         <div class="col-sm-3 sidenav hidden-xs">
             <h3>หน้าจัดการระบบ</h3>
             <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#section1">ผู้ใช้งาน</a></li>
-                <li><a href="#section2">สถานีวัดคุณภาพอากาศ</a></li>
-                <li><a href="#section3">รายงานมลพิษทางเสียง</a></li>
-                <li><a href="#section3">รายงานมลพิษทางอากาศ</a></li>
+                <li class="active"><a href="{{ url('/index_admin') }}">ผู้ใช้งาน</a></li>
+                <li><a href="{{ url('/index_admin_ws') }}">สถานีวัดคุณภาพอากาศ</a></li>
+                <li><a href="{{ url('/index_admin_noise') }}">รายงานมลพิษทางเสียง</a></li>
+                <li><a href="{{ url('/index_admin_air') }}">รายงานมลพิษทางอากาศ</a></li>
             </ul><br>
         </div>
 

@@ -33,7 +33,7 @@ class AdminController extends Controller
 
     public function editUser($id)
     {
-        $user = User::where('id', $id)->get();
+        $user = User::where('id', $id)->get()->first();
 
         return view('index_admin_edit')->with('user', $user);
     }

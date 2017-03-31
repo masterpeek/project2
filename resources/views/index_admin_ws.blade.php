@@ -43,7 +43,7 @@
                             <td>{{ $data->aqi_value }}</td>
                             <td>{{ $data->aqi_condition_name }}</td>
                             <td>{{ $data->thai_date }}</td>
-                            <td>{{ $data->time }}</td>
+                            <td>{{ $data->time }} น.</td>
                             <td>{!! Form::open(['method' => 'DELETE', 'url' => 'index_admin_ws/'.$data->station_id]) !!}
                                 {!! Form::submit('ลบ', ['class' => 'btn btn-danger']) !!}
                                 {!! Form::close() !!}</td>

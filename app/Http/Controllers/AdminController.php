@@ -31,7 +31,7 @@ class AdminController extends Controller
 
     public function indexWeatherStation()
     {
-        $datas = WeatherStationController::all();
+        $datas = WeatherStation::all();
 
         return view('/index_admin_ws')->with('datas', $datas);
 
@@ -39,7 +39,7 @@ class AdminController extends Controller
 
     public function indexNoise()
     {
-        $datas = AutoReportNoiseByUserController::all();
+        $datas = AutoReportNoiseByUser::all();
 
         return view('/index_admin_noise')->with('datas', $datas);
 
@@ -47,7 +47,7 @@ class AdminController extends Controller
 
     public function indexAir()
     {
-        $datas = ReportAirByUserController::all();
+        $datas = ReportAirByUser::all();
 
         return view('/index_admin_air')->with('datas', $datas);
 

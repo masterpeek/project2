@@ -44,7 +44,6 @@
                             <td>{{ $data->aqi_condition_name }}</td>
                             <td>{{ $data->thai_date }}</td>
                             <td>{{ $data->time }}</td>
-
                             <td><input type="button" class="btn btn-danger" value="ลบ"></td>
                         </tr>
                     @endforeach

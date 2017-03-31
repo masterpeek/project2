@@ -25,29 +25,25 @@
                 <table class="table table-bordered">
                     <tr>
                         <th>รหัส</th>
-                        <th>ชื่อผู้ใช้</th>
-                        <th>รหัสผ่าน</th>
-                        <th>ชื่อ</th>
-                        <th>นามสกุล</th>
-                        <th>เบอร์โทรศัพท์</th>
-                        <th>ระดับผู้ใช้</th>
-                        <th>แก้ไข</th>
+                        <th>รูป</th>
+                        <th>ระดับกลิ่นเหม็น</th>
+                        <th>ระดับมลพิษ</th>
+                        <th>รายละเอียด</th>
+                        <th>พื้นที่</th>
+                        <th>จังหวัด</th>
+                        <th>วันที่และเวลา</th>
                         <th>ลบ</th>
                     </tr>
-                    @foreach($users as $user)
+                    @foreach($datas as $data)
                         <tr>
-                            <td>{{ $user->id }}</td>
-                            <td>{{ $user->username }}</td>
-                            <td>{{ $user->password }}</td>
-                            <td>{{ $user->fname }}</td>
-                            <td>{{ $user->lname }}</td>
-                            <td>{{ $user->tel }}</td>
-                            @if($user->user_level = 1)
-                                <td> ผู้ใช้ทั่วไป </td>
-                            @elseif($user->user_level = 2)
-                                <td> ผู้ดูแลระบบ </td>
-                            @endif
-                            <td><input type="button" class="btn btn-warning" value="แก้ไข"></td>
+                            <td>{{ $data->id }}</td>
+                            <td>{{ base64_decode($data->air_picture) }}</td>
+                            <td>{{ $data->air_smell }}</td>
+                            <td>{{ $data->air_pollution }}</td>
+                            <td>{{ $data->air_comment }}</td>
+                            <td>{{ $data->air_area_name }}</td>
+                            <td>{{ $data->air_province_name }}</td>
+                            <td>{{ $data->air_thai_date }}</td>
                             <td><input type="button" class="btn btn-danger" value="ลบ"></td>
                         </tr>
                     @endforeach

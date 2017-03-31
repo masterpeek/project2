@@ -19,7 +19,7 @@ class WeatherStationController extends Controller
             '13t', '62t', '67t', '75t', '77t', '21t', '70t', '43t', '63t', '28t',
             '30t', '31t', '74t', '26t', '37t', '38t', '39t', '40t', '68t', '44t',
             '08t', '16t', '17t', '19t', '14t', '27t', '24t', '25t', '71t', '42t',
-            '57t', '73t', '35t', '36t', '72t', '69t', '58t', 'm109', 'm101', 'm110');
+            '57t', '73t', '35t', '36t', '72t', '69t', '58t', 'm101', 'm110');
 
         $size_id_station = sizeof($id_station);
 

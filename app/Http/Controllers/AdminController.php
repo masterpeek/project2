@@ -15,7 +15,7 @@ class AdminController extends Controller
 
     public function create()
     {
-        return view('/create_admin');
+        return view('/create_form_admin');
     }
 
     public function createAdmin(Request $request)

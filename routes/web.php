@@ -18,7 +18,8 @@ Route::post('/select_condition_all', 'WebController@select_condition_all');
 Route::post('/search_all', 'WebController@search_all');
 
 Route::get('/index_admin', 'AdminController@index');
-Route::get('/create_admin', 'AdminController@create');
+Route::get('/create_form_admin', 'AdminController@create');
+Route::get('/create_admin', 'AdminController@createAdmin');
 Route::get('/login_admin', 'AdminController@loginAdmin');
 
 Route::get('call_data_weather_station', 'WeatherStationController@callData');

@@ -37,8 +37,7 @@
                     @foreach($datas as $data)
                         <tr>
                             <td>{{ $data->id }}</td>
-                            {{ header("Content-type: image/png") }}
-                            <td>{{ base64_decode($data->air_picture) }}</td>
+                            <td><img src="data:image/png;base64,' . {{ $data->air_picture }} . '" /></td>
                             <td>{{ $data->air_smell }}</td>
                             <td>{{ $data->air_pollution }}</td>
                             <td>{{ $data->air_comment }}</td>

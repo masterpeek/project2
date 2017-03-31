@@ -38,6 +38,47 @@ class AdminController extends Controller
         return view('index_admin_edit')->with('user', $user);
     }
 
+    public function updateUser(Request $request)
+    {
+        $user = $request->all();
+
+        $data = [];
+
+        $data['username'] = $user['username'];
+        $data['password'] = $user['password'];
+        $data['confirm_password'] = $user['confirm_password'];
+        $data['fname'] = $user['name'];
+        $data['lname'] = $user['lastname'];
+        $data['tel'] = $user['telephone'];
+
+        $rule = array
+        (
+            'username' => 'required|unique:users|min:6|max:16',
+            'password' => 'required|min:6|max:80',
+            'confirm_password' => 'min:6|max:80|same:password',
+            'fname' => 'required',
+            'lname' => 'required',
+            'tel' => 'required|min:10|max:10'
+        );
+
+        $validator = Validator::make($data, $rule);
+
+        if($validator->fails())
+        {
+            return "fail";
+        }
+        else
+        {
+            User::where('username', $data['username'])
+                ->update(['username' => $data['username'],
+                'password' => $data['password'], 'confirm_password' => $data['confirm_password'],
+                'fname' => $data['fname'], 'lname' => $data['lname'], 'tel' => $data['tel']]);
+
+            return redirect()->action('HomeController@index');
+        }
+
+    }
+
     public function deleteUser($id)
     {
         User::where('id', $id)->delete();
@@ -158,11 +199,6 @@ class AdminController extends Controller
         {
             return "incorrect username";
         }
-    }
-
-    public function updateUser($id)
-    {
-
     }
 
 }

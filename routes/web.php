@@ -23,6 +23,7 @@ Route::post('/create_admin', 'AdminController@createAdmin');
 Route::post('/check_login_admin', 'AdminController@loginAdmin');
 Route::get('/index_admin', 'AdminController@indexAdmin')->name('index_admin');
 Route::get('/index_admin_edit/{id}', 'AdminController@editUser');
+Route::post('/update_user', 'AdminController@updateUser');
 Route::delete('/index_admin/{id}', 'AdminController@deleteUser');
 Route::get('/index_admin_ws', 'AdminController@indexWeatherStation')->name('index_admin_ws');
 Route::delete('/index_admin_ws/{id}', 'AdminController@deleteWeatherStation');

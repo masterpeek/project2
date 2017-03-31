@@ -24,8 +24,11 @@ Route::post('/check_login_admin', 'AdminController@loginAdmin');
 Route::get('/index_admin', 'AdminController@indexAdmin')->name('index_admin');
 Route::delete('/index_admin/{id}', 'AdminController@deleteUser');
 Route::get('/index_admin_ws', 'AdminController@indexWeatherStation');
+Route::delete('/index_admin_ws/{id}', 'AdminController@deleteWeatherStation');
 Route::get('/index_admin_noise', 'AdminController@indexNoise');
+Route::delete('/index_admin_noise/{id}', 'AdminController@deleteNoise');
 Route::get('/index_admin_air', 'AdminController@indexAir');
+Route::delete('/index_admin_air/{id}', 'AdminController@deleteAir');
 
 Route::get('call_data_weather_station', 'WeatherStationController@callData');
 Route::get('return_data_weather_station', 'WeatherStationController@allData');

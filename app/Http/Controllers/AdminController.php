@@ -20,7 +20,10 @@ class AdminController extends Controller
 
     public function indexAdmin()
     {
-        return view('/index_admin');
+        $users = User::all();
+
+        return view('/index_admin')->with('users', $users);
+
     }
 
     public function createAdmin(Request $request)

@@ -22,6 +22,7 @@
         </div>
         <div class="col-sm-9">
             <br>
+            @foreach($users as $user)
             <table class="table table-bordered">
                 <tr>
                     <th>รหัส</th>
@@ -35,17 +36,22 @@
                     <th>ลบ</th>
                 </tr>
                 <tr>
-                    <td>1</td>
-                    <td>moozagent</td>
-                    <td>fdjgkjgldfgfdlkgl</td>
-                    <td>อภินันท์</td>
-                    <td>พีรชัยเดโช</td>
-                    <td>0808866528</td>
-                    <td>ผู้ใช้ทั่วไป</td>
+                    <td>{{ $user->id }}</td>
+                    <td>{{ $user->username }}</td>
+                    <td>{{ $user->password }}</td>
+                    <td>{{ $users->fname }}</td>
+                    <td>{{ $user->lname }}</td>
+                    <td>{{ $user->tel }}</td>
+                    @if($user->user_level = 1)
+                    <td> ผู้ใช้ทั่วไป </td>
+                    @elseif($user->user_level = 2)
+                        <td> ผู้ดูแลระบบ </td>
+                    @endif
                     <td><input type="button" class="btn btn-warning" value="แก้ไข"></td>
                     <td><input type="button" class="btn btn-danger" value="ลบ"></td>
                 </tr>
             </table>
+                @endforeach
 
         </div>
     </div>

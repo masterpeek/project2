@@ -53,7 +53,6 @@ class AdminController extends Controller
 
         $rule = array
         (
-            'username' => 'required|unique:users|min:6|max:16',
             'password' => 'required|min:6|max:80',
             'confirm_password' => 'min:6|max:80|same:password',
             'fname' => 'required',

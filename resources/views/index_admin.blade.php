@@ -48,7 +48,7 @@
                         <td> ผู้ดูแลระบบ </td>
                     @endif
                     <td><input type="button" class="btn btn-warning" value="แก้ไข"></td>
-                    <td>{!! Form::open(['method' => 'DELETE', 'route' => ['index_admin_deleteUser', $user->id]]) !!}
+                    <td>{!! Form::open(['method' => 'DELETE', 'route' => ['index_admin/'.$user->id, $user->id]]) !!}
                         {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                         {!! Form::close() !!}</td>
                 </tr>

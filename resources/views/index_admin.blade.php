@@ -23,7 +23,6 @@
         <div class="col-sm-9">
             <br>
             <table class="table table-bordered">
-                @foreach($users as $user)
                 <tr>
                     <th>รหัส</th>
                     <th>ชื่อผู้ใช้</th>
@@ -35,7 +34,7 @@
                     <th>แก้ไข</th>
                     <th>ลบ</th>
                 </tr>
-
+                @foreach($users as $user)
                 <tr>
                     <td>{{ $user->id }}</td>
                     <td>{{ $user->username }}</td>

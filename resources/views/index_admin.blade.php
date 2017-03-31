@@ -42,9 +42,9 @@
                     <td>{{ $user->fname }}</td>
                     <td>{{ $user->lname }}</td>
                     <td>{{ $user->tel }}</td>
-                    @if($user->user_level = 1)
+                    @if($user->user_level == 1)
                     <td> ผู้ใช้ทั่วไป </td>
-                        @elseif($user->user_level = 2)
+                        @elseif($user->user_level == 2)
                             <td> ผู้ดูแลระบบ </td>
                         @endif
                     <td><input type="button" class="btn btn-warning" value="แก้ไข"></td>

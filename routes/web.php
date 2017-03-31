@@ -22,6 +22,7 @@ Route::get('/create_form_admin', 'AdminController@create');
 Route::post('/create_admin', 'AdminController@createAdmin');
 Route::post('/check_login_admin', 'AdminController@loginAdmin');
 Route::get('/index_admin', 'AdminController@indexAdmin')->name('index_admin');
+Route::get('/index_admin_ws', 'AdminController@indexWeatherStation');
 
 Route::get('call_data_weather_station', 'WeatherStationController@callData');
 Route::get('return_data_weather_station', 'WeatherStationController@allData');

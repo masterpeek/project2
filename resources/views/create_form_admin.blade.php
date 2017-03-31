@@ -11,22 +11,22 @@
                         {!! Form::open(['url' => 'create_admin', 'method' => 'post']) !!}
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="ชื่อผู้ใช้" type="text" name="Username">
+                                <input class="form-control" placeholder="ชื่อผู้ใช้" type="text" name="username">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="รหัสผ่าน" type="password" name="Password">
+                                <input class="form-control" placeholder="รหัสผ่าน" type="password" name="password">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="ยืนยันรหัสผ่าน" type="password" name="ConfirmPassword">
+                                <input class="form-control" placeholder="ยืนยันรหัสผ่าน" type="password" name="confirm_password">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="ชื่อ" type="text" name="Name">
+                                <input class="form-control" placeholder="ชื่อ" type="text" name="name">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="นามสกุล" type="text" name="Lastname">
+                                <input class="form-control" placeholder="นามสกุล" type="text" name="lastname">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="เบอร์โทรศัพท์" type="text" name="Telephone">
+                                <input class="form-control" placeholder="เบอร์โทรศัพท์" type="text" name="telephone">
                             </div>
                             <input class="btn btn-lg btn-success btn-block" type="submit" value="ยืนยัน">
                         </fieldset>

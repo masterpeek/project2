@@ -24,12 +24,12 @@ class AdminController extends Controller
 
         $data = [];
 
-        $data['username'] = $admin['Username'];
-        $data['password'] = md5($admin['Password']);
-        $data['confirm_password'] = md5($admin['ConfirmPassword']);
-        $data['fname'] = $admin['Name'];
-        $data['lname'] = $admin['Lastname'];
-        $data['tel'] = $admin['Telephone'];
+        $data['username'] = $admin['username'];
+        $data['password'] = md5($admin['password']);
+        $data['confirm_password'] = md5($admin['confirm_password']);
+        $data['fname'] = $admin['name'];
+        $data['lname'] = $admin['lastname'];
+        $data['tel'] = $admin['telephone'];
         $data['user_level'] = 2;
 
 
@@ -63,8 +63,8 @@ class AdminController extends Controller
 
         $user = $request->all();
 
-        $username = $user["Username"];
-        $password = md5($user["Password"]);
+        $username = $user["username"];
+        $password = md5($user["password"]);
 
         $data = User::where('username', '=', $username)->get()->first();
 

@@ -73,7 +73,7 @@ class AdminController extends Controller
                 'password' => $data['password'], 'confirm_password' => $data['confirm_password'],
                 'fname' => $data['fname'], 'lname' => $data['lname'], 'tel' => $data['tel']]);
 
-            return redirect()->action('HomeController@index');
+            return redirect()->action('AdminController@index_admin');
         }
 
     }

@@ -25,7 +25,7 @@
                         {!! Form::open(['url' => 'update_user', 'method' => 'post']) !!}
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="ชื่อผู้ใช้" type="text" name="username" value="{{ $user->username }}">
+                                <input class="form-control" placeholder="ชื่อผู้ใช้" type="text" name="username" value="{{ $user->username }}" readonly>
                             </div>
                             <div class="form-group">
                                 <input class="form-control" placeholder="รหัสผ่าน" type="password" name="password" value="{{ $user->password }}">

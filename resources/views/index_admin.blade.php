@@ -44,9 +44,10 @@
                     <td>{{ $user->tel }}</td>
                     @if($user->user_level = 1)
                     <td> ผู้ใช้ทั่วไป </td>
-                    @elseif($user->user_level = 2)
+                        @endif
+                    @if($user->user_level = 2)
                         <td> ผู้ดูแลระบบ </td>
-                    @endif
+                        @endif
                     <td><input type="button" class="btn btn-warning" value="แก้ไข"></td>
                     <td>{!! Form::open(['method' => 'DELETE', 'url' => 'index_admin/'.$user->id]) !!}
                         {!! Form::submit('ลบ', ['class' => 'btn btn-danger']) !!}

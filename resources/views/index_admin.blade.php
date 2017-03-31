@@ -49,7 +49,7 @@
                     @endif
                     <td><input type="button" class="btn btn-warning" value="แก้ไข"></td>
                     <td>{!! Form::open(['method' => 'DELETE', 'url' => 'index_admin/'.$user->id]) !!}
-                        {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                        {!! Form::submit('ลบ', ['class' => 'btn btn-danger']) !!}
                         {!! Form::close() !!}</td>
                 </tr>
                 @endforeach

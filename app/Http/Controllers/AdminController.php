@@ -30,12 +30,26 @@ class AdminController extends Controller
 
     }
 
+    public function deleteUser($id)
+    {
+        User::where('id', $id)->delete();
+
+        return redirect()->route('index_admin');
+    }
+
     public function indexWeatherStation()
     {
         $datas = WeatherStation::all();
 
         return view('/index_admin_ws')->with('datas', $datas);
 
+    }
+
+    public function deleteWeatherStation($id)
+    {
+        WeatherStation::where('station_id', $id)->delete();
+
+        return redirect()->route('index_admin_ws');
     }
 
     public function indexNoise()
@@ -46,12 +60,26 @@ class AdminController extends Controller
 
     }
 
+    public function deleteNoise($id)
+    {
+        AutoReportNoiseByUser::where('id', $id)->delete();
+
+        return redirect()->route('index_admin_noise');
+    }
+
     public function indexAir()
     {
         $datas = ReportAirByUser::all();
 
         return view('/index_admin_air')->with('datas', $datas);
 
+    }
+
+    public function deleteAir($id)
+    {
+        ReportAirByUser::where('id', $id)->delete();
+
+        return redirect()->route('index_admin_air');
     }
 
     public function createAdmin(Request $request)
@@ -127,18 +155,6 @@ class AdminController extends Controller
     public function updateUser($id)
     {
 
-    }
-
-    public function deleteUser($id)
-    {
-        $users = User::where('id', $id)->delete();
-
-        return redirect()->route('index_admin');
-    }
-
-    public function showUser()
-    {
-        $users = User::all();
     }
 
 }

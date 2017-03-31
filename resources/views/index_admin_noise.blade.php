@@ -38,7 +38,9 @@
                             <td>{{ $data->noise_area_name }}</td>
                             <td>{{ $data->noise_province_name }}</td>
                             <td>{{ $data->noise_thai_date }}</td>
-                            <td><input type="button" class="btn btn-danger" value="ลบ"></td>
+                            <td>{!! Form::open(['method' => 'DELETE', 'url' => 'index_admin_noise/'.$data->id]) !!}
+                                {!! Form::submit('ลบ', ['class' => 'btn btn-danger']) !!}
+                                {!! Form::close() !!}</td>
                         </tr>
                     @endforeach
                 </table>

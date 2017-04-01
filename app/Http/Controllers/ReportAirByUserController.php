@@ -255,7 +255,7 @@ class ReportAirByUserController extends Controller
         }
         else if($choice == "2")
         {
-            $air = ReportAirByUser::where('id', $id)->get();
+            $air = ReportAirByUser::where('id', $id)->get()->first();
 
             if($air[0]->air_pollution == "เล็กน้อย")
             {

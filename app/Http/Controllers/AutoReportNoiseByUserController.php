@@ -233,7 +233,7 @@ class AutoReportNoiseByUserController extends Controller
 
         $choice = $data["Choice"];
 
-        if($choice == "0")
+        if($choice === "0")
         {
             AutoReportNoiseByUser::where('id', $id)->delete();
         }

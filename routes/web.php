@@ -26,6 +26,7 @@ Route::get('/index_admin_edit/{id}', 'AdminController@editUser');
 Route::post('/update_user', 'AdminController@updateUser');
 Route::delete('/index_admin/{id}', 'AdminController@deleteUser');
 Route::get('/index_admin_ws', 'AdminController@indexWeatherStation')->name('index_admin_ws');
+Route::post('search_weather_admin', 'AdminController@searchWeatherStation');
 Route::delete('/index_admin_ws/{id}', 'AdminController@deleteWeatherStation');
 Route::get('/index_admin_noise', 'AdminController@indexNoise')->name('index_admin_noise');
 Route::delete('/index_admin_noise/{id}', 'AdminController@deleteNoise');

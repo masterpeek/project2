@@ -93,6 +93,16 @@ class AdminController extends Controller
 
     }
 
+    public function searchWeatherStation()
+    {
+        $input = Input::all();
+
+        $datas = WeatherStation::where('province_name', $input['province'])->get();
+
+        return view('index_admin_ws')->with('datas', $datas);
+
+    }
+
     public function deleteWeatherStation($id)
     {
         WeatherStation::where('station_id', $id)->delete();

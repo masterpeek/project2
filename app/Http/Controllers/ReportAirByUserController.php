@@ -159,7 +159,7 @@ class ReportAirByUserController extends Controller
 
         if($result != null)
         {
-            $ans = $ans.$result[0]->air_smell.";".$result[0]->air_area_name.";".$result[0]->air_province_name.";".
+            $ans = $ans.$result[0]->air_pollution.";".$result[0]->air_area_name.";".$result[0]->air_province_name.";".
             $result[0]->id.";".number_format($result[0]->distance, 2).";".$result[0]->air_picture;
 
             return $ans;

@@ -90,9 +90,9 @@ class AdminController extends Controller
     {
         $input = Input::all();
 
-        $datas = User::where('username', $input['username'])->get();
+        $users = User::where('username', $input['username'])->get();
 
-        return view('index_admin')->with('datas', $datas);
+        return view('index_admin')->with('users', $users);
 
     }
 
@@ -104,14 +104,14 @@ class AdminController extends Controller
 
         if($condition === "ทั้งหมด")
         {
-            $datas = User::all();
+            $users = User::all();
         }
         else
         {
-            $datas = User::where('user_level', intval($condition))->get();
+            $users = User::where('user_level', intval($condition))->get();
         }
 
-        return view('index_admin')->with('datas', $datas);
+        return view('index_admin')->with('users', $users);
 
     }
 

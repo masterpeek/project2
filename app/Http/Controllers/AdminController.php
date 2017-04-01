@@ -104,6 +104,24 @@ class AdminController extends Controller
 
     }
 
+    public function searchConditionWeatherStation()
+    {
+        $input = Input::all();
+
+        $condition = $input["condition"];
+
+        if($condition === "ทั้งหมด")
+        {
+            $datas = WeatherStation::all();
+        }
+        else
+        {
+            $datas = WeatherStation::where('aqi_condition_name', $condition)->get();
+        }
+
+        return view('index_admin_ws')->with('datas', $datas);
+    }
+
     public function deleteWeatherStation($id)
     {
         WeatherStation::where('station_id', $id)->delete();

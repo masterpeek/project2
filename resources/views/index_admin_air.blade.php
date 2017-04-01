@@ -18,7 +18,7 @@
                     <input type="text" name="province" class="form-control" placeholder="ค้นหาจังหวัด เช่น กรุงเทพ, นครปฐม...">
                     <span class="input-group-btn">
                             <input type="submit" value="ค้นหา" class="btn btn-default">
-                            <a href="{{ url('/index_admin_noise') }}" class="btn btn-default">ค้นหาทั้งหมด</a>
+                            <a href="{{ url('/index_admin_air') }}" class="btn btn-default">ค้นหาทั้งหมด</a>
                         </span>
                 </div>
                 {!! Form::close() !!}

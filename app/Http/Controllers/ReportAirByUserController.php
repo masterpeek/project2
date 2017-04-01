@@ -149,7 +149,7 @@ class ReportAirByUserController extends Controller
         $distance = $data["Distance"];
 
         $result = DB::select('select report_air_by_user.id,
-        report_air_by_user.air_smell, report_air_by_user.air_picture, 
+        report_air_by_user.air_pollution, report_air_by_user.air_picture, 
         report_air_by_user.air_area_name, report_air_by_user.air_province_name,  
         report_air_by_user.air_lat, report_air_by_user.air_long, 
         (6371 * acos(cos(radians(' . $lat . ')) * cos(radians(report_air_by_user.air_lat)) 

@@ -13,12 +13,27 @@
         </div>
 
         <div class="col-sm-4 col-sm-offset-2">
+            {!! Form::open(['url' => 'search_user_admin', 'method' => 'post']) !!}
             <div class="input-group">
-                <input type="text" name="province" class="form-control" placeholder="ค้นหา">
+                <input type="text" name="province" class="form-control" placeholder="ค้นหาจากชื่อผู้ใช้">
                 <span class="input-group-btn">
                             <input type="submit" value="ค้นหา" class="btn btn-default">
+                            <a href="{{ url('/index_admin') }}" class="btn btn-default">ค้นหาทั้งหมด</a>
                         </span>
             </div>
+            {!! Form::close() !!}
+            <br>
+            {!! Form::open(['url' => 'search_condition_user_admin', 'method' => 'post']) !!}
+            <div class="form-group" style="text-align:center">
+                <h4>เลือกดูตามระดับผู้ใช้</h4>
+                <select name="condition">
+                    <option value="ทั้งหมด">ทั้งหมด</option>
+                    <option value="1">ผู้ใช้ทั่วไป</option>
+                    <option value="2">ผู้ดูแลระบบ</option>
+                </select>
+                <input type="submit" value="ค้นหา">
+            </div>
+            {!! Form::close() !!}
         </div>
         <div class="col-sm-9">
             <br>

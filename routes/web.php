@@ -22,6 +22,8 @@ Route::get('/create_form_admin', 'AdminController@create');
 Route::post('/create_admin', 'AdminController@createAdmin');
 Route::post('/check_login_admin', 'AdminController@loginAdmin');
 Route::get('/index_admin', 'AdminController@indexAdmin')->name('index_admin');
+Route::post('search_user_admin', 'AdminController@searchUser');
+Route::post('search_condition_user_admin', 'AdminController@searchConditionUser');
 Route::get('/index_admin_edit/{id}', 'AdminController@editUser');
 Route::post('/update_user', 'AdminController@updateUser');
 Route::delete('/index_admin/{id}', 'AdminController@deleteUser');

@@ -86,6 +86,35 @@ class AdminController extends Controller
         return redirect()->route('index_admin');
     }
 
+    public function searchUser()
+    {
+        $input = Input::all();
+
+        $datas = User::where('username', $input['username'])->get();
+
+        return view('index_admin')->with('datas', $datas);
+
+    }
+
+    public function searchConditionUser()
+    {
+        $input = Input::all();
+
+        $condition = $input["user_level"];
+
+        if($condition === "ทั้งหมด")
+        {
+            $datas = User::all();
+        }
+        else
+        {
+            $datas = User::where('user_level', intval($condition))->get();
+        }
+
+        return view('index_admin')->with('datas', $datas);
+
+    }
+
     public function indexWeatherStation()
     {
         $datas = WeatherStation::all();

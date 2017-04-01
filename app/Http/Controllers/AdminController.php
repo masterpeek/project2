@@ -141,7 +141,7 @@ class AdminController extends Controller
     {
         $input = Input::all();
 
-        $datas = AutoReportNoiseByUser::where('province_name', $input['province'])->get();
+        $datas = AutoReportNoiseByUser::where('noise_province_name', $input['province'])->get();
 
         return view('index_admin_noise')->with('datas', $datas);
 
@@ -166,7 +166,7 @@ class AdminController extends Controller
     {
         $input = Input::all();
 
-        $datas = ReportAirByUser::where('province_name', $input['province'])->get();
+        $datas = ReportAirByUser::where('air_province_name', $input['province'])->get();
 
         return view('index_admin_air')->with('datas', $datas);
 

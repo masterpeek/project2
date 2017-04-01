@@ -100,7 +100,7 @@ class AdminController extends Controller
     {
         $input = Input::all();
 
-        $condition = $input["user_level"];
+        $condition = $input["condition"];
 
         if($condition === "ทั้งหมด")
         {

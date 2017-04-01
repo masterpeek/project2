@@ -15,7 +15,7 @@
         <div class="col-sm-4 col-sm-offset-2">
             {!! Form::open(['url' => 'search_user_admin', 'method' => 'post']) !!}
             <div class="input-group">
-                <input type="text" name="province" class="form-control" placeholder="ค้นหาจากชื่อผู้ใช้">
+                <input type="text" name="username" class="form-control" placeholder="ค้นหาจากชื่อผู้ใช้">
                 <span class="input-group-btn">
                             <input type="submit" value="ค้นหา" class="btn btn-default">
                             <a href="{{ url('/index_admin') }}" class="btn btn-default">ค้นหาทั้งหมด</a>

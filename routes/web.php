@@ -30,8 +30,10 @@ Route::post('search_weather_admin', 'AdminController@searchWeatherStation');
 Route::post('search_condition_ws_admin', 'AdminController@searchConditionWeatherStation');
 Route::delete('/index_admin_ws/{id}', 'AdminController@deleteWeatherStation');
 Route::get('/index_admin_noise', 'AdminController@indexNoise')->name('index_admin_noise');
+Route::post('search_noise_admin', 'AdminController@searchNoise');
 Route::delete('/index_admin_noise/{id}', 'AdminController@deleteNoise');
 Route::get('/index_admin_air', 'AdminController@indexAir')->name('index_admin_air');
+Route::post('search_air_admin', 'AdminController@searchAir');
 Route::delete('/index_admin_air/{id}', 'AdminController@deleteAir');
 
 Route::get('call_data_weather_station', 'WeatherStationController@callData');

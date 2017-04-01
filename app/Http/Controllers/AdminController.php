@@ -137,6 +137,16 @@ class AdminController extends Controller
 
     }
 
+    public function searchNoise()
+    {
+        $input = Input::all();
+
+        $datas = WeatherStation::where('province_name', $input['province'])->get();
+
+        return view('index_admin_noise')->with('datas', $datas);
+
+    }
+
     public function deleteNoise($id)
     {
         AutoReportNoiseByUser::where('id', $id)->delete();
@@ -149,6 +159,16 @@ class AdminController extends Controller
         $datas = ReportAirByUser::all();
 
         return view('/index_admin_air')->with('datas', $datas);
+
+    }
+
+    public function searchAir()
+    {
+        $input = Input::all();
+
+        $datas = WeatherStation::where('province_name', $input['province'])->get();
+
+        return view('index_admin_air')->with('datas', $datas);
 
     }
 

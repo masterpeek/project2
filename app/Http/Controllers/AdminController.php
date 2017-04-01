@@ -147,24 +147,6 @@ class AdminController extends Controller
 
     }
 
-    public function searchConditionNoise()
-    {
-        $input = Input::all();
-
-        $condition = $input["condition"];
-
-        if($condition === "ทั้งหมด")
-        {
-            $datas = ReportAirByUser::all();
-        }
-        else
-        {
-            $datas = ReportAirByUser::where('air_pollution', $condition)->get();
-        }
-
-        return view('index_admin_air')->with('datas', $datas);
-    }
-
     public function deleteNoise($id)
     {
         AutoReportNoiseByUser::where('id', $id)->delete();
@@ -188,6 +170,24 @@ class AdminController extends Controller
 
         return view('index_admin_air')->with('datas', $datas);
 
+    }
+
+    public function searchConditionAir()
+    {
+        $input = Input::all();
+
+        $condition = $input["condition"];
+
+        if($condition === "ทั้งหมด")
+        {
+            $datas = ReportAirByUser::all();
+        }
+        else
+        {
+            $datas = ReportAirByUser::where('air_pollution', $condition)->get();
+        }
+
+        return view('index_admin_air')->with('datas', $datas);
     }
 
     public function deleteAir($id)

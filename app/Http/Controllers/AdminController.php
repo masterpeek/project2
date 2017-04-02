@@ -262,7 +262,12 @@ class AdminController extends Controller
         {
             User::create($data);
 
-            return "success";
+            if(User::create($data))
+            {
+                return "success";
+            }
+            
+            return redirect()->route('login_admin');
         }
     }
 

@@ -300,7 +300,7 @@ class AdminController extends Controller
     {
         Session::flush();
 
-        return view('login_admin');
+        return redirect()->route('login_admin');
 
     }
 

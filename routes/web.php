@@ -17,7 +17,7 @@ Route::get('/contact', 'WebController@contact');
 Route::post('/select_condition_all', 'WebController@select_condition_all');
 Route::post('/search_all', 'WebController@search_all');
 
-Route::get('/login_admin', 'AdminController@index');
+Route::get('/login_admin', 'AdminController@index')->name('login_admin');
 Route::get('/create_form_admin', 'AdminController@create');
 Route::post('/create_admin', 'AdminController@createAdmin');
 Route::post('/check_login_admin', 'AdminController@loginAdmin');

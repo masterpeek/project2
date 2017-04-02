@@ -299,6 +299,9 @@ class AdminController extends Controller
     public function destroySession()
     {
         Session::flush();
+
+        return redirect()->route('login_admin');
+
     }
 
 

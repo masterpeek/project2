@@ -38,6 +38,7 @@ Route::get('/index_admin_air', 'AdminController@indexAir')->name('index_admin_ai
 Route::post('search_air_admin', 'AdminController@searchAir');
 Route::post('search_condition_air_admin', 'AdminController@searchConditionAir');
 Route::delete('/index_admin_air/{id}', 'AdminController@deleteAir');
+Route::get('/logout', 'AdminController@destroySession')->name('logout');
 
 Route::get('call_data_weather_station', 'WeatherStationController@callData');
 Route::get('return_data_weather_station', 'WeatherStationController@allData');

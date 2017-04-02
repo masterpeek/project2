@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Validator;
 
 class AdminController extends Controller
@@ -283,6 +284,10 @@ class AdminController extends Controller
             {
                 $result = $result.$data->id.";".$data->username.";".$data->fname.";".$data->lname.";".$data->tel;
 
+                Session::put('username_admin', $data->username);
+
+                $this->sessionAdmin();
+
                 return redirect()->route('index_admin');
             }
             else
@@ -294,6 +299,20 @@ class AdminController extends Controller
         {
             return "incorrect username";
         }
+    }
+
+    public function sessionAdmin()
+    {
+        $value = Session::get('username_admin');
+
+        return view('app_admin')->with('value', $value);
+    }
+
+    public function destroySession()
+    {
+        Session::flush();
+
+        return view('login_admin');
     }
 
 }

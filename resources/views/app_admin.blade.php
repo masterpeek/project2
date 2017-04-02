@@ -41,7 +41,7 @@
         </div>
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> {{ $value }} </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> {{ \Illuminate\Support\Facades\Session::get('username_admin') }}</a></li>
             <li><a href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-in"></span> ออกจากระบบ </a></li>
         </ul>
     </div>

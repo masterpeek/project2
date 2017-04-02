@@ -256,20 +256,13 @@ class AdminController extends Controller
 
         if($validator->fails())
         {
-            return "fail";
+            return view('fail_create_admin');
         }
         else
         {
             User::create($data);
 
-            $count = 1;
-
-            if($count == 1)
-            {
-                echo "Success";
-            }
-
-            return redirect()->route('login_admin');
+            return view('success_create_admin');
         }
     }
 

@@ -4,4 +4,5 @@
         <a href="{{ url('login_admin') }}" class="close" data-dismiss="alert">&times;</a>
         <strong>สมัครสมาชิกสำเร็จ!</strong> คุณได้ทำการสมัครสมาชิกสำเร็จเเล้ว.
     </div>
+
     @stop

@@ -266,7 +266,7 @@ class AdminController extends Controller
 
             if($count == 1)
             {
-                return "success";
+                echo "Success";
             }
 
             return redirect()->route('login_admin');

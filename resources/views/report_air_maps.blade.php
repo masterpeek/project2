@@ -46,6 +46,7 @@
 
         {{ $c = sizeof($markers) }}
 
+        @for($ini = 0;$ini < $c;$ini++)
         for (i = 0; i < markers.length; i++) {
             var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
 
@@ -56,7 +57,7 @@
 
             var content = "มลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
-                "วันที่: "+ date + "<br><img align='center' src='data:image/jpeg;base64,"+ "{{ $markers[0]->air_picture }}" + "'/>";
+                "วันที่: "+ date + "<br><img align='center' src='data:image/jpeg;base64,"+ "{{ $markers[$ini]->air_picture }}" + "'/>";
 
             var infowindow = new google.maps.InfoWindow({
                 content: content
@@ -87,6 +88,7 @@
                 infowindow.open(map, this);
             });
         }
+        @endfor
     }
     google.maps.event.addDomListener(window, 'load', initMap);
 </script>

@@ -35,6 +35,7 @@
             center: bkk
         });
 
+
         // Multiple Markers
         var markers = [
                 @foreach($markers as $marker)
@@ -42,6 +43,8 @@
                 "{{ $marker->air_area_name }}", "{{ $marker->air_province_name }}", "{{ $marker->air_thai_date }}"],
             @endforeach
         ];
+
+            <?php $count = sizeof($markers)?>
 
 
 
@@ -57,7 +60,7 @@
 
             var content = "มลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
-                "วันที่: "+ date + "<br><img align='center' src='data:image/jpeg;base64,"+ "{{ $markers[0]->air_picture }}" + "'/>";
+                "วันที่: "+ date + "<br><img align='center' src='data:image/jpeg;base64,"+ " {{ $markers[0]->air_picture }}" + "'/>";
 
             var infowindow = new google.maps.InfoWindow({
                 content: content

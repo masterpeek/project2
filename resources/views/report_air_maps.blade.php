@@ -44,9 +44,7 @@
             @endforeach
         ];
 
-        {{ $c = sizeof($markers) }}
-
-        @for($ini = 0;$ini < $c;$ini++)
+        @for($ini = 0;$ini < sizeof($markers);$ini++)
         for (i = 0; i < markers.length; i++) {
             var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
 

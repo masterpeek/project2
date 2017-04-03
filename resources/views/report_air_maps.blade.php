@@ -39,7 +39,7 @@
         var markers = [
                 @foreach($markers as $marker)
             ['', {{ $marker->air_lat }}, {{ $marker->air_long }}, "{{ $marker->air_pollution }}",
-                "{{ $marker->air_area_name }}", "{{ $marker->air_province_name }}", "{{ $marker->air_thai_date }}"],
+                "{{ $marker->air_area_name }}", "{{ $marker->air_province_name }}", "{{ $marker->air_thai_date }}", "{{ $marker->air_picture }}"],
             @endforeach
         ];
 
@@ -50,10 +50,11 @@
             var area = markers[i][4];
             var province = markers[i][5];
             var date = markers[i][6];
+            var picture = markers[i][7];
 
             var content = "มลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
-                "วันที่: "+ date;
+                "วันที่: "+ date + '<br><img src="data:image/jpg;base64,'+ picture + '"/>';
 
             var infowindow = new google.maps.InfoWindow({
                 content: content

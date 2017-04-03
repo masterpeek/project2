@@ -45,9 +45,6 @@
         ];
 
         {{ $c = sizeof($markers) }}
-        {{ $c }}
-
-
 
         for (i = 0; i < markers.length; i++) {
             var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
@@ -57,11 +54,14 @@
             var province = markers[i][5];
             var date = markers[i][6];
 
-
-
             var content = "มลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
-                "วันที่: "+ date + "<br><img align='center' src='data:image/jpeg;base64,"+ " {{ $markers[0]->air_picture }}" + "'/>";
+                "วันที่: "+ date + "<br><img align='center' src='data:image/jpeg;base64,"+
+
+                    @for($ini = 0;$ini < $c;$ini++)
+                "{{ $markers[$ini]->air_picture }}"
+                @endfor
+                + "'/>";
 
             var infowindow = new google.maps.InfoWindow({
                 content: content

@@ -54,7 +54,7 @@
             var province = markers[i][5];
             var date = markers[i][6];
 
-                    @for($ini = 0;$ini < $c;$ini++)
+                    @for($ini = 0;$ini < $c-1;$ini++)
                     @endfor
 
             var content = "มลพิษทางอากาศ: "+ value +

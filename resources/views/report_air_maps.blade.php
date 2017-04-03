@@ -57,8 +57,8 @@
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
                 "วันที่: "+ date + "<br><img align='center' src='data:image/jpeg;base64,"+
                     @for($ini = 0;$ini < count($markers);$ini++)
-                    {{ $markers[$ini]->air_picture
-                }} + "'/>";
+                    "{{ $markers[$ini]->air_picture
+                }}" + "'/>";
                 @endfor
 
             var infowindow = new google.maps.InfoWindow({

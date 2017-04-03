@@ -52,7 +52,9 @@
             var date = markers[i][6];
             var picture = markers[i][7];
 
-            var content = '<br><img src="data:image/jpg;base64,'+ picture + '"/>';
+            var content = "มลพิษทางอากาศ: "+ value +
+                "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
+                "วันที่: "+ date;
 
             var infowindow = new google.maps.InfoWindow({
                 content: content

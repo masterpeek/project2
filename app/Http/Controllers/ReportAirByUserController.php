@@ -184,24 +184,6 @@ class ReportAirByUserController extends Controller
         return $arrAir;
     }
 
-    public function deleteAir()
-    {
-        $query = "TRUNCATE TABLE report_air_by_user";
-
-        ReportAirByUser::getQuery($query)->delete();
-
-    }
-
-    public function deleteAirMarker(Request $request)
-    {
-        $data = $request->all();
-
-        $id = $data["Id"];
-
-        ReportAirByUser::where('id', $id)->delete();
-    }
-
-
     public function maps()
     {
         $markers = ReportAirByUser::all();

@@ -169,23 +169,6 @@ class AutoReportNoiseByUserController extends Controller
         return $arrNoise;
     }
 
-    public function deleteNoise()
-    {
-        $query = "TRUNCATE TABLE auto_report_noise_by_user";
-
-        AutoReportNoiseByUser::getQuery($query)->delete();
-
-    }
-
-    public function deleteNoiseMarker(Request $request)
-    {
-        $data = $request->all();
-
-        $id = $data["Id"];
-
-        AutoReportNoiseByUser::where('id', $id)->delete();
-    }
-
     public function maps()
     {
         $markers = AutoReportNoiseByUser::all();

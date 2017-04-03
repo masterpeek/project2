@@ -44,7 +44,8 @@
             @endforeach
         ];
 
-            <?php $count = sizeof($markers)?>
+        {{ $c = sizeof($markers) }}
+        {{ $c }}
 
 
 

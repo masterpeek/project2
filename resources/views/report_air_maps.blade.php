@@ -57,10 +57,7 @@
             var content = "มลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
                 "วันที่: "+ date + "<br><img align='center' src='data:image/jpeg;base64,"+
-
-                    @for($ini = 0;$ini < $c;$ini++)
-                "{{ $markers[$ini]->air_picture }}"
-                @endfor
+                " @for($ini = 0;$ini < $c;$ini++){{ $markers[$ini]->air_picture }}@endfor"
                 + "'/>";
 
             var infowindow = new google.maps.InfoWindow({

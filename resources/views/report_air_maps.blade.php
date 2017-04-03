@@ -51,9 +51,13 @@
             var province = markers[i][5];
             var date = markers[i][6];
 
+            {{ $ini = -1 }}
+
+            {{ $ini = $ini + 1 }}
+
             var content = "มลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
-                "วันที่: "+ date + "<br><img src='data:image/jpeg;base64,"+ {{ $markers[0]->air_picture }} + "'/>";
+                "วันที่: "+ date + "<br><img src='data:image/jpeg;base64,"+ "{{ $markers[$ini]->air_picture }}" + "'/>";
 
             var infowindow = new google.maps.InfoWindow({
                 content: content

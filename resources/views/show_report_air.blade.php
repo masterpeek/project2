@@ -20,7 +20,7 @@
             // Multiple Markers
             var markers = [
                 ['', {{ $data->air_lat }}, {{ $data->air_long }}, "{{ $data->air_pollution }}",
-                    "{{ $data->air_area_name }}","{{ $data->air_province_name }}", "{{ $data->air_thai_date }}", "{{ $data->air_picture }}"],
+                    "{{ $data->air_area_name }}","{{ $data->air_province_name }}", "{{ $data->air_thai_date }}"],
             ];
 
             for (i = 0; i < markers.length; i++) {
@@ -30,7 +30,6 @@
                 var area = markers[i][4];
                 var province = markers[i][5];
                 var date = markers[i][6];
-                var pic = markers[i][7];
 
                 var content = "มลพิษทางอากาศ: "+ value +
                     "<br>" + "พื้นที่: "+ area + " " + province + "<br>" +

@@ -47,7 +47,7 @@
         var pictures =
             [
                     @foreach($markers as $marker)
-                ['', "{{ base64_decode($marker->air_picture) }}"],
+                ['', "{{ $marker->air_picture }}"],
                 @endforeach
             ];
 

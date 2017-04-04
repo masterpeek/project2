@@ -51,10 +51,10 @@
             var area = markers[i][4];
             var province = markers[i][5];
             var date = markers[i][6];
-            
+
             var content = "มลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
-                "วันที่: "+ date;
+                "วันที่: "+ date + "<br><a href='https://www.w3schools.com'>คลิกเพื่อดูรูป</a>";
 
             var infowindow = new google.maps.InfoWindow({
                 content: content

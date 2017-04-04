@@ -44,13 +44,6 @@
             @endforeach
         ];
 
-        var pictures =
-            [
-                    @foreach($markers as $marker)
-                ['', "{{ $marker->air_picture }}"],
-                @endforeach
-            ];
-
         for (i = 0; i < markers.length; i++) {
             var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
 
@@ -58,8 +51,7 @@
             var area = markers[i][4];
             var province = markers[i][5];
             var date = markers[i][6];
-            var pic = pictures[i][7];
-
+            
             var content = "มลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
                 "วันที่: "+ date;

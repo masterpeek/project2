@@ -54,7 +54,7 @@
 
             var content = "มลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
-                "วันที่: "+ date + "<br><a href='https://www.w3schools.com'>คลิกเพื่อดูรูป</a>";
+                "วันที่: "+ date;
 
             var infowindow = new google.maps.InfoWindow({
                 content: content

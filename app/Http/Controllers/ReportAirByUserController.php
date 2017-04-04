@@ -272,5 +272,4 @@ class ReportAirByUserController extends Controller
         return view('report_air_maps')->with('markers', $markers);
     }
 
-
 }

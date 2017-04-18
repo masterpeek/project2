@@ -72,7 +72,7 @@ class AdminController extends Controller
         {
             User::where('username', $data['username'])
                 ->update(['username' => $data['username'],
-                'password' => $data['password'], 'confirm_password' => $data['confirm_password'],
+                'password' => md5($data['password']), 'confirm_password' => md5($data['confirm_password']),
                 'fname' => $data['fname'], 'lname' => $data['lname'], 'tel' => $data['tel']]);
 
             return redirect()->action('AdminController@indexAdmin');

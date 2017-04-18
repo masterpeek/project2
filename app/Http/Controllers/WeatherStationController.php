@@ -226,7 +226,11 @@ class WeatherStationController extends Controller
     {
         $input = Input::all();
 
-        $datas = WeatherStation::where('province_name', $input['province'])->get();
+        $check_bkk = array("มหานคร");
+
+        $province = str_replace($check_bkk,"",$input['province']);
+
+        $datas = WeatherStation::where('province_name', $province)->get();
 
         return view('index_weather')->with('datas', $datas);
 

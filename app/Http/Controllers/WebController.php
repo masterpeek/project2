@@ -23,8 +23,10 @@ class WebController extends Controller
     {
         $input = Input::all();
 
-        $province = $input["province"];
+        $check_bkk = array("มหานคร");
 
+        $province = str_replace($check_bkk,"",$input['province']);
+        
         $markers = WeatherStation::where('province_name', $province)->get();
         $noises = AutoReportNoiseByUser::where('noise_province_name', $province)->get();
         $airs = ReportAirByUser::where('air_province_name', $province)->get();

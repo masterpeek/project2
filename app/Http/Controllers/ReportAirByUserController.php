@@ -216,7 +216,11 @@ class ReportAirByUserController extends Controller
     {
         $input = Input::all();
 
-        $datas = ReportAirByUser::where('air_province_name', $input['province'])
+        $check_bkk = array("มหานคร");
+
+        $province = str_replace($check_bkk,"",$input['province']);
+
+        $datas = ReportAirByUser::where('air_province_name', $province)
             ->orderBy('created_at', 'DESC')->get();
 
         return view('index_report_air')->with('datas', $datas);

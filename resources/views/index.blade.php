@@ -54,7 +54,7 @@
                 @foreach($markers as $marker)
             ['', {{ $marker->lat }}, {{ $marker->long }}, {{ $marker->aqi_value }},
                 "{{ $marker->aqi_condition_name }}", "{{ $marker->station_name }}",
-                "{{ $marker->area_name }}", "{{ $marker->thai_date }}", "{{ $marker->time }}"],
+                "{{ $marker->area_name }}", "{{ $marker->thai_date }}", "{{ $marker->time }}", "{{ $marker->province_name }}"],
             @endforeach
         ];
 
@@ -82,10 +82,11 @@
             var area = markers[i][6];
             var date = markers[i][7];
             var time = markers[i][8];
+            var province = markers[i][9];
 
 
             var content = "ค่า​AQI: "+ aqi + " " + "ระดับคุณภาพอากาศ: " + aqi_condition +
-                "<br>" + "ชื่อ: "+ station + "<br>" + "พื้นที่: "+ area +
+                "<br>" + "ชื่อ: "+ station + "<br>" + "พื้นที่: "+ area + " จ." + province +
                 "<br>" + "วันที่: "+ date + " " + "เวลา: " + time +" น.";
 
             var infowindow = new google.maps.InfoWindow({
@@ -135,7 +136,7 @@
             var date = noises[i][6];
 
             var content = "ความดังเสียง: "+ value + " เดซิเบล" +
-                "<br>" + "พื้นที่: "+ area + " "+ province + "<br>" +
+                "<br>" + "พื้นที่: "+ area + " จ."+ province + "<br>" +
                 "วันที่: "+ date;
 
             var infowindow = new google.maps.InfoWindow({
@@ -164,7 +165,7 @@
             var date = airs[i][6];
 
             var content = "ระดับมลพิษทางอากาศ: "+ value +
-                "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
+                "<br>" + "พื้นที่: "+ area +" จ."+ province + "<br>" +
                 "วันที่: "+ date;
 
             var infowindow = new google.maps.InfoWindow({

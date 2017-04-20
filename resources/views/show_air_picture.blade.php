@@ -20,6 +20,7 @@
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
             {!! Form::close() !!}
+        </div>
 
     <div class="container" style="text-align: center">
         <img src="data:image/jpeg;base64,{{ $air_picture->air_picture }}" class="centered" width="500" height="500">

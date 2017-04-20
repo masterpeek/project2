@@ -55,7 +55,7 @@
 
             var content = "มลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +
-                "วันที่: "+ date + "<br>" + "<a href='https://fast-fortress-33466.herokuapp.com/"+id+"/>";
+                "วันที่: "+ date + "<br>" + "<a href='https://fast-fortress-33466.herokuapp.com/"+id+">คลิกเพื่อดูรูป</a>";
 
             var infowindow = new google.maps.InfoWindow({
                 content: content

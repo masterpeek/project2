@@ -7,7 +7,7 @@
     </div>
     <br>
     <div class="form-group" style="text-align:center">
-    <a href="{{ url('report_air_maps') }}" class="btn btn-primary" role="button">กลับสู่หน้าแผนที่</a>
+    <a href="{{ url('index_report_air') }}" class="btn btn-primary" role="button">กลับสู่หน้ารายงานมลพิษทางอากาศ</a>
     </div>
     @stop
 

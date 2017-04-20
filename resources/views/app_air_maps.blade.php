@@ -11,10 +11,6 @@
     <meta charset="UTF-8">
     <title>App Name</title>
 
-    <style>
-        div { border: 1px solid #0000; height: 600px; width: 600px; line-height: 600px; *font-size: 600px; text-align: center;  }
-    </style>
-
 </head>
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">

@@ -32,7 +32,7 @@
                 var date = markers[i][6];
 
                 var content = "ความดังของเสียง: "+ value + " เดซิเบล" +
-                    "<br>" + "พื้นที่: "+ area + " " + province +  "<br>" +
+                    "<br>" + "พื้นที่: "+ area + " จ." + province +  "<br>" +
                     "วันที่: "+ date;
 
                 var infowindow = new google.maps.InfoWindow({

@@ -38,7 +38,7 @@
                         <div class="mdl-card__supporting-text">
                             วันที่:  {{ $data->thai_date }} &nbsp; เวลา: {{ $data->time }}  น.
                             <br>
-                            พื้นที่: {{ $data->area_name }}
+                            พื้นที่: {{ $data->area_name }} จ.{{ $data->province_name }}
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
                             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ url('show_weather_station/'.$data->station_id) }}">

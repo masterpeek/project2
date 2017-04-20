@@ -12,11 +12,7 @@
     <title>App Name</title>
 
     <style>
-    img.centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-    }
+        div { border: 1px solid #0000; height: 600px; width: 600px; line-height: 600px; *font-size: 600px; text-align: center;  }
     </style>
 
 </head>

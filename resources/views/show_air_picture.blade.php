@@ -5,8 +5,8 @@
         <div class="mdl-grid">
 
 
-    <div class="container" style="align-content: center">
-        <img src="data:image/jpeg;base64,{{ $air_picture->air_picture }}" class="centered" width="800" height="600">
+    <div class="container" style="text-align: center">
+        <img src="data:image/jpeg;base64,{{ $air_picture->air_picture }}" class="centered" width="400" height="200">
     </div>
         </div>
     </section>

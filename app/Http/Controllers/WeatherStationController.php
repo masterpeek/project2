@@ -147,7 +147,7 @@ class WeatherStationController extends Controller
         from weather_station order by distance limit 1');
 
         $ans = $ans.$result[0]->aqi_value.";".$result[0]->aqi_condition_name.";".$result[0]->area_name.";".number_format($result[0]->distance, 2).";".
-            $result[0]->thai_date.";".$result[0]->time;
+            $result[0]->thai_date.";".$result[0]->time.";".$result[0]->province_name;
 
         $arr['area'] = $ans;
 

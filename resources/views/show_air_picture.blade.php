@@ -3,7 +3,7 @@
 @section('content')
     <br>
     <div class="form-group" style="text-align:center">
-        <img src="data:image/jpeg;base64,{{ $air_picture->air_picture }}" class="centered" width="350" height="350">
+        <img src="data:image/jpeg;base64,{{ $air_picture->air_picture }}" class="centered" width="450" height="450">
     </div>
     <br>
     <div class="form-group" style="text-align:center">

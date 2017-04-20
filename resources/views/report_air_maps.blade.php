@@ -51,7 +51,7 @@
             var area = markers[i][4];
             var province = markers[i][5];
             var date = markers[i][6];
-            var id = marker[i][7];
+            var id = markers[i][7];
 
             var content = "มลพิษทางอากาศ: "+ value +
                 "<br>" + "พื้นที่: "+ area +" "+ province + "<br>" +

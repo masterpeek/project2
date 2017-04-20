@@ -48,6 +48,7 @@
                         <th>พื้นที่</th>
                         <th>จังหวัด</th>
                         <th>วันที่และเวลา</th>
+                        <th>ผู้รายงาน</th>
                         <th>ลบ</th>
                     </tr>
                     @foreach($datas as $data)
@@ -60,6 +61,7 @@
                             <td>{{ $data->air_area_name }}</td>
                             <td>{{ $data->air_province_name }}</td>
                             <td>{{ $data->air_thai_date }}</td>
+                            <td>{{ $data->user_id }}</td>
                             <td>{!! Form::open(['method' => 'DELETE', 'url' => 'index_admin_air/'.$data->id]) !!}
                                 {!! Form::submit('ลบ', ['class' => 'btn btn-danger']) !!}
                                 {!! Form::close() !!}</td>

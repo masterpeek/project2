@@ -4,7 +4,7 @@
     <div class="form-group" style="text-align:center">
         <h3> สถานีวัดคุณภาพอากาศ</h3>
     </div>
-    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+    <section class="section--center mdl-grid mdl-grid--no-spacing">
         <div class="mdl-grid">
             {!! Form::open(['url' => 'search_weather', 'method' => 'post']) !!}
             <div class="row">

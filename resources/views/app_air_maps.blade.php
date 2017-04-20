@@ -10,6 +10,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>App Name</title>
+
+    <style>
+    img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    }
+    </style>
+
 </head>
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">

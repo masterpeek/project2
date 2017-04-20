@@ -76,6 +76,7 @@ Route::get('report_air_maps', 'ReportAirByUserController@maps');
 Route::get('/index_report_air', 'ReportAirByUserController@index');
 Route::get('/all_report_air', 'ReportAirByUserController@viewAll');
 Route::get('/show_report_air/{id}', 'ReportAirByUserController@show');
+Route::get('/show_air_picture/{id}', 'ReportAirByUserController@showAirPicture');
 Route::post('/notify_nearby_air','ReportAirByUserController@reportAirNearBy');
 Route::post('/search_air', 'ReportAirByUserController@search');
 Route::post('/update_air', 'ReportAirByUserController@updateAir');

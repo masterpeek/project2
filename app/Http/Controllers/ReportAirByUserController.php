@@ -184,6 +184,13 @@ class ReportAirByUserController extends Controller
         return $arrAir;
     }
 
+    public function showAirPicture($id)
+    {
+        $air_picture = ReportAirByUser::where('id', $id)->get()->first();
+
+        return view('show_air_picture')->with('air_picture', $air_picture);
+    }
+
     public function maps()
     {
         $markers = ReportAirByUser::all();

@@ -21,7 +21,7 @@
             var markers = [
                 ['', {{ $data->lat }}, {{ $data->long }}, {{ $data->aqi_value }},
                     "{{ $data->aqi_condition_name }}", "{{ $data->station_name }}",
-                    "{{ $data->area_name }}", "{{ $data->thai_date }}", "{{ $data->time }}"],
+                    "{{ $data->area_name }}", "{{ $data->thai_date }}", "{{ $data->time }}", "{{ $data->province_name }}"],
             ];
 
             for (i = 0; i < markers.length; i++) {
@@ -33,10 +33,10 @@
                 var area = markers[i][6];
                 var date = markers[i][7];
                 var time = markers[i][8];
-
+                var province = markers[i][9];
 
                 var content = "ค่า​ AQI: "+ aqi + " " + "สถานะ: " + aqi_condition +
-                    "<br>" + "ชื่อ: "+ station + "<br>" + "พื้นที่: "+ area +
+                    "<br>" + "ชื่อ: "+ station + "<br>" + "พื้นที่: "+ area + " จ." + province +
                     "<br>" + "วันที่: "+ date + " " + "เวลา: " + time +" น.";
 
                 var infowindow = new google.maps.InfoWindow({
@@ -101,7 +101,7 @@
                                 &nbsp;วันที่: {{ $data->thai_date }}&nbsp;เวลา: {{ $data->time }}  น.</h4>
                         </div>
                         <div class="mdl-card__supporting-text">
-                            <h5> พื้นที่: {{ $data->area_name }} </h5>
+                            <h5> พื้นที่: {{ $data->area_name }} จ.{{ $data->province_name }}</h5>
                         </div>
                     </div>
                 </div>

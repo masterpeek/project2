@@ -36,9 +36,11 @@ class WeatherStationController extends Controller
 
             $check = array("มหานคร", "ฯ", "จ.");
 
+            $check2 = array("มหานคร", "ฯ");
+
             $province_name = str_replace($check,"",$province_name_split);
 
-            $area_name = str_replace($check,"",$ans->areaTH);
+            $area_name = str_replace($check2,"",$ans->areaTH);
 
             $area_name1 = str_replace(","," ",$area_name);
 

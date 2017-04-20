@@ -28,7 +28,7 @@
                         </div>
                         <div class="mdl-card__supporting-text">
                             วันที่: {{ $data->noise_thai_date }}  <br>
-                            พื้นที่: {{ $data->noise_area_name }} {{ $data->noise_province_name }}
+                            พื้นที่: {{ $data->noise_area_name }} จ.{{ $data->noise_province_name }}
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
                             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ url('show_report_noise/'.$data->id) }}">

@@ -67,7 +67,7 @@
                         </h4>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h5> พื้นที่: {{ $data->noise_area_name }} {{ $data->noise_province_name }}</h5>
+                        <h5> พื้นที่: {{ $data->noise_area_name }} จ.{{ $data->noise_province_name }}</h5>
                     </div>
                 </div>
             </div>

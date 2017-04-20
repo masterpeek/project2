@@ -33,7 +33,7 @@
                 var id = markers[i][7];
 
                 var content = "มลพิษทางอากาศ: "+ value +
-                    "<br>" + "พื้นที่: "+ area + " " + province + "<br>" +
+                    "<br>" + "พื้นที่: "+ area + " จ." + province + "<br>" +
                     "วันที่: "+ date + "<br>" + "<a href='https://fast-fortress-33466.herokuapp.com/show_air_picture/"+id+"'>คลิกเพื่อดูรูป</a>";
 
                 var infowindow = new google.maps.InfoWindow({

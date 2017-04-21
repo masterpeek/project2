@@ -183,11 +183,10 @@ class WeatherStationController extends Controller
 
                 return $ans;
             }
-            else
-            {
-                return "no result";
-            }
-
+        }
+        else
+        {
+            return "no result";
         }
 
     }

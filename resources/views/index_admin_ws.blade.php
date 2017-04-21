@@ -50,6 +50,8 @@
                         <th>สถานะ</th>
                         <th>วันที่</th>
                         <th>เวลา</th>
+                        <th>ละติจูด</th>
+                        <th>ลองจิจูด</th>
                         <th>ลบ</th>
                     </tr>
                     @foreach($datas as $data)
@@ -62,6 +64,8 @@
                             <td>{{ $data->aqi_condition_name }}</td>
                             <td>{{ $data->thai_date }}</td>
                             <td>{{ $data->time }} น.</td>
+                            <td>{{ $data->lat }}</td>
+                            <td>{{ $data->long }}</td>
                             <td>{!! Form::open(['method' => 'DELETE', 'url' => 'index_admin_ws/'.$data->station_id]) !!}
                                 {!! Form::submit('ลบ', ['class' => 'btn btn-danger']) !!}
                                 {!! Form::close() !!}</td>

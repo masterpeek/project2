@@ -155,6 +155,43 @@ class WeatherStationController extends Controller
 
     }
 
+    public function notifyWeatherNearby(Request $request)
+    {
+        $ans = "";
+
+        $data = $request->all();
+
+        $lat = $data["Latitude"];
+        $lng = $data["Longitude"];
+        $distance = $data["Distance"];
+
+        $result = DB::select('select weather_station.aqi_value, 
+        weather_station.aqi_condition_name, 
+        weather_station.area_name, weather_station.province_name, weather_station.thai_date,weather_station.time,   
+        weather_station.lat, weather_station.long, 
+        (6371 * acos(cos(radians(' . $lat . ')) * cos(radians(weather_station.lat)) 
+        * cos(radians(weather_station.long ) - radians(' . $lng . ')) 
+        + sin(radians(' . $lat .')) * sin(radians(weather_station.lat)))) as distance
+        from weather_station having distance <= '. $distance .' order by distance limit 1');
+
+        if($result != null)
+        {
+            if($result[0]->aqi_value >= 101)
+            {
+                $ans = $ans.$result[0]->aqi_value.";".$result[0]->aqi_condition_name.";".$result[0]->area_name.";".number_format($result[0]->distance, 2).";".
+                    $result[0]->thai_date.";".$result[0]->time.";".$result[0]->province_name;
+
+                return $ans;
+            }
+
+        }
+        else
+        {
+            return "no result";
+        }
+
+    }
+
 
     public function goodRank()
     {

@@ -44,6 +44,7 @@ Route::get('call_data_weather_station', 'WeatherStationController@callData');
 Route::get('return_data_weather_station', 'WeatherStationController@allData');
 Route::get('allDb', 'WeatherStationController@allDB');
 Route::post('aqi_near_by', 'WeatherStationController@nearByLatLong');
+Route::post('notify_nearby_weather', 'WeatherStationController@notifyWeatherNearby');
 Route::get('good_rank', 'WeatherStationController@goodRank');
 Route::get('bad_rank', 'WeatherStationController@badRank');
 Route::get('maps', 'WeatherStationController@maps');

@@ -32,6 +32,8 @@
                         <th>พื้นที่</th>
                         <th>จังหวัด</th>
                         <th>วันที่และเวลา</th>
+                        <th>ละติจูด</th>
+                        <th>ลองจิจูด</th>
                         <th>ลบ</th>
                     </tr>
                     @foreach($datas as $data)
@@ -41,6 +43,8 @@
                             <td>{{ $data->noise_area_name }}</td>
                             <td>{{ $data->noise_province_name }}</td>
                             <td>{{ $data->noise_thai_date }}</td>
+                            <td>{{ $data->noise_lat }}</td>
+                            <td>{{ $data->noise_long }}</td>
                             <td>{!! Form::open(['method' => 'DELETE', 'url' => 'index_admin_noise/'.$data->id]) !!}
                                 {!! Form::submit('ลบ', ['class' => 'btn btn-danger']) !!}
                                 {!! Form::close() !!}</td>

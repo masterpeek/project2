@@ -23,7 +23,7 @@
     <option value="ปานกลาง">คุณภาพปานกลาง</option>
     <option value="กระทบต่อสุขภาพ">กระทบต่อสุขภาพ</option>
     <option value="กระทบต่อสุขภาพมาก">กระทบต่อสุขภาพมาก</option>
-    <option value="อันตราย">อันตราย</option>
+    <option value="อันตราย">รุนแรง</option>
 </select>
 <input type="submit" value="ค้นหา">
 </div>

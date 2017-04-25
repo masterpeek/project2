@@ -252,7 +252,7 @@ class ReportAirByUserController extends Controller
 
             if($air[0]->air_pollution === "เล็กน้อย")
             {
-                ReportAirByUser::where('id', $id)->update(['air_pollution' => 'ไม่มี']);
+                ReportAirByUser::where('id', $id)->delete();
             }
             else if($air[0]->air_pollution  === "ปานกลาง")
             {

@@ -20,6 +20,20 @@
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
             {!! Form::close() !!}
+
+            {!! Form::open(['url' => 'select_condition_air_index', 'method' => 'post']) !!}
+            <div class="form-group" style="text-align:center">
+                <h4>เลือกดูตามระดับมลพิษทางอากาศ</h4>
+                <select name="condition">
+                    <option value="ทั้งหมด">ทั้งหมด</option>
+                    <option value="เล็กน้อย">เล็กน้อย</option>
+                    <option value="ปานกลาง">ปานกลาง</option>
+                    <option value="รุนแรง">รุนแรง</option>
+                </select>
+                <input type="submit" value="ค้นหา">
+            </div>
+            {!! Form::close() !!}
+
             @foreach($datas as $data)
                 <div class="mdl-cell mdl-cell--3-col">
                     <div class="demo-card-square mdl-card mdl-shadow--2dp">

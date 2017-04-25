@@ -283,4 +283,23 @@ class ReportAirByUserController extends Controller
         return view('report_air_maps')->with('markers', $markers);
     }
 
+    public function selectConditionAirIndex()
+    {
+        $input = Input::all();
+
+        $condition = $input["condition"];
+
+        if($condition === "ทั้งหมด")
+        {
+            $datas = ReportAirByUser::orderBy('created_at', 'DESC')->get();
+        }
+        else
+        {
+            $datas = ReportAirByUser::where('air_pollution', $condition)->orderBy('created_at', 'DESC')->get();
+        }
+
+        return view('index_report_air')->with('datas', $datas);
+    }
+
+
 }

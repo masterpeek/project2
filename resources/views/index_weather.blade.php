@@ -16,25 +16,25 @@
                             <a href="{{ url('/all') }}" class="btn btn-default">ค้นหาทั้งหมด</a>
                             <a href="{{ url('/maps') }}" class="btn btn-default">แผนที่</a>
                         </span>
-                        {!! Form::close() !!}
                     </div><!-- /input-group -->
-                    {!! Form::open(['url' => 'select_condition_weather', 'method' => 'post']) !!}
-                    <div class="form-group" style="text-align:center">
-                        <h4>เลือกดูตามระดับคุณภาพอากาศ</h4>
-                        <select name="condition">
-                            <option value="ทั้งหมด">ทั้งหมด</option>
-                            <option value="ดี">คุณภาพดี</option>
-                            <option value="ปานกลาง">คุณภาพปานกลาง</option>
-                            <option value="กระทบต่อสุขภาพ">กระทบต่อสุขภาพ</option>
-                            <option value="กระทบต่อสุขภาพมาก">กระทบต่อสุขภาพมาก</option>
-                            <option value="อันตราย">รุนแรง</option>
-                        </select>
-                        <input type="submit" value="ค้นหา">
-                    </div>
-                    {!! Form::close() !!}
                 </div><!-- /.col-lg-6 -->
-
             </div><!-- /.row -->
+            {!! Form::close() !!}
+
+            {!! Form::open(['url' => 'select_condition_weather', 'method' => 'post']) !!}
+            <div class="form-group" style="text-align:center">
+                <h4>เลือกดูตามระดับคุณภาพอากาศ</h4>
+                <select name="condition">
+                    <option value="ทั้งหมด">ทั้งหมด</option>
+                    <option value="ดี">คุณภาพดี</option>
+                    <option value="ปานกลาง">คุณภาพปานกลาง</option>
+                    <option value="กระทบต่อสุขภาพ">กระทบต่อสุขภาพ</option>
+                    <option value="กระทบต่อสุขภาพมาก">กระทบต่อสุขภาพมาก</option>
+                    <option value="อันตราย">รุนแรง</option>
+                </select>
+                <input type="submit" value="ค้นหา">
+            </div>
+            {!! Form::close() !!}
 
             @foreach($datas as $data)
                 <div class="mdl-cell mdl-cell--3-col">

@@ -20,7 +20,8 @@
             // Multiple Markers
             var markers = [
                 ['', {{ $data->air_lat }}, {{ $data->air_long }}, "{{ $data->air_pollution }}",
-                    "{{ $data->air_area_name }}","{{ $data->air_province_name }}", "{{ $data->air_thai_date }}", {{ $data->id }}],
+                    "{{ $data->air_area_name }}","{{ $data->air_province_name }}", "{{ $data->air_thai_date }}", {{ $data->id }},
+                "{{ $data->air_smell }}"],
             ];
 
             for (i = 0; i < markers.length; i++) {
@@ -31,8 +32,9 @@
                 var province = markers[i][5];
                 var date = markers[i][6];
                 var id = markers[i][7];
+                var smell = markers[i][8];
 
-                var content = "มลพิษทางอากาศ: "+ value +
+                var content = "มลพิษทางอากาศ: "+ value + "กลิ่นเหม็น: " + smell +
                     "<br>" + "พื้นที่: "+ area + " จ." + province + "<br>" +
                     "วันที่: "+ date + "<br>" + "<a href='https://fast-fortress-33466.herokuapp.com/show_air_picture/"+id+"'>คลิกเพื่อดูรูป</a>";
 

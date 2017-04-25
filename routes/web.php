@@ -55,6 +55,7 @@ Route::get('/show_weather_station/{id}', 'WeatherStationController@show');
 Route::get('/show_near', 'WeatherStationController@showNear');
 Route::post('/search_weather', 'WeatherStationController@search');
 Route::post('/select_condition', 'WeatherStationController@select_condition');
+Route::post('/select_condition_weather', 'WeatherStationController@selectConditionWeather');
 
 Route::resource('user','UserController');
 Route::post('register', 'UserController@register');

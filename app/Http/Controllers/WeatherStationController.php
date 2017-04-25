@@ -296,4 +296,22 @@ class WeatherStationController extends Controller
         return view('maps')->with('markers', $datas);
     }
 
+    public function selectConditionWeather()
+    {
+        $input = Input::all();
+
+        $condition = $input["condition"];
+
+        if($condition === "ทั้งหมด")
+        {
+            $datas = WeatherStation::orderBy('date', 'DESC')->orderBy('time', 'DESC')->get();
+        }
+        else
+        {
+            $datas = WeatherStation::where('aqi_condition_name', $condition)->orderBy('date', 'DESC')->orderBy('time', 'DESC')->get();
+        }
+
+        return view('index_weather')->with('datas', $datas);
+    }
+
 }

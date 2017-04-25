@@ -246,6 +246,23 @@ class ReportAirByUserController extends Controller
         {
             ReportAirByUser::where('id', $id)->delete();
         }
+        else if($choice === "1")
+        {
+            $air = ReportAirByUser::where('id', $id)->get();
+
+            if($air[0]->air_pollution === "เล็กน้อย")
+            {
+                ReportAirByUser::where('id', $id)->update(['air_pollution' => 'ไม่มี']);
+            }
+            else if($air[0]->air_pollution  === "ปานกลาง")
+            {
+                ReportAirByUser::where('id', $id)->update(['air_pollution' => 'เล็กน้อย']);
+            }
+            else if($air[0]->air_pollution  === "รุนแรง")
+            {
+                ReportAirByUser::where('id', $id)->update(['air_pollution' => 'ปานกลาง']);
+            }
+        }
         else if($choice === "2")
         {
             $air = ReportAirByUser::where('id', $id)->get();

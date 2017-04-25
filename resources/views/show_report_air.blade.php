@@ -34,7 +34,7 @@
                 var id = markers[i][7];
                 var smell = markers[i][8];
 
-                var content = "มลพิษทางอากาศ: "+ value + "กลิ่นเหม็น: " + smell +
+                var content = "มลพิษทางอากาศ: "+ value + " กลิ่นเหม็น: " + smell +
                     "<br>" + "พื้นที่: "+ area + " จ." + province + "<br>" +
                     "วันที่: "+ date + "<br>" + "<a href='https://fast-fortress-33466.herokuapp.com/show_air_picture/"+id+"'>คลิกเพื่อดูรูป</a>";
 

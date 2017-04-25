@@ -45,7 +45,8 @@
                                         @elseif($data->air_pollution == "รุนแรง")
                                             <div class="mdl-card__title mdl-card--expand" style="background: red">
                                                         @endif
-                            <h2 class="mdl-card__title-text" style="color: #ffffff">มลพิษอากาศ: {{ $data->air_pollution }}</h2>
+                            <h2 class="mdl-card__title-text" style="color: #ffffff">มลพิษอากาศ: {{ $data->air_pollution }} <br>
+                            กลิ่นเหม็น: {{ $data->air_smell }}</h2>
                         </div>
                         <div class="mdl-card__supporting-text">
                             วันที่: {{ $data->air_thai_date }}  <br>

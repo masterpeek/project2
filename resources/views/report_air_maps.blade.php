@@ -40,7 +40,8 @@
         var markers = [
                 @foreach($markers as $marker)
             ['', {{ $marker->air_lat }}, {{ $marker->air_long }}, "{{ $marker->air_pollution }}",
-                "{{ $marker->air_area_name }}", "{{ $marker->air_province_name }}", "{{ $marker->air_thai_date }}", {{ $marker->id }}],
+                "{{ $marker->air_area_name }}", "{{ $marker->air_province_name }}", "{{ $marker->air_thai_date }}", {{ $marker->id }},
+            "{{ $marker->air_smell }}"],
             @endforeach
         ];
 
@@ -52,8 +53,9 @@
             var province = markers[i][5];
             var date = markers[i][6];
             var id = markers[i][7];
+            var smell = markers[i][8];
 
-            var content = "มลพิษทางอากาศ: "+ value +
+            var content = "มลพิษทางอากาศ: "+ value + " กลิ่นเหม็น: " + smell +
                 "<br>" + "พื้นที่: "+ area +" จ."+ province + "<br>" +
                 "วันที่: "+ date + "<br>" + "<a href='https://fast-fortress-33466.herokuapp.com/show_air_picture/"+id+"'>คลิกเพื่อดูรูป</a>"
 

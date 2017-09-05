@@ -95,6 +95,8 @@
                                             <div class="mdl-card__title mdl-card--expand" style="background: #f7ca18">
                                                 @elseif($data->aqi_value >= 201 && $data->aqi_value <= 300)
                                                     <div class="mdl-card__title mdl-card--expand" style="background: #ff9900">
+                                                         @elseif($data->aqi_value > 300)
+                                                        <div class="mdl-card__title mdl-card--expand" style="background: #ff0000">
                                                         @endif
                             <h4> AQI: {{ $data->aqi_value }} &nbsp;
                                 สถานะ: {{ $data->aqi_condition_name }}

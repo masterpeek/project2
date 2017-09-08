@@ -50,7 +50,7 @@
                                                 <div class="mdl-card__title mdl-card--expand" style="background: #ff9900">
                                                 @elseif($data->aqi_value > 300)
                                                     <div class="mdl-card__title mdl-card--expand" style="background: #ff0000">
-                                    @endif
+                                                        @endif
                             <h2 class="mdl-card__title-text" style="color: #ffffff">ค่า AQI: {{ $data->aqi_value }} <br> คุณภาพ: {{ $data->aqi_condition_name }} </h2>
 
                         </div>
